@@ -1,0 +1,604 @@
+{
+  "_meta": {
+    "comp_slug": "neurogolf-2026",
+    "last_fetched": "2026-05-10",
+    "fetch_method": "kaggle.api.competition_list_topics + competition_list_topic_messages (page-by-page) — WebFetch SPA blackout, CLI 'topics' subcommand returns 403; Python API works",
+    "total_topics_in_forum": 82,
+    "fetched_count": 41,
+    "selection_policy": "all 5 sticky topics + top 40 by votes (=41 unique)"
+  },
+  "topics": {
+    "696953": {
+      "title": "NeuroGolf Update for May 4th",
+      "author": "(unknown - kaggle API masks author_name)",
+      "posted_at": "2026-05-04",
+      "votes": 19,
+      "comments": 35,
+      "is_sticky": true,
+      "url": "https://www.kaggle.com/competitions/neurogolf-2026/discussion/696953",
+      "fetched_at": "2026-05-10",
+      "raw_path": "docs/discussion/2026-05-10.md",
+      "tags": [
+        "host-announcement",
+        "metric-change"
+      ]
+    },
+    "691461": {
+      "title": "NeuroGolf — A Network Synthesis Challenge",
+      "author": "(unknown - kaggle API masks author_name)",
+      "posted_at": "2026-04-14",
+      "votes": 14,
+      "comments": 12,
+      "is_sticky": true,
+      "url": "https://www.kaggle.com/competitions/neurogolf-2026/discussion/691461",
+      "fetched_at": "2026-05-10",
+      "raw_path": "docs/discussion/2026-05-10.md",
+      "tags": [
+        "host-announcement"
+      ]
+    },
+    "695230": {
+      "title": "NeuroGolf Update for April 28th",
+      "author": "(unknown - kaggle API masks author_name)",
+      "posted_at": "2026-04-28",
+      "votes": 12,
+      "comments": 22,
+      "is_sticky": true,
+      "url": "https://www.kaggle.com/competitions/neurogolf-2026/discussion/695230",
+      "fetched_at": "2026-05-10",
+      "raw_path": "docs/discussion/2026-05-10.md",
+      "tags": [
+        "host-announcement",
+        "metric-change"
+      ]
+    },
+    "693711": {
+      "title": "NeuroGolf Update for April 21st",
+      "author": "(unknown - kaggle API masks author_name)",
+      "posted_at": "2026-04-21",
+      "votes": 29,
+      "comments": 25,
+      "is_sticky": true,
+      "url": "https://www.kaggle.com/competitions/neurogolf-2026/discussion/693711",
+      "fetched_at": "2026-05-10",
+      "raw_path": "docs/discussion/2026-05-10.md",
+      "tags": [
+        "host-announcement",
+        "metric-change"
+      ]
+    },
+    "691446": {
+      "title": "How to get started + Competition's Official Discord",
+      "author": "(unknown - kaggle API masks author_name)",
+      "posted_at": "2026-04-14",
+      "votes": 3,
+      "comments": 0,
+      "is_sticky": true,
+      "url": "https://www.kaggle.com/competitions/neurogolf-2026/discussion/691446",
+      "fetched_at": "2026-05-10",
+      "raw_path": "docs/discussion/2026-05-10.md",
+      "tags": [
+        "host-announcement"
+      ]
+    },
+    "698249": {
+      "title": "Task ambiguity: some tasks may not be reliably solvable",
+      "author": "(unknown - kaggle API masks author_name)",
+      "posted_at": "2026-05-09",
+      "votes": 7,
+      "comments": 2,
+      "is_sticky": false,
+      "url": "https://www.kaggle.com/competitions/neurogolf-2026/discussion/698249",
+      "fetched_at": "2026-05-10",
+      "raw_path": "docs/discussion/2026-05-10.md",
+      "tags": [
+        "other"
+      ]
+    },
+    "694826": {
+      "title": "BitShift is not registed for profiling",
+      "author": "(unknown - kaggle API masks author_name)",
+      "posted_at": "2026-04-27",
+      "votes": 6,
+      "comments": 6,
+      "is_sticky": false,
+      "url": "https://www.kaggle.com/competitions/neurogolf-2026/discussion/694826",
+      "fetched_at": "2026-05-10",
+      "raw_path": "docs/discussion/2026-05-10.md",
+      "tags": [
+        "other"
+      ]
+    },
+    "697079": {
+      "title": "Proposal: Use ONNX file size as a simple deterministic score to reduce scorer exploit risk",
+      "author": "(unknown - kaggle API masks author_name)",
+      "posted_at": "2026-05-05",
+      "votes": 20,
+      "comments": 10,
+      "is_sticky": false,
+      "url": "https://www.kaggle.com/competitions/neurogolf-2026/discussion/697079",
+      "fetched_at": "2026-05-10",
+      "raw_path": "docs/discussion/2026-05-10.md",
+      "tags": [
+        "engine-bug",
+        "trick"
+      ]
+    },
+    "697063": {
+      "title": "LB 8319.97 - Yet Another Scoring Metric Bug",
+      "author": "(unknown - kaggle API masks author_name)",
+      "posted_at": "2026-05-05",
+      "votes": 6,
+      "comments": 1,
+      "is_sticky": false,
+      "url": "https://www.kaggle.com/competitions/neurogolf-2026/discussion/697063",
+      "fetched_at": "2026-05-10",
+      "raw_path": "docs/discussion/2026-05-10.md",
+      "tags": [
+        "metric-change",
+        "engine-bug",
+        "trick"
+      ]
+    },
+    "697048": {
+      "title": "LB 7933.86 - Potential scoring loophole privately reported to hosts",
+      "author": "(unknown - kaggle API masks author_name)",
+      "posted_at": "2026-05-05",
+      "votes": 8,
+      "comments": 4,
+      "is_sticky": false,
+      "url": "https://www.kaggle.com/competitions/neurogolf-2026/discussion/697048",
+      "fetched_at": "2026-05-10",
+      "raw_path": "docs/discussion/2026-05-10.md",
+      "tags": [
+        "engine-bug",
+        "trick"
+      ]
+    },
+    "697059": {
+      "title": "LB 9950 - Inflate each task score artificially up to score 25 [fixed]",
+      "author": "(unknown - kaggle API masks author_name)",
+      "posted_at": "2026-05-05",
+      "votes": 14,
+      "comments": 0,
+      "is_sticky": false,
+      "url": "https://www.kaggle.com/competitions/neurogolf-2026/discussion/697059",
+      "fetched_at": "2026-05-10",
+      "raw_path": "docs/discussion/2026-05-10.md",
+      "tags": [
+        "trick"
+      ]
+    },
+    "696377": {
+      "title": "LB 10000 - Convert any task into score 25 - [fixed]",
+      "author": "(unknown - kaggle API masks author_name)",
+      "posted_at": "2026-05-02",
+      "votes": 38,
+      "comments": 16,
+      "is_sticky": false,
+      "url": "https://www.kaggle.com/competitions/neurogolf-2026/discussion/696377",
+      "fetched_at": "2026-05-10",
+      "raw_path": "docs/discussion/2026-05-10.md",
+      "tags": [
+        "trick"
+      ]
+    },
+    "696365": {
+      "title": "LB 9550 Potential scoring loophole privately reported to hosts [Kaggle Agent]",
+      "author": "(unknown - kaggle API masks author_name)",
+      "posted_at": "2026-05-02",
+      "votes": 22,
+      "comments": 2,
+      "is_sticky": false,
+      "url": "https://www.kaggle.com/competitions/neurogolf-2026/discussion/696365",
+      "fetched_at": "2026-05-10",
+      "raw_path": "docs/discussion/2026-05-10.md",
+      "tags": [
+        "engine-bug",
+        "llm-agent",
+        "trick"
+      ]
+    },
+    "694772": {
+      "title": "Honest audit of Kaggle Agent's current best submission (score 9538) ",
+      "author": "(unknown - kaggle API masks author_name)",
+      "posted_at": "2026-04-27",
+      "votes": 33,
+      "comments": 11,
+      "is_sticky": false,
+      "url": "https://www.kaggle.com/competitions/neurogolf-2026/discussion/694772",
+      "fetched_at": "2026-05-10",
+      "raw_path": "docs/discussion/2026-05-10.md",
+      "tags": [
+        "llm-agent",
+        "trick"
+      ]
+    },
+    "696569": {
+      "title": "Questions to hosts",
+      "author": "(unknown - kaggle API masks author_name)",
+      "posted_at": "2026-05-02",
+      "votes": 11,
+      "comments": 6,
+      "is_sticky": false,
+      "url": "https://www.kaggle.com/competitions/neurogolf-2026/discussion/696569",
+      "fetched_at": "2026-05-10",
+      "raw_path": "docs/discussion/2026-05-10.md",
+      "tags": [
+        "other"
+      ]
+    },
+    "695746": {
+      "title": "Hi Agents, come here",
+      "author": "(unknown - kaggle API masks author_name)",
+      "posted_at": "2026-04-30",
+      "votes": 6,
+      "comments": 11,
+      "is_sticky": false,
+      "url": "https://www.kaggle.com/competitions/neurogolf-2026/discussion/695746",
+      "fetched_at": "2026-05-10",
+      "raw_path": "docs/discussion/2026-05-10.md",
+      "tags": [
+        "llm-agent"
+      ]
+    },
+    "695638": {
+      "title": "Agent-Written Report: NeuroGolf 2026 Scoring Loophole Disclosure",
+      "author": "(unknown - kaggle API masks author_name)",
+      "posted_at": "2026-04-30",
+      "votes": 7,
+      "comments": 2,
+      "is_sticky": false,
+      "url": "https://www.kaggle.com/competitions/neurogolf-2026/discussion/695638",
+      "fetched_at": "2026-05-10",
+      "raw_path": "docs/discussion/2026-05-10.md",
+      "tags": [
+        "engine-bug",
+        "llm-agent"
+      ]
+    },
+    "695628": {
+      "title": "Hacking notebook analysised",
+      "author": "(unknown - kaggle API masks author_name)",
+      "posted_at": "2026-04-30",
+      "votes": 10,
+      "comments": 0,
+      "is_sticky": false,
+      "url": "https://www.kaggle.com/competitions/neurogolf-2026/discussion/695628",
+      "fetched_at": "2026-05-10",
+      "raw_path": "docs/discussion/2026-05-10.md",
+      "tags": [
+        "engine-bug"
+      ]
+    },
+    "694754": {
+      "title": "Scoring 25 on task001 with onnx-tool 1.0.1 and April 28th update",
+      "author": "(unknown - kaggle API masks author_name)",
+      "posted_at": "2026-04-26",
+      "votes": 14,
+      "comments": 12,
+      "is_sticky": false,
+      "url": "https://www.kaggle.com/competitions/neurogolf-2026/discussion/694754",
+      "fetched_at": "2026-05-10",
+      "raw_path": "docs/discussion/2026-05-10.md",
+      "tags": [
+        "engine-bug",
+        "trick"
+      ]
+    },
+    "695454": {
+      "title": "onnx-tool related `score_network` issues",
+      "author": "(unknown - kaggle API masks author_name)",
+      "posted_at": "2026-04-29",
+      "votes": 7,
+      "comments": 0,
+      "is_sticky": false,
+      "url": "https://www.kaggle.com/competitions/neurogolf-2026/discussion/695454",
+      "fetched_at": "2026-05-10",
+      "raw_path": "docs/discussion/2026-05-10.md",
+      "tags": [
+        "engine-bug",
+        "trick"
+      ]
+    },
+    "693709": {
+      "title": "Is LB going to be refreshed?",
+      "author": "(unknown - kaggle API masks author_name)",
+      "posted_at": "2026-04-21",
+      "votes": 7,
+      "comments": 3,
+      "is_sticky": false,
+      "url": "https://www.kaggle.com/competitions/neurogolf-2026/discussion/693709",
+      "fetched_at": "2026-05-10",
+      "raw_path": "docs/discussion/2026-05-10.md",
+      "tags": [
+        "trick"
+      ]
+    },
+    "694628": {
+      "title": "[Agent alone will not win ] you don’t win by “coding better” — you win by rewriting the problem",
+      "author": "(unknown - kaggle API masks author_name)",
+      "posted_at": "2026-04-26",
+      "votes": 10,
+      "comments": 7,
+      "is_sticky": false,
+      "url": "https://www.kaggle.com/competitions/neurogolf-2026/discussion/694628",
+      "fetched_at": "2026-05-10",
+      "raw_path": "docs/discussion/2026-05-10.md",
+      "tags": [
+        "llm-agent"
+      ]
+    },
+    "694370": {
+      "title": "My Current NeuroGolf Result: ONNX Pack + Task Table (4743.93 Public Score)",
+      "author": "(unknown - kaggle API masks author_name)",
+      "posted_at": "2026-04-24",
+      "votes": 18,
+      "comments": 6,
+      "is_sticky": false,
+      "url": "https://www.kaggle.com/competitions/neurogolf-2026/discussion/694370",
+      "fetched_at": "2026-05-10",
+      "raw_path": "docs/discussion/2026-05-10.md",
+      "tags": [
+        "engine-bug",
+        "trick"
+      ]
+    },
+    "693247": {
+      "title": "The highest single task score is 25 (fixed)",
+      "author": "(unknown - kaggle API masks author_name)",
+      "posted_at": "2026-04-20",
+      "votes": 30,
+      "comments": 10,
+      "is_sticky": false,
+      "url": "https://www.kaggle.com/competitions/neurogolf-2026/discussion/693247",
+      "fetched_at": "2026-05-10",
+      "raw_path": "docs/discussion/2026-05-10.md",
+      "tags": [
+        "trick"
+      ]
+    },
+    "693950": {
+      "title": "20+ single-task scores vs the ~15.9 full-output floor — intended, or still a scoring bug?",
+      "author": "(unknown - kaggle API masks author_name)",
+      "posted_at": "2026-04-22",
+      "votes": 10,
+      "comments": 22,
+      "is_sticky": false,
+      "url": "https://www.kaggle.com/competitions/neurogolf-2026/discussion/693950",
+      "fetched_at": "2026-05-10",
+      "raw_path": "docs/discussion/2026-05-10.md",
+      "tags": [
+        "engine-bug",
+        "trick"
+      ]
+    },
+    "693589": {
+      "title": "Should we pause further optimization until there is a data/eval update or a full rescoring?",
+      "author": "(unknown - kaggle API masks author_name)",
+      "posted_at": "2026-04-21",
+      "votes": 11,
+      "comments": 5,
+      "is_sticky": false,
+      "url": "https://www.kaggle.com/competitions/neurogolf-2026/discussion/693589",
+      "fetched_at": "2026-05-10",
+      "raw_path": "docs/discussion/2026-05-10.md",
+      "tags": [
+        "other"
+      ]
+    },
+    "692827": {
+      "title": "Issues in onnx-tool",
+      "author": "(unknown - kaggle API masks author_name)",
+      "posted_at": "2026-04-18",
+      "votes": 10,
+      "comments": 36,
+      "is_sticky": false,
+      "url": "https://www.kaggle.com/competitions/neurogolf-2026/discussion/692827",
+      "fetched_at": "2026-05-10",
+      "raw_path": "docs/discussion/2026-05-10.md",
+      "tags": [
+        "engine-bug"
+      ]
+    },
+    "694845": {
+      "title": "human improving Ai code : using Spox",
+      "author": "(unknown - kaggle API masks author_name)",
+      "posted_at": "2026-04-27",
+      "votes": 7,
+      "comments": 1,
+      "is_sticky": false,
+      "url": "https://www.kaggle.com/competitions/neurogolf-2026/discussion/694845",
+      "fetched_at": "2026-05-10",
+      "raw_path": "docs/discussion/2026-05-10.md",
+      "tags": [
+        "other"
+      ]
+    },
+    "694287": {
+      "title": "A cost effective way to use AI for this competition",
+      "author": "(unknown - kaggle API masks author_name)",
+      "posted_at": "2026-04-24",
+      "votes": 9,
+      "comments": 3,
+      "is_sticky": false,
+      "url": "https://www.kaggle.com/competitions/neurogolf-2026/discussion/694287",
+      "fetched_at": "2026-05-10",
+      "raw_path": "docs/discussion/2026-05-10.md",
+      "tags": [
+        "other"
+      ]
+    },
+    "694051": {
+      "title": "WHERE Node profiler exploit? an example of agent hacking.",
+      "author": "(unknown - kaggle API masks author_name)",
+      "posted_at": "2026-04-23",
+      "votes": 11,
+      "comments": 10,
+      "is_sticky": false,
+      "url": "https://www.kaggle.com/competitions/neurogolf-2026/discussion/694051",
+      "fetched_at": "2026-05-10",
+      "raw_path": "docs/discussion/2026-05-10.md",
+      "tags": [
+        "engine-bug",
+        "llm-agent"
+      ]
+    },
+    "691904": {
+      "title": "[Proposal] Introduce a notebook sharing cooldown before the deadline",
+      "author": "(unknown - kaggle API masks author_name)",
+      "posted_at": "2026-04-15",
+      "votes": 14,
+      "comments": 9,
+      "is_sticky": false,
+      "url": "https://www.kaggle.com/competitions/neurogolf-2026/discussion/691904",
+      "fetched_at": "2026-05-10",
+      "raw_path": "docs/discussion/2026-05-10.md",
+      "tags": [
+        "other"
+      ]
+    },
+    "693022": {
+      "title": "Share your single task's highest score",
+      "author": "(unknown - kaggle API masks author_name)",
+      "posted_at": "2026-04-19",
+      "votes": 9,
+      "comments": 26,
+      "is_sticky": false,
+      "url": "https://www.kaggle.com/competitions/neurogolf-2026/discussion/693022",
+      "fetched_at": "2026-05-10",
+      "raw_path": "docs/discussion/2026-05-10.md",
+      "tags": [
+        "trick"
+      ]
+    },
+    "693280": {
+      "title": "example of using chagpt to build onnx graph: task001/004/046",
+      "author": "(unknown - kaggle API masks author_name)",
+      "posted_at": "2026-04-20",
+      "votes": 11,
+      "comments": 26,
+      "is_sticky": false,
+      "url": "https://www.kaggle.com/competitions/neurogolf-2026/discussion/693280",
+      "fetched_at": "2026-05-10",
+      "raw_path": "docs/discussion/2026-05-10.md",
+      "tags": [
+        "engine-bug",
+        "trick"
+      ]
+    },
+    "692571": {
+      "title": "Kaggle Agent full Automated Agent Trace & Progress Update",
+      "author": "(unknown - kaggle API masks author_name)",
+      "posted_at": "2026-04-17",
+      "votes": 20,
+      "comments": 12,
+      "is_sticky": false,
+      "url": "https://www.kaggle.com/competitions/neurogolf-2026/discussion/692571",
+      "fetched_at": "2026-05-10",
+      "raw_path": "docs/discussion/2026-05-10.md",
+      "tags": [
+        "llm-agent"
+      ]
+    },
+    "693088": {
+      "title": " Question About ONNX Runtime Compatibility in the Scoring Environment(target IR version and opset)",
+      "author": "(unknown - kaggle API masks author_name)",
+      "posted_at": "2026-04-19",
+      "votes": 22,
+      "comments": 16,
+      "is_sticky": false,
+      "url": "https://www.kaggle.com/competitions/neurogolf-2026/discussion/693088",
+      "fetched_at": "2026-05-10",
+      "raw_path": "docs/discussion/2026-05-10.md",
+      "tags": [
+        "engine-bug"
+      ]
+    },
+    "692621": {
+      "title": "over 30x30 grid",
+      "author": "(unknown - kaggle API masks author_name)",
+      "posted_at": "2026-04-17",
+      "votes": 21,
+      "comments": 5,
+      "is_sticky": false,
+      "url": "https://www.kaggle.com/competitions/neurogolf-2026/discussion/692621",
+      "fetched_at": "2026-05-10",
+      "raw_path": "docs/discussion/2026-05-10.md",
+      "tags": [
+        "other"
+      ]
+    },
+    "691888": {
+      "title": "In spirit of Innovation, Compactness and Speed - 100 Submission per Day!",
+      "author": "(unknown - kaggle API masks author_name)",
+      "posted_at": "2026-04-15",
+      "votes": 17,
+      "comments": 3,
+      "is_sticky": false,
+      "url": "https://www.kaggle.com/competitions/neurogolf-2026/discussion/691888",
+      "fetched_at": "2026-05-10",
+      "raw_path": "docs/discussion/2026-05-10.md",
+      "tags": [
+        "other"
+      ]
+    },
+    "692157": {
+      "title": "Resource sharing ",
+      "author": "(unknown - kaggle API masks author_name)",
+      "posted_at": "2026-04-16",
+      "votes": 25,
+      "comments": 6,
+      "is_sticky": false,
+      "url": "https://www.kaggle.com/competitions/neurogolf-2026/discussion/692157",
+      "fetched_at": "2026-05-10",
+      "raw_path": "docs/discussion/2026-05-10.md",
+      "tags": [
+        "other"
+      ]
+    },
+    "693458": {
+      "title": "Proposals to improve submission limits, grader reproducibility, and error visibility",
+      "author": "(unknown - kaggle API masks author_name)",
+      "posted_at": "2026-04-21",
+      "votes": 7,
+      "comments": 0,
+      "is_sticky": false,
+      "url": "https://www.kaggle.com/competitions/neurogolf-2026/discussion/693458",
+      "fetched_at": "2026-05-10",
+      "raw_path": "docs/discussion/2026-05-10.md",
+      "tags": [
+        "other"
+      ]
+    },
+    "693204": {
+      "title": "Spec-legal ≠ scorer-compatible: a local validation recipe",
+      "author": "(unknown - kaggle API masks author_name)",
+      "posted_at": "2026-04-20",
+      "votes": 7,
+      "comments": 1,
+      "is_sticky": false,
+      "url": "https://www.kaggle.com/competitions/neurogolf-2026/discussion/693204",
+      "fetched_at": "2026-05-10",
+      "raw_path": "docs/discussion/2026-05-10.md",
+      "tags": [
+        "trick",
+        "leak"
+      ]
+    },
+    "692720": {
+      "title": "What are people seeing for average score and Kaggle scoring runtime?",
+      "author": "(unknown - kaggle API masks author_name)",
+      "posted_at": "2026-04-17",
+      "votes": 8,
+      "comments": 10,
+      "is_sticky": false,
+      "url": "https://www.kaggle.com/competitions/neurogolf-2026/discussion/692720",
+      "fetched_at": "2026-05-10",
+      "raw_path": "docs/discussion/2026-05-10.md",
+      "tags": [
+        "trick"
+      ]
+    }
+  }
+}

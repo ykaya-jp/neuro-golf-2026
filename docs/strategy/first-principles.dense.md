@@ -21,83 +21,113 @@ tabular / vision / nlp / timeseries の場合:
 
 | 記号 | 意味 | 出典 |
 |---|---|---|
-| | | |
+| INPUT_SHAPE = [1, 10, 30, 30] | 入力 tensor 形状: batch=1, channels=10 (one-hot), height=30, width=30 | neurogolf_utils.py:86, 105 |
+| OUTPUT_SHAPE = [1, 10, 30, 30] | 出力 tensor 形状 (入力と同じ) | neurogolf_utils.py:105, verify_network:444 |
+| PARAM_COUNT | 重み initializer / Constant node の要素数合計 + scalar parameter 数 | neurogolf_utils.py:291-314 (calculate_params) |
+| MEMORY_BYTES | 各 tensor の最大サイズ総和 (bytes、ONNX Runtime Profiler より算出) | neurogolf_utils.py:189-249 (calculate_memory) |
+| COST = PARAM_COUNT + MEMORY_BYTES | 評価対象の総コスト | neurogolf_utils.py:454 |
+| SCORE = max(1, 25 - ln(COST)) | ゲーム score 1 task あたり | neurogolf_utils.py:454 |
 
-**ストレージ上の癖 / 落とし穴** (= コードを書く前に必ず把握):
+**ストレージ上の癖 / 落とし穴**:
 
-- < 例: 「planet record の slot 2 は X 座標、3 は Y 座標 (engine 内で sample → store で transposed)」 >
-- < 例: 「target column は train.csv では int 型だが test sample submission は float 型」 >
-
----
+- **tensor / initializer 名衝突禁止** (2026-05-06): ONNX graph.input / graph.output の名前と initializer の名前が被ると reject。例: input 名に "input"、output 名に "output" を避ける (neurogolf_utils.py:192-196)。
+- **"kernel_time" 文字列禁止** (2026-05-06): node output 名に "kernel_time" を含むと validator が reject。ONNX Runtime Profiler が自動的に "_kernel_time" suffix をつけるため、node name を output[0] に統一する際に注意 (neurogolf_utils.py:240, 430)。
+- **One-hot encoding**: 各 grid cell [r, c] は色インデックス (0-9) で表現。tensor では [batch=0, color_index, r, c] = 1.0、その他は 0.0。border 外は全て 0 (zero-hot) (neurogolf_utils.py:262-272)。
+- **Grid pad**: 入力 grid が 30x30 未満でも BATCH=1, CHANNELS=10, HEIGHT=30, WIDTH=30 に zero-pad される。test 実行時に grid > 30x30 は ignored される (neurogolf_utils.py:268)。
+- **Shape inference strict mode**: ONNX shape inference は strict_mode=True で実行。すべての tensor dimension が静的 (no symbolic dim、no sequence_type) でないと shape 推論失敗 → memory calculation None → error (neurogolf_utils.py:191)。
 
 ## 1. 評価指標の数式定義
 
 ### 1.1 metric の closed form
 
-<!-- public docs / engine source の数式をそのまま math 表記で。
-     TeX 表記は `$ ... $` インライン、`$$ ... $$` ブロック。 -->
+$$\text{score}_t = \max(1, 25 - \ln(\text{cost}_t))$$
 
-$$\text{metric}(y, \hat{y}) = \cdots$$
+ここで、
 
-出典: < public docs URL > / `engine.py:NNN-NNN`
+$$\text{cost}_t = \text{params}(\text{NN}_t) + \text{memory\_bytes}(\text{NN}_t)$$
 
-### 1.2 metric が依存する column / state
+$t \in \{1, 2, \ldots, 400\}$ = task ID。
 
-- < dependency 1 >
-- < dependency 2 >
+出典: neurogolf_utils.py:454、`verify_network()` 内の点数計算式。
+
+### 1.2 metric が依存する量
+
+- **params(NN)**: ONNX model.graph.initializer (weight tensor) と graph.node[op_type='Constant'] の attribute で定義される定数の要素数合計 (neurogolf_utils.py:291-314)。2026-05-06 より scalar parameter (Constant node の value_ints, value_floats 等) も 1 param ずつ count される (neurogolf_utils.py:308-313)。
+- **memory_bytes(NN)**: ONNX Runtime Profiler (enable_profiling=True) が出力する JSON trace から、各 tensor の最大メモリ占有量を抽出し合計 (neurogolf_utils.py:189-249)。float32 では 4 bytes/param、int8 では 1 bytes/param。
+- **ln()** = 自然対数。
+- **max(1, ...)** = 最低スコア 1 点 (cost が exp(24) ≈ 26B 以上でも必ず 1 点獲得)。
 
 ### 1.3 worst case / best case
 
-- 理論最小値: < value > (条件: < ... >)
-- 理論最大値: < value > (条件: < ... >)
-- starter notebook の score: < value >
+- **理論最小値**: 1 点 (= cost が大きい limit)。例: 全 400 task で score 1 なら total 400。
+- **理論最大値**: 25 点/task (= cost → 0、ただし params ≥ 1 なので不可能に近い)。例: cost = 1 なら score = 25 - ln(1) = 25。
+- **実務的最大値**: cost ≈ 1 程度が限界 (bias 1 + 最小限の weight)。
+- **current LB top**: 7290 / 10000 ≈ 73%。これは平均 18.23 points/task ⟺ 平均 cost ≈ 876 (neurogolf_utils.py の計算から逆算)。
+- **starter benchmark**: 1-layer 3x3 conv (weight only、900 params + float32 memory 3600 bytes = cost 4500) なら score ≈ 16.59/task → 6635/10000 = 66%。
 
----
-
-## 2. ゲーム / データの不変条件 (= 違反すると submission が silent fail / disqualify する)
-
-<!-- agent comp:
-     - action validation rule (forbidden moves が silent drop されるか)
-     - timeout / step limit
-     - resource constraint (ship max, RAM, etc.)
-     tabular / nlp / vision:
-     - submission file format
-     - submission row count (= test set 行数と一致)
-     - probability の合計が 1 になる必要があるか
-     - leak の avoidance ルール -->
+## 2. ゲーム / データの不変条件
 
 | 条件 | 違反時の挙動 | 出典 |
 |---|---|---|
-| | | |
+| ONNX file size ≤ 1.44 MB | submission 全体 reject | neurogolf_utils.py:104, check_network:256 |
+| 禁止 operator: LOOP, SCAN, NONZERO, UNIQUE, SCRIPT, FUNCTION, COMPRESS | validator 内で check (Kaggle engine が reject) | neurogolf_utils.py:103 (note: COMPRESS は 2026-04-30 追加) |
+| 単一入力・単一出力 graph のみ | multi-input / multi-output は None return (2026-05-06) | neurogolf_utils.py:192 |
+| Static shape 必須 (dynamic dim 禁止) | shape_inference fail → memory calc None → error | neurogolf_utils.py:222-228 (dim_param は rejected) |
+| Sequence type / nonpositive tensor dim 禁止 | (2026-05-04) Sequence は rejected、dim ≤ 0 は rejected | neurogolf_utils.py:219, 227 |
+| tensor 名に "kernel_time" を含まない | validator reject (2026-05-06) | neurogolf_utils.py:430 |
+| initializer ∩ (input ∪ output) = ∅ (名衝突禁止) | (2026-05-06) memory calc None | neurogolf_utils.py:195-196 |
+| Custom domain / functions / subgraph 禁止 | (2026-04-30) None return | neurogolf_utils.py:197-206 |
+| Node negative params / memory 禁止 | (2026-04-28) error flag set | neurogolf_utils.py:447-448 |
+| Grid ≤ 30×30 (test data) | > 30×30 は ignored in benchmark | neurogolf_utils.py:268 |
+| Output: 30×30 one-hot encoding | border 外は zero-hot (color 10) | neurogolf_utils.py:275-288, convert_from_numpy() |
 
----
+## 3. 主要 quantity の閉形式
 
-## 3. 主要 quantity の閉形式 / 公式
+### 3.1 1-layer convolution の params 計算
 
-<!-- agent comp 例:
-     - fleet 速度公式: $v(N) = 1 + (v_{max}-1)(\ln N / \ln 1000)^{1.5}$
-     - lead-shot 角度: $\theta = \arctan(\cdots)$
-     - forbidden cone half-angle: $\alpha = \arcsin(R_\odot / D)$
-     tabular / timeseries 例:
-     - target encoding の bias correction
-     - fold split の予測有効性
-     - feature importance の信頼区間 -->
+$$\text{params}_{\text{conv}} = C_{\text{out}} \times C_{\text{in}} \times K_h \times K_w + (\text{bias=optional})$$
 
-### 3.1 < quantity 1 >
+例: $C_{\text{out}} = 10, C_{\text{in}} = 10, K = 3 \times 3$ なら
 
-$$\text{...} = \cdots$$
+$$\text{params}_{\text{conv}} = 10 \times 10 \times 3 \times 3 = 900 \text{ (weight のみ)}$$
 
-| < input > | < output > |
-|---|---|
-| | |
+bias 含む場合は +10、計 910。
 
-出典: < file:line >
+出典: neurogolf_utils.py:401-418 (single_layer_conv2d_network)。kernel_size=3 で kernel_offsets = [-1, 0, 1]、weights shape = [10, 10, 3, 3]。
 
-### 3.2 < quantity 2 >
+### 3.2 Memory footprint (float32)
 
-(同形式)
+$$\text{memory\_bytes}_{\text{float32}} = \text{params} \times 4 \text{ bytes/element}$$
 
----
+例: params = 900 なら memory = 3600 bytes。
+
+Quantized int8:
+
+$$\text{memory\_bytes}_{\text{int8}} = \text{params} \times 1 \text{ byte/element}$$
+
+例: 同じ 900 params で memory = 900 bytes (4× 削減)。
+
+### 3.3 Full cost (params + memory) と score
+
+例: 1-layer 3×3 conv, C_out=C_in=10, float32:
+- params = 900
+- memory = 3600
+- cost = 4500
+- score = max(1, 25 - ln(4500)) = max(1, 25 - 8.412) = **16.588**
+
+400 task 全て cost 4500 なら: $400 \times 16.588 = 6635 / 10000 = 66.35\%$
+
+int8 量子化で cost = 1800 なら score = max(1, 25 - 7.495) = **17.505** → 400 × 17.505 = 7002 / 10000 (+367, +5.5%)。
+
+出典: neurogolf_utils.py:454、verify_network()。
+
+### 3.4 Score range と cost の関数関係
+
+$$\ln(\text{cost}) = 25 - \text{score}$$
+
+score = 20 → cost ≈ 148
+score = 18 → cost ≈ 876 (current LB top)
+score = 16 → cost ≈ 4500 (1-layer baseline)
 
 ## 4. Domain 知識 (W5 出力)
 
@@ -141,28 +171,39 @@ $$\text{...} = \cdots$$
 
 ---
 
-## 5. submission / agent template の制約
-
-<!-- file size limit, memory limit, time limit per row/turn, internet 可否 -->
+## 5. submission / network 制約
 
 | 項目 | 制約 | 出典 |
 |---|---|---|
-| File size | | |
-| Memory | | |
-| Wall time per row/turn | | |
-| Internet during inference | | |
-| External data 可否 | | |
-
----
+| ONNX file size | ≤ 1.44 MB / file | neurogolf_utils.py:104 (_FILESIZE_LIMIT_IN_BYTES) |
+| Submission archive | task001.onnx ~ task400.onnx を zip して提出 | neurogolf_utils.py:verify_network() docstring (implied) |
+| ONNX opset | 10 固定 (ONNX IR version 10) | neurogolf_utils.py:106 (_IR_VERSION, _OPSET_IMPORTS) |
+| Input tensor 名 | "input" (固定) | neurogolf_utils.py:331, 410 |
+| Output tensor 名 | "output" (固定) | neurogolf_utils.py:331, 411 |
+| Input shape | [1, 10, 30, 30] (static) | neurogolf_utils.py:86, 105, 264 |
+| Output shape | [1, 10, 30, 30] (static) | neurogolf_utils.py:105 |
+| Inference time limit | 記載なし (kaggle notebook は ~ 30 min timeout) | (TBD: discussion 確認) |
+| External data | Kaggle 標準規約 (不可) | (standard Kaggle rules) |
+| Internet during inference | 不可 | (standard Kaggle rules) |
+| Constant folding | 有効 (2026-04-28 より params に count される) | neurogolf_utils.py:291-307 (calculate_params, Constant node handling) |
 
 ## 6. これらの第一原理から導かれる「やってはいけないこと」
 
-- < anti-pattern 1 + 数式根拠 >
-- < anti-pattern 2 >
-
----
+- **すべての task に同じ汎用 NN を使う**: cost = params (shared across 400 task) + memory_bytes × 400 になり、1 network で 400 copy のメモリコストを払う。任意の 1 network で cost ≥ 400M → score < 1 (ln(400M) > 25)。task 別最適化必須。
+- **大型 dense layer (> 1000 output channels)**: params > 1M → ln(1M) = 13.8 → score < 12。grid 30×30 で spatial structure を失う dense は非効率。
+- **dynamic shape / symbolic dimension**: shape_inference strict_mode=True で fail → memory = None → error。static shape 必須 (ONNX standard ではなく当コンペ制約)。
+- **tensor 名に "kernel_time" を含める**: Profiler が自動的に "_kernel_time" suffix を追加し、validator がこれを reject。node.name = node.output[0] の pattern で対応 (neurogolf_utils.py:429)。
+- **initializer と input/output の名衝突**: validator check (neurogolf_utils.py:195-196) → None return → rejected。"W", "bias" など無難な命名が必須。
+- **unnecessary bias**: bias = C_out params、数式上 NN 性能に寄与しなければ cost waste。task 別に必要判定する。
+- **float32 で保存し続ける**: int8 量子化で memory 4× 削減可能。cost が ln() に logarithmic なため、削減効果は +0.9 point/task × 400 = +360 点。
+- **Loop / Scan operator 使用**: 禁止リスト (neurogolf_utils.py:103)。dynamic loop や sequential processing は不可能。
 
 ## 7. これらの第一原理から導かれる「優位性の source」
 
-- < advantage 1 + 数式根拠 >
-- < advantage 2 >
+- **task 別最適 architecture 選択**: 例えば tiling task は 1-layer 3×3 conv で sufficient (params = 900)、pure color-swap なら lookup table 風 1×1 conv (params = 100)。architecture を task category に応じて分岐させれば avg cost を 900 → 500 に低下させ、avg score を 18.2 → 19.6 に向上 (+560 点)。
+- **重み hand-craft / training skip**: supervised training を skip、ARC-AGI task の logic を手 analysis / LLM で reverse-engineering し、weight を directly construct。overfit zero + cost 最小化。例: reflect / rotate task なら weight matrix を hard-code。
+- **int8 / sparse quantization**: float32 → int8 で memory 4× 削減。sparse weight (90% zero) さらに活用すれば memory_bytes / params → 0。cost reduction log-sensitive → +5-10% total score gain。
+- **task category clustering + template library**: ARC-explanations.json, arc-primitives.json から task category を抽出 (reflect, rotate, color-map, etc.)。category ごとに fixed NN template を設計し、task parameter tune only。design reuse + cost amortization。
+- **arc_explanations.json の LLM 自動化**: task 自然言語説明 → ONNX graph 自動生成。rule-based pattern matching で logic → graph conversion。manual design overhead reduction。
+- **Initializer vs. Constant node trade-off**: initializer (initializer count toward params) vs. Constant node (attribute count で params)。sparse pattern によって最適化分岐。例: sparse tensor なら sparse_initializer (memory_bytes 削減)。
+- **float16 fallback**: float32 より float16 (2 bytes/param) を試験。accuracy impact verify 後、memory cost 50% 削減可能。ONNX Cast operator で type conversion (cost: 0 params)。

@@ -9,12 +9,12 @@
 
 | # | 軸 | 担当 | 主出力 | 状態 | blocker |
 |---|---|---|---|---|---|
-| 1 | Discussion mining | W1 | `docs/discussion/insights.md`, `<date>.md`, `topics.json` | 🔄 in_progress | - |
-| 2 | Public kernel taxonomy | W2 | `docs/research/public_kernels/INDEX.md` + `<slug>/content.md` × N | 🔄 in_progress | - |
-| 3 | Past similar comps | W3 | `docs/research/past-comps.{dense,kids}.md`, `references.json` | 🔄 in_progress | - |
-| 4 | Host dataset analysis | W4 | `docs/research/host_datasets.md` の EDA 部 | ✅ done (main agent 代行) | - |
-| 5 | Domain knowledge synthesis | W5 | `docs/strategy/first-principles.dense.md` の domain 知識 sect | 🔄 in_progress | - |
-| 6 | First-principles derivation | W6 | `docs/strategy/first-principles.{dense,kids}.md` の数式部 | 🔄 in_progress | - |
+| 1 | Discussion mining | W1 | `docs/discussion/insights.md` (155 行), `2026-05-10.md` (4786 行), `topics.json` (41 topic) | ✅ done | - |
+| 2 | Public kernel taxonomy | W2 | `docs/research/public_kernels/README.md` (155 行) + `<slug>/content.md` × 15 件 (44 unique manifest) | ✅ done | - |
+| 3 | Past similar comps | W3 | `docs/research/past-comps.{dense,kids}.md`, `references.json` (8 records, maximum 2: ARC Prize 2024 + MicroNet 2019) | ✅ done | - |
+| 4 | Host dataset analysis | W4 | `docs/research/host_datasets.md` (CLI + EDA, N=101,718 pair) | ✅ done (main agent 代行) | - |
+| 5 | Domain knowledge synthesis | W5 | `docs/strategy/first-principles.dense.md` §4 (67 行 / SOTA 17 引用) | ✅ done | - |
+| 6 | First-principles derivation | W6 | `docs/strategy/first-principles.{dense,kids}.md` §0/§1/§2/§3/§5/§6/§7 (209 + 63 行) | ✅ done | - |
 
 状態: ⬜ pending → 🔄 in_progress → ✅ done → ❌ failed (再走 1 回後も fail)
 
@@ -26,13 +26,15 @@
 
 | QG | 検査内容 | 結果 | 失敗時の gap |
 |---|---|---|---|
-| QG-1 | host_datasets.md に CLI 出力あり | ✅ pass (Phase 0) | - |
-| QG-2 | host dataset 公開ありなら 1 day DL + EDA N≥1000 | ✅ pass (Phase 0, N=101,718 pair) | - |
-| QG-3 | past-comps.references.json 最低 3 件 | ⬜ pending W3 | - |
-| QG-4 | public_kernels/<slug>/content.md 各々に source URL | ⬜ pending W2 | - |
-| QG-5 | discussion/insights.md 章ごとに source 引用 | ⬜ pending W1 | - |
-| QG-6 | 各 markdown の本文行 日本語比率 ≥ 70% | ⬜ pending all workers | - |
-| QG-7 | exp001-design.md に 3+ 案、各案 4 sect | ⬜ pending Phase 3 | - |
+| QG-1 | host_datasets.md に CLI 出力あり | ✅ pass | - |
+| QG-2 | host dataset 公開ありなら 1 day DL + EDA N≥1000 | ✅ pass (N=101,718 pair) | - |
+| QG-3 | past-comps.references.json 最低 3 件 | ✅ pass (8 records, maximum 2) | - |
+| QG-4 | public_kernels/<slug>/content.md 各々に source URL | ✅ pass (15/15) | - |
+| QG-5 | discussion/insights.md 章ごとに source 引用 | ✅ pass (W1 全章 [#NNN](URL) 引用) | - |
+| QG-6 | 各 markdown の本文行 日本語比率 ≥ 70% | ⚠ 一部 fail (placeholder 多めの skeleton 残存) | lb-observations.kids.md (60%) は worker 担当外で skeleton まま |
+| QG-7 | exp001-design.md に 3+ 案、各案 4 sect | ✅ pass (Phase 3 main agent) | - |
+| QG-8 | critic 反論 ≥ 6 objection | ✅ pass (Phase 4 critic 10 objection / 6 lens 網羅) | - |
+| QG-9 | ONBOARDING_CHECKLIST.md 6 軸全部 ✅ | ✅ pass (このファイルが唯一の self-reference) | - |
 | QG-8 | critic 反論 ≥ 6 objection (likelihood/impact/detectability tag 付) | ⬜ | - |
 | QG-9 | このファイルの 6 軸全部 ✅ | ⬜ | - |
 
