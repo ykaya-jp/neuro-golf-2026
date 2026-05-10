@@ -1,0 +1,24 @@
+{
+  "_meta": {
+    "client": "AgentDispatchClient (manual relay)",
+    "task_id": "task004",
+    "kernel_size": 3,
+    "verdict": "rejected — task004 is object-aware (= shift each connected component, NOT entire grid). 1 layer conv cannot do connected-component analysis.",
+    "lesson": "1 layer conv で解ける task は context-free な color substitution に限定 (task276 のような)。 grid shift を全体に均一適用する task が ARC にあれば 3x3 で解けるが、 ARC は object-aware 変換が支配的。"
+  },
+  "result": {
+    "task_id": "task004",
+    "onnx_size": 3772,
+    "constraint_violations": [],
+    "functional_correct": false,
+    "scorer_ok": true,
+    "cost": 900,
+    "score": 18.197605236675688,
+    "arc_agi_pass": 0,
+    "arc_agi_fail": 3,
+    "arc_gen_pass": 0,
+    "arc_gen_fail": 262,
+    "error": null,
+    "accepted": false
+  }
+}

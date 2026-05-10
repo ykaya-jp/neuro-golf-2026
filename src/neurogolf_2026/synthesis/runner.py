@@ -1,7 +1,9 @@
 """Runner: 抽出 weight_fn → ONNX → score_network で functional correct + scorer_ok 判定."""
 from __future__ import annotations
 
-from collections.abc import Callable
+import threading
+from collections.abc import Callable, Iterator
+from contextlib import contextmanager
 from dataclasses import dataclass
 
 import onnx
@@ -10,6 +12,29 @@ from neurogolf_2026.build_submission import _validate_onnx
 from neurogolf_2026.networks._helpers import single_layer_conv2d_network
 from neurogolf_2026.validate import validate_task
 from neurogolf_2026.networks import REGISTRY
+
+# 並列 dispatch 時の REGISTRY mutation race を防ぐ (= 1 process 内 1 lock)
+# NOTE: multi-process では別途 IPC 必要、 本実装は thread-safe のみ
+_REGISTRY_LOCK = threading.Lock()
+
+
+@contextmanager
+def _temp_registry(task_id: str, model: onnx.ModelProto) -> Iterator[None]:
+    """REGISTRY に task_id → builder を一時 inject、 finally で原状復帰.
+
+    並列 unsafe (= 同一 process 内 multi-thread 想定の Lock 付き) — multi-process は
+    別途 IPC 必要 (= 各 worker が独立 REGISTRY を持つ設計に refactor)。
+    """
+    with _REGISTRY_LOCK:
+        original = REGISTRY.get(task_id)
+        REGISTRY[task_id] = lambda: model
+        try:
+            yield
+        finally:
+            if original is None:
+                REGISTRY.pop(task_id, None)
+            else:
+                REGISTRY[task_id] = original
 
 
 @dataclass
@@ -61,17 +86,9 @@ def run_weight_fn(
     result.constraint_violations = []
 
     # functional correct + scorer_ok を score_network で判定
-    # (validate_task は registry から builder を取るので、registry に投入しない一時 builder を inject する)
-    # 簡易: registry に一時 entry → validate → 元に戻す
-    original = REGISTRY.get(task_id)
-    REGISTRY[task_id] = lambda: model
-    try:
+    # context manager で REGISTRY 一時 inject (= thread-safe、 multi-process は別 IPC 必要)
+    with _temp_registry(task_id, model):
         v = validate_task(task_id, strict=False, verbose=False)
-    finally:
-        if original is None:
-            REGISTRY.pop(task_id, None)
-        else:
-            REGISTRY[task_id] = original
 
     result.arc_agi_pass = v["arc_agi"]["right"]
     result.arc_agi_fail = v["arc_agi"]["wrong"]

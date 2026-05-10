@@ -1,0 +1,8 @@
+```python
+def weight_fn(channel_out, channel_in, kernel_coord):
+    if kernel_coord != (0, -1):
+        return 0.0
+    if channel_out == channel_in:
+        return 1.0
+    return 0.0
+```
