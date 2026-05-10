@@ -1,0 +1,2027 @@
+{
+  "_meta": {
+    "out": "submissions/blended.zip",
+    "zip_size_bytes": 787327,
+    "uncompressed_total_bytes": 3487417,
+    "task_count": 400,
+    "fallback_count": 0,
+    "by_source_count": {
+      "konbu17-may8": 219,
+      "karnakbaevarthur-task-library": 82,
+      "afr1ste-5480-41": 58,
+      "magmacot-new-blending": 40,
+      "karnakbaevarthur-logic": 1
+    },
+    "sources_evaluated": [
+      "konbu17-may8",
+      "afr1ste-5480-41",
+      "jonathanchan-ngc26",
+      "magmacot-new-blending",
+      "konbu17-blended-401-v117",
+      "karnakbaevarthur-task-library",
+      "karnakbaevarthur-logic"
+    ]
+  },
+  "per_task": {
+    "task001": {
+      "source": "konbu17-may8",
+      "size": 1001,
+      "status": "selected"
+    },
+    "task002": {
+      "source": "karnakbaevarthur-task-library",
+      "size": 12396,
+      "status": "selected"
+    },
+    "task003": {
+      "source": "karnakbaevarthur-task-library",
+      "size": 2848,
+      "status": "selected"
+    },
+    "task004": {
+      "source": "afr1ste-5480-41",
+      "size": 2672,
+      "status": "selected"
+    },
+    "task005": {
+      "source": "konbu17-may8",
+      "size": 14885,
+      "status": "selected"
+    },
+    "task006": {
+      "source": "konbu17-may8",
+      "size": 1310,
+      "status": "selected"
+    },
+    "task007": {
+      "source": "afr1ste-5480-41",
+      "size": 1272,
+      "status": "selected"
+    },
+    "task008": {
+      "source": "konbu17-may8",
+      "size": 4647,
+      "status": "selected"
+    },
+    "task009": {
+      "source": "karnakbaevarthur-task-library",
+      "size": 11215,
+      "status": "selected"
+    },
+    "task010": {
+      "source": "karnakbaevarthur-task-library",
+      "size": 4283,
+      "status": "selected"
+    },
+    "task011": {
+      "source": "konbu17-may8",
+      "size": 10283,
+      "status": "selected"
+    },
+    "task012": {
+      "source": "afr1ste-5480-41",
+      "size": 1516,
+      "status": "selected"
+    },
+    "task013": {
+      "source": "konbu17-may8",
+      "size": 22727,
+      "status": "selected"
+    },
+    "task014": {
+      "source": "magmacot-new-blending",
+      "size": 2835,
+      "status": "selected"
+    },
+    "task015": {
+      "source": "konbu17-may8",
+      "size": 3834,
+      "status": "selected"
+    },
+    "task016": {
+      "source": "konbu17-may8",
+      "size": 158,
+      "status": "selected"
+    },
+    "task017": {
+      "source": "afr1ste-5480-41",
+      "size": 10614,
+      "status": "selected"
+    },
+    "task018": {
+      "source": "konbu17-may8",
+      "size": 28217,
+      "status": "selected"
+    },
+    "task019": {
+      "source": "konbu17-may8",
+      "size": 3021,
+      "status": "selected"
+    },
+    "task020": {
+      "source": "konbu17-may8",
+      "size": 14783,
+      "status": "selected"
+    },
+    "task021": {
+      "source": "konbu17-may8",
+      "size": 29463,
+      "status": "selected"
+    },
+    "task022": {
+      "source": "konbu17-may8",
+      "size": 29851,
+      "status": "selected"
+    },
+    "task023": {
+      "source": "magmacot-new-blending",
+      "size": 2795,
+      "status": "selected"
+    },
+    "task024": {
+      "source": "konbu17-may8",
+      "size": 2232,
+      "status": "selected"
+    },
+    "task025": {
+      "source": "konbu17-may8",
+      "size": 61508,
+      "status": "selected"
+    },
+    "task026": {
+      "source": "karnakbaevarthur-task-library",
+      "size": 1551,
+      "status": "selected"
+    },
+    "task027": {
+      "source": "konbu17-may8",
+      "size": 31059,
+      "status": "selected"
+    },
+    "task028": {
+      "source": "karnakbaevarthur-task-library",
+      "size": 2174,
+      "status": "selected"
+    },
+    "task029": {
+      "source": "afr1ste-5480-41",
+      "size": 12396,
+      "status": "selected"
+    },
+    "task030": {
+      "source": "magmacot-new-blending",
+      "size": 5691,
+      "status": "selected"
+    },
+    "task031": {
+      "source": "magmacot-new-blending",
+      "size": 1982,
+      "status": "selected"
+    },
+    "task032": {
+      "source": "konbu17-may8",
+      "size": 1654,
+      "status": "selected"
+    },
+    "task033": {
+      "source": "konbu17-may8",
+      "size": 1311,
+      "status": "selected"
+    },
+    "task034": {
+      "source": "afr1ste-5480-41",
+      "size": 13710,
+      "status": "selected"
+    },
+    "task035": {
+      "source": "afr1ste-5480-41",
+      "size": 9397,
+      "status": "selected"
+    },
+    "task036": {
+      "source": "magmacot-new-blending",
+      "size": 3416,
+      "status": "selected"
+    },
+    "task037": {
+      "source": "konbu17-may8",
+      "size": 10137,
+      "status": "selected"
+    },
+    "task038": {
+      "source": "karnakbaevarthur-task-library",
+      "size": 1699,
+      "status": "selected"
+    },
+    "task039": {
+      "source": "afr1ste-5480-41",
+      "size": 1675,
+      "status": "selected"
+    },
+    "task040": {
+      "source": "konbu17-may8",
+      "size": 3111,
+      "status": "selected"
+    },
+    "task041": {
+      "source": "konbu17-may8",
+      "size": 1313,
+      "status": "selected"
+    },
+    "task042": {
+      "source": "konbu17-may8",
+      "size": 9477,
+      "status": "selected"
+    },
+    "task043": {
+      "source": "konbu17-may8",
+      "size": 1181,
+      "status": "selected"
+    },
+    "task044": {
+      "source": "afr1ste-5480-41",
+      "size": 25359,
+      "status": "selected"
+    },
+    "task045": {
+      "source": "afr1ste-5480-41",
+      "size": 932,
+      "status": "selected"
+    },
+    "task046": {
+      "source": "afr1ste-5480-41",
+      "size": 8947,
+      "status": "selected"
+    },
+    "task047": {
+      "source": "magmacot-new-blending",
+      "size": 1841,
+      "status": "selected"
+    },
+    "task048": {
+      "source": "konbu17-may8",
+      "size": 5977,
+      "status": "selected"
+    },
+    "task049": {
+      "source": "karnakbaevarthur-task-library",
+      "size": 2586,
+      "status": "selected"
+    },
+    "task050": {
+      "source": "karnakbaevarthur-task-library",
+      "size": 1200,
+      "status": "selected"
+    },
+    "task051": {
+      "source": "konbu17-may8",
+      "size": 8106,
+      "status": "selected"
+    },
+    "task052": {
+      "source": "konbu17-may8",
+      "size": 918,
+      "status": "selected"
+    },
+    "task053": {
+      "source": "magmacot-new-blending",
+      "size": 167,
+      "status": "selected"
+    },
+    "task054": {
+      "source": "konbu17-may8",
+      "size": 8955,
+      "status": "selected"
+    },
+    "task055": {
+      "source": "konbu17-may8",
+      "size": 14976,
+      "status": "selected"
+    },
+    "task056": {
+      "source": "konbu17-may8",
+      "size": 1471,
+      "status": "selected"
+    },
+    "task057": {
+      "source": "karnakbaevarthur-task-library",
+      "size": 1031,
+      "status": "selected"
+    },
+    "task058": {
+      "source": "konbu17-may8",
+      "size": 26982,
+      "status": "selected"
+    },
+    "task059": {
+      "source": "karnakbaevarthur-task-library",
+      "size": 2903,
+      "status": "selected"
+    },
+    "task060": {
+      "source": "konbu17-may8",
+      "size": 2234,
+      "status": "selected"
+    },
+    "task061": {
+      "source": "konbu17-may8",
+      "size": 16988,
+      "status": "selected"
+    },
+    "task062": {
+      "source": "afr1ste-5480-41",
+      "size": 14313,
+      "status": "selected"
+    },
+    "task063": {
+      "source": "karnakbaevarthur-task-library",
+      "size": 2197,
+      "status": "selected"
+    },
+    "task064": {
+      "source": "konbu17-may8",
+      "size": 4579,
+      "status": "selected"
+    },
+    "task065": {
+      "source": "konbu17-may8",
+      "size": 1908,
+      "status": "selected"
+    },
+    "task066": {
+      "source": "konbu17-may8",
+      "size": 22387,
+      "status": "selected"
+    },
+    "task067": {
+      "source": "karnakbaevarthur-task-library",
+      "size": 147,
+      "status": "selected"
+    },
+    "task068": {
+      "source": "konbu17-may8",
+      "size": 1520,
+      "status": "selected"
+    },
+    "task069": {
+      "source": "afr1ste-5480-41",
+      "size": 36370,
+      "status": "selected"
+    },
+    "task070": {
+      "source": "afr1ste-5480-41",
+      "size": 6690,
+      "status": "selected"
+    },
+    "task071": {
+      "source": "magmacot-new-blending",
+      "size": 11741,
+      "status": "selected"
+    },
+    "task072": {
+      "source": "karnakbaevarthur-task-library",
+      "size": 1623,
+      "status": "selected"
+    },
+    "task073": {
+      "source": "konbu17-may8",
+      "size": 1388,
+      "status": "selected"
+    },
+    "task074": {
+      "source": "magmacot-new-blending",
+      "size": 1846,
+      "status": "selected"
+    },
+    "task075": {
+      "source": "konbu17-may8",
+      "size": 7717,
+      "status": "selected"
+    },
+    "task076": {
+      "source": "konbu17-may8",
+      "size": 21727,
+      "status": "selected"
+    },
+    "task077": {
+      "source": "konbu17-may8",
+      "size": 11626,
+      "status": "selected"
+    },
+    "task078": {
+      "source": "karnakbaevarthur-task-library",
+      "size": 1812,
+      "status": "selected"
+    },
+    "task079": {
+      "source": "afr1ste-5480-41",
+      "size": 2165,
+      "status": "selected"
+    },
+    "task080": {
+      "source": "afr1ste-5480-41",
+      "size": 20621,
+      "status": "selected"
+    },
+    "task081": {
+      "source": "konbu17-may8",
+      "size": 3537,
+      "status": "selected"
+    },
+    "task082": {
+      "source": "konbu17-may8",
+      "size": 1755,
+      "status": "selected"
+    },
+    "task083": {
+      "source": "konbu17-may8",
+      "size": 923,
+      "status": "selected"
+    },
+    "task084": {
+      "source": "konbu17-may8",
+      "size": 1945,
+      "status": "selected"
+    },
+    "task085": {
+      "source": "konbu17-may8",
+      "size": 2013,
+      "status": "selected"
+    },
+    "task086": {
+      "source": "afr1ste-5480-41",
+      "size": 3399,
+      "status": "selected"
+    },
+    "task087": {
+      "source": "konbu17-may8",
+      "size": 435,
+      "status": "selected"
+    },
+    "task088": {
+      "source": "konbu17-may8",
+      "size": 12966,
+      "status": "selected"
+    },
+    "task089": {
+      "source": "magmacot-new-blending",
+      "size": 19484,
+      "status": "selected"
+    },
+    "task090": {
+      "source": "konbu17-may8",
+      "size": 19479,
+      "status": "selected"
+    },
+    "task091": {
+      "source": "afr1ste-5480-41",
+      "size": 2984,
+      "status": "selected"
+    },
+    "task092": {
+      "source": "karnakbaevarthur-task-library",
+      "size": 2049,
+      "status": "selected"
+    },
+    "task093": {
+      "source": "konbu17-may8",
+      "size": 3751,
+      "status": "selected"
+    },
+    "task094": {
+      "source": "konbu17-may8",
+      "size": 2051,
+      "status": "selected"
+    },
+    "task095": {
+      "source": "karnakbaevarthur-task-library",
+      "size": 729,
+      "status": "selected"
+    },
+    "task096": {
+      "source": "afr1ste-5480-41",
+      "size": 19499,
+      "status": "selected"
+    },
+    "task097": {
+      "source": "konbu17-may8",
+      "size": 2695,
+      "status": "selected"
+    },
+    "task098": {
+      "source": "afr1ste-5480-41",
+      "size": 1086,
+      "status": "selected"
+    },
+    "task099": {
+      "source": "konbu17-may8",
+      "size": 6509,
+      "status": "selected"
+    },
+    "task100": {
+      "source": "karnakbaevarthur-task-library",
+      "size": 4773,
+      "status": "selected"
+    },
+    "task101": {
+      "source": "afr1ste-5480-41",
+      "size": 32723,
+      "status": "selected"
+    },
+    "task102": {
+      "source": "konbu17-may8",
+      "size": 36416,
+      "status": "selected"
+    },
+    "task103": {
+      "source": "karnakbaevarthur-task-library",
+      "size": 1443,
+      "status": "selected"
+    },
+    "task104": {
+      "source": "konbu17-may8",
+      "size": 5723,
+      "status": "selected"
+    },
+    "task105": {
+      "source": "konbu17-may8",
+      "size": 35077,
+      "status": "selected"
+    },
+    "task106": {
+      "source": "konbu17-may8",
+      "size": 2939,
+      "status": "selected"
+    },
+    "task107": {
+      "source": "magmacot-new-blending",
+      "size": 58097,
+      "status": "selected"
+    },
+    "task108": {
+      "source": "magmacot-new-blending",
+      "size": 3957,
+      "status": "selected"
+    },
+    "task109": {
+      "source": "konbu17-may8",
+      "size": 3836,
+      "status": "selected"
+    },
+    "task110": {
+      "source": "konbu17-may8",
+      "size": 16176,
+      "status": "selected"
+    },
+    "task111": {
+      "source": "afr1ste-5480-41",
+      "size": 1457,
+      "status": "selected"
+    },
+    "task112": {
+      "source": "konbu17-may8",
+      "size": 3852,
+      "status": "selected"
+    },
+    "task113": {
+      "source": "konbu17-may8",
+      "size": 499,
+      "status": "selected"
+    },
+    "task114": {
+      "source": "afr1ste-5480-41",
+      "size": 2288,
+      "status": "selected"
+    },
+    "task115": {
+      "source": "magmacot-new-blending",
+      "size": 3652,
+      "status": "selected"
+    },
+    "task116": {
+      "source": "konbu17-may8",
+      "size": 479,
+      "status": "selected"
+    },
+    "task117": {
+      "source": "konbu17-may8",
+      "size": 10682,
+      "status": "selected"
+    },
+    "task118": {
+      "source": "afr1ste-5480-41",
+      "size": 18974,
+      "status": "selected"
+    },
+    "task119": {
+      "source": "konbu17-may8",
+      "size": 48756,
+      "status": "selected"
+    },
+    "task120": {
+      "source": "karnakbaevarthur-task-library",
+      "size": 3834,
+      "status": "selected"
+    },
+    "task121": {
+      "source": "afr1ste-5480-41",
+      "size": 3339,
+      "status": "selected"
+    },
+    "task122": {
+      "source": "konbu17-may8",
+      "size": 3438,
+      "status": "selected"
+    },
+    "task123": {
+      "source": "konbu17-may8",
+      "size": 8565,
+      "status": "selected"
+    },
+    "task124": {
+      "source": "afr1ste-5480-41",
+      "size": 2821,
+      "status": "selected"
+    },
+    "task125": {
+      "source": "konbu17-may8",
+      "size": 2003,
+      "status": "selected"
+    },
+    "task126": {
+      "source": "konbu17-may8",
+      "size": 2488,
+      "status": "selected"
+    },
+    "task127": {
+      "source": "magmacot-new-blending",
+      "size": 2103,
+      "status": "selected"
+    },
+    "task128": {
+      "source": "afr1ste-5480-41",
+      "size": 3224,
+      "status": "selected"
+    },
+    "task129": {
+      "source": "konbu17-may8",
+      "size": 1196,
+      "status": "selected"
+    },
+    "task130": {
+      "source": "afr1ste-5480-41",
+      "size": 1012,
+      "status": "selected"
+    },
+    "task131": {
+      "source": "konbu17-may8",
+      "size": 12240,
+      "status": "selected"
+    },
+    "task132": {
+      "source": "karnakbaevarthur-task-library",
+      "size": 1988,
+      "status": "selected"
+    },
+    "task133": {
+      "source": "konbu17-may8",
+      "size": 189849,
+      "status": "selected"
+    },
+    "task134": {
+      "source": "konbu17-may8",
+      "size": 7188,
+      "status": "selected"
+    },
+    "task135": {
+      "source": "konbu17-may8",
+      "size": 346,
+      "status": "selected"
+    },
+    "task136": {
+      "source": "konbu17-may8",
+      "size": 8371,
+      "status": "selected"
+    },
+    "task137": {
+      "source": "konbu17-may8",
+      "size": 2340,
+      "status": "selected"
+    },
+    "task138": {
+      "source": "konbu17-may8",
+      "size": 10853,
+      "status": "selected"
+    },
+    "task139": {
+      "source": "konbu17-may8",
+      "size": 1588,
+      "status": "selected"
+    },
+    "task140": {
+      "source": "konbu17-may8",
+      "size": 435,
+      "status": "selected"
+    },
+    "task141": {
+      "source": "konbu17-may8",
+      "size": 1743,
+      "status": "selected"
+    },
+    "task142": {
+      "source": "konbu17-may8",
+      "size": 915,
+      "status": "selected"
+    },
+    "task143": {
+      "source": "magmacot-new-blending",
+      "size": 1543,
+      "status": "selected"
+    },
+    "task144": {
+      "source": "karnakbaevarthur-task-library",
+      "size": 1559,
+      "status": "selected"
+    },
+    "task145": {
+      "source": "konbu17-may8",
+      "size": 32048,
+      "status": "selected"
+    },
+    "task146": {
+      "source": "konbu17-may8",
+      "size": 1351,
+      "status": "selected"
+    },
+    "task147": {
+      "source": "konbu17-may8",
+      "size": 1306,
+      "status": "selected"
+    },
+    "task148": {
+      "source": "konbu17-may8",
+      "size": 10335,
+      "status": "selected"
+    },
+    "task149": {
+      "source": "konbu17-may8",
+      "size": 1420,
+      "status": "selected"
+    },
+    "task150": {
+      "source": "konbu17-may8",
+      "size": 1054,
+      "status": "selected"
+    },
+    "task151": {
+      "source": "afr1ste-5480-41",
+      "size": 1808,
+      "status": "selected"
+    },
+    "task152": {
+      "source": "konbu17-may8",
+      "size": 915,
+      "status": "selected"
+    },
+    "task153": {
+      "source": "afr1ste-5480-41",
+      "size": 4925,
+      "status": "selected"
+    },
+    "task154": {
+      "source": "konbu17-may8",
+      "size": 2826,
+      "status": "selected"
+    },
+    "task155": {
+      "source": "konbu17-may8",
+      "size": 1054,
+      "status": "selected"
+    },
+    "task156": {
+      "source": "konbu17-may8",
+      "size": 9218,
+      "status": "selected"
+    },
+    "task157": {
+      "source": "magmacot-new-blending",
+      "size": 11155,
+      "status": "selected"
+    },
+    "task158": {
+      "source": "konbu17-may8",
+      "size": 159472,
+      "status": "selected"
+    },
+    "task159": {
+      "source": "konbu17-may8",
+      "size": 20168,
+      "status": "selected"
+    },
+    "task160": {
+      "source": "karnakbaevarthur-task-library",
+      "size": 1506,
+      "status": "selected"
+    },
+    "task161": {
+      "source": "karnakbaevarthur-task-library",
+      "size": 2323,
+      "status": "selected"
+    },
+    "task162": {
+      "source": "karnakbaevarthur-task-library",
+      "size": 1317,
+      "status": "selected"
+    },
+    "task163": {
+      "source": "konbu17-may8",
+      "size": 13789,
+      "status": "selected"
+    },
+    "task164": {
+      "source": "konbu17-may8",
+      "size": 479,
+      "status": "selected"
+    },
+    "task165": {
+      "source": "konbu17-may8",
+      "size": 6369,
+      "status": "selected"
+    },
+    "task166": {
+      "source": "konbu17-may8",
+      "size": 1246,
+      "status": "selected"
+    },
+    "task167": {
+      "source": "konbu17-may8",
+      "size": 2375,
+      "status": "selected"
+    },
+    "task168": {
+      "source": "konbu17-may8",
+      "size": 8303,
+      "status": "selected"
+    },
+    "task169": {
+      "source": "karnakbaevarthur-task-library",
+      "size": 2955,
+      "status": "selected"
+    },
+    "task170": {
+      "source": "konbu17-may8",
+      "size": 47329,
+      "status": "selected"
+    },
+    "task171": {
+      "source": "konbu17-may8",
+      "size": 1636,
+      "status": "selected"
+    },
+    "task172": {
+      "source": "konbu17-may8",
+      "size": 479,
+      "status": "selected"
+    },
+    "task173": {
+      "source": "magmacot-new-blending",
+      "size": 5511,
+      "status": "selected"
+    },
+    "task174": {
+      "source": "afr1ste-5480-41",
+      "size": 53737,
+      "status": "selected"
+    },
+    "task175": {
+      "source": "konbu17-may8",
+      "size": 5068,
+      "status": "selected"
+    },
+    "task176": {
+      "source": "konbu17-may8",
+      "size": 1218,
+      "status": "selected"
+    },
+    "task177": {
+      "source": "magmacot-new-blending",
+      "size": 2579,
+      "status": "selected"
+    },
+    "task178": {
+      "source": "afr1ste-5480-41",
+      "size": 11224,
+      "status": "selected"
+    },
+    "task179": {
+      "source": "konbu17-may8",
+      "size": 170,
+      "status": "selected"
+    },
+    "task180": {
+      "source": "konbu17-may8",
+      "size": 1458,
+      "status": "selected"
+    },
+    "task181": {
+      "source": "konbu17-may8",
+      "size": 1230,
+      "status": "selected"
+    },
+    "task182": {
+      "source": "magmacot-new-blending",
+      "size": 57608,
+      "status": "selected"
+    },
+    "task183": {
+      "source": "magmacot-new-blending",
+      "size": 3348,
+      "status": "selected"
+    },
+    "task184": {
+      "source": "konbu17-may8",
+      "size": 6823,
+      "status": "selected"
+    },
+    "task185": {
+      "source": "konbu17-may8",
+      "size": 16320,
+      "status": "selected"
+    },
+    "task186": {
+      "source": "konbu17-may8",
+      "size": 2418,
+      "status": "selected"
+    },
+    "task187": {
+      "source": "konbu17-may8",
+      "size": 6346,
+      "status": "selected"
+    },
+    "task188": {
+      "source": "karnakbaevarthur-task-library",
+      "size": 147,
+      "status": "selected"
+    },
+    "task189": {
+      "source": "afr1ste-5480-41",
+      "size": 8522,
+      "status": "selected"
+    },
+    "task190": {
+      "source": "konbu17-may8",
+      "size": 7038,
+      "status": "selected"
+    },
+    "task191": {
+      "source": "konbu17-may8",
+      "size": 8552,
+      "status": "selected"
+    },
+    "task192": {
+      "source": "karnakbaevarthur-task-library",
+      "size": 1290,
+      "status": "selected"
+    },
+    "task193": {
+      "source": "karnakbaevarthur-task-library",
+      "size": 913,
+      "status": "selected"
+    },
+    "task194": {
+      "source": "karnakbaevarthur-task-library",
+      "size": 4047,
+      "status": "selected"
+    },
+    "task195": {
+      "source": "magmacot-new-blending",
+      "size": 6438,
+      "status": "selected"
+    },
+    "task196": {
+      "source": "karnakbaevarthur-task-library",
+      "size": 1964,
+      "status": "selected"
+    },
+    "task197": {
+      "source": "konbu17-may8",
+      "size": 1165,
+      "status": "selected"
+    },
+    "task198": {
+      "source": "konbu17-may8",
+      "size": 8467,
+      "status": "selected"
+    },
+    "task199": {
+      "source": "konbu17-may8",
+      "size": 2222,
+      "status": "selected"
+    },
+    "task200": {
+      "source": "konbu17-may8",
+      "size": 2442,
+      "status": "selected"
+    },
+    "task201": {
+      "source": "konbu17-may8",
+      "size": 12203,
+      "status": "selected"
+    },
+    "task202": {
+      "source": "konbu17-may8",
+      "size": 5974,
+      "status": "selected"
+    },
+    "task203": {
+      "source": "konbu17-may8",
+      "size": 7997,
+      "status": "selected"
+    },
+    "task204": {
+      "source": "konbu17-may8",
+      "size": 2713,
+      "status": "selected"
+    },
+    "task205": {
+      "source": "magmacot-new-blending",
+      "size": 28211,
+      "status": "selected"
+    },
+    "task206": {
+      "source": "konbu17-may8",
+      "size": 19041,
+      "status": "selected"
+    },
+    "task207": {
+      "source": "konbu17-may8",
+      "size": 1759,
+      "status": "selected"
+    },
+    "task208": {
+      "source": "konbu17-may8",
+      "size": 19596,
+      "status": "selected"
+    },
+    "task209": {
+      "source": "afr1ste-5480-41",
+      "size": 60426,
+      "status": "selected"
+    },
+    "task210": {
+      "source": "konbu17-may8",
+      "size": 479,
+      "status": "selected"
+    },
+    "task211": {
+      "source": "magmacot-new-blending",
+      "size": 3957,
+      "status": "selected"
+    },
+    "task212": {
+      "source": "karnakbaevarthur-task-library",
+      "size": 3235,
+      "status": "selected"
+    },
+    "task213": {
+      "source": "afr1ste-5480-41",
+      "size": 15720,
+      "status": "selected"
+    },
+    "task214": {
+      "source": "karnakbaevarthur-task-library",
+      "size": 4047,
+      "status": "selected"
+    },
+    "task215": {
+      "source": "konbu17-may8",
+      "size": 3024,
+      "status": "selected"
+    },
+    "task216": {
+      "source": "konbu17-may8",
+      "size": 17269,
+      "status": "selected"
+    },
+    "task217": {
+      "source": "magmacot-new-blending",
+      "size": 4218,
+      "status": "selected"
+    },
+    "task218": {
+      "source": "afr1ste-5480-41",
+      "size": 9724,
+      "status": "selected"
+    },
+    "task219": {
+      "source": "konbu17-may8",
+      "size": 59685,
+      "status": "selected"
+    },
+    "task220": {
+      "source": "karnakbaevarthur-task-library",
+      "size": 1594,
+      "status": "selected"
+    },
+    "task221": {
+      "source": "konbu17-may8",
+      "size": 21930,
+      "status": "selected"
+    },
+    "task222": {
+      "source": "karnakbaevarthur-task-library",
+      "size": 1496,
+      "status": "selected"
+    },
+    "task223": {
+      "source": "karnakbaevarthur-task-library",
+      "size": 825,
+      "status": "selected"
+    },
+    "task224": {
+      "source": "karnakbaevarthur-task-library",
+      "size": 4121,
+      "status": "selected"
+    },
+    "task225": {
+      "source": "konbu17-may8",
+      "size": 5386,
+      "status": "selected"
+    },
+    "task226": {
+      "source": "karnakbaevarthur-task-library",
+      "size": 3374,
+      "status": "selected"
+    },
+    "task227": {
+      "source": "konbu17-may8",
+      "size": 1417,
+      "status": "selected"
+    },
+    "task228": {
+      "source": "afr1ste-5480-41",
+      "size": 4406,
+      "status": "selected"
+    },
+    "task229": {
+      "source": "karnakbaevarthur-task-library",
+      "size": 675,
+      "status": "selected"
+    },
+    "task230": {
+      "source": "karnakbaevarthur-task-library",
+      "size": 1894,
+      "status": "selected"
+    },
+    "task231": {
+      "source": "magmacot-new-blending",
+      "size": 3402,
+      "status": "selected"
+    },
+    "task232": {
+      "source": "konbu17-may8",
+      "size": 1684,
+      "status": "selected"
+    },
+    "task233": {
+      "source": "konbu17-may8",
+      "size": 39834,
+      "status": "selected"
+    },
+    "task234": {
+      "source": "konbu17-may8",
+      "size": 13394,
+      "status": "selected"
+    },
+    "task235": {
+      "source": "konbu17-may8",
+      "size": 3900,
+      "status": "selected"
+    },
+    "task236": {
+      "source": "karnakbaevarthur-task-library",
+      "size": 1505,
+      "status": "selected"
+    },
+    "task237": {
+      "source": "konbu17-may8",
+      "size": 2210,
+      "status": "selected"
+    },
+    "task238": {
+      "source": "afr1ste-5480-41",
+      "size": 13857,
+      "status": "selected"
+    },
+    "task239": {
+      "source": "afr1ste-5480-41",
+      "size": 3785,
+      "status": "selected"
+    },
+    "task240": {
+      "source": "konbu17-may8",
+      "size": 3841,
+      "status": "selected"
+    },
+    "task241": {
+      "source": "konbu17-may8",
+      "size": 170,
+      "status": "selected"
+    },
+    "task242": {
+      "source": "afr1ste-5480-41",
+      "size": 1168,
+      "status": "selected"
+    },
+    "task243": {
+      "source": "konbu17-may8",
+      "size": 17458,
+      "status": "selected"
+    },
+    "task244": {
+      "source": "magmacot-new-blending",
+      "size": 3037,
+      "status": "selected"
+    },
+    "task245": {
+      "source": "konbu17-may8",
+      "size": 3138,
+      "status": "selected"
+    },
+    "task246": {
+      "source": "karnakbaevarthur-task-library",
+      "size": 2482,
+      "status": "selected"
+    },
+    "task247": {
+      "source": "konbu17-may8",
+      "size": 2063,
+      "status": "selected"
+    },
+    "task248": {
+      "source": "konbu17-may8",
+      "size": 1636,
+      "status": "selected"
+    },
+    "task249": {
+      "source": "konbu17-may8",
+      "size": 1635,
+      "status": "selected"
+    },
+    "task250": {
+      "source": "karnakbaevarthur-task-library",
+      "size": 2683,
+      "status": "selected"
+    },
+    "task251": {
+      "source": "konbu17-may8",
+      "size": 6992,
+      "status": "selected"
+    },
+    "task252": {
+      "source": "konbu17-may8",
+      "size": 3972,
+      "status": "selected"
+    },
+    "task253": {
+      "source": "magmacot-new-blending",
+      "size": 2619,
+      "status": "selected"
+    },
+    "task254": {
+      "source": "karnakbaevarthur-task-library",
+      "size": 5815,
+      "status": "selected"
+    },
+    "task255": {
+      "source": "konbu17-may8",
+      "size": 34023,
+      "status": "selected"
+    },
+    "task256": {
+      "source": "konbu17-may8",
+      "size": 7365,
+      "status": "selected"
+    },
+    "task257": {
+      "source": "konbu17-may8",
+      "size": 1096,
+      "status": "selected"
+    },
+    "task258": {
+      "source": "karnakbaevarthur-logic",
+      "size": 3834,
+      "status": "selected"
+    },
+    "task259": {
+      "source": "karnakbaevarthur-task-library",
+      "size": 3233,
+      "status": "selected"
+    },
+    "task260": {
+      "source": "konbu17-may8",
+      "size": 2466,
+      "status": "selected"
+    },
+    "task261": {
+      "source": "karnakbaevarthur-task-library",
+      "size": 973,
+      "status": "selected"
+    },
+    "task262": {
+      "source": "afr1ste-5480-41",
+      "size": 1308,
+      "status": "selected"
+    },
+    "task263": {
+      "source": "karnakbaevarthur-task-library",
+      "size": 1827,
+      "status": "selected"
+    },
+    "task264": {
+      "source": "konbu17-may8",
+      "size": 11409,
+      "status": "selected"
+    },
+    "task265": {
+      "source": "konbu17-may8",
+      "size": 2945,
+      "status": "selected"
+    },
+    "task266": {
+      "source": "karnakbaevarthur-task-library",
+      "size": 2066,
+      "status": "selected"
+    },
+    "task267": {
+      "source": "konbu17-may8",
+      "size": 1321,
+      "status": "selected"
+    },
+    "task268": {
+      "source": "konbu17-may8",
+      "size": 18815,
+      "status": "selected"
+    },
+    "task269": {
+      "source": "konbu17-may8",
+      "size": 2387,
+      "status": "selected"
+    },
+    "task270": {
+      "source": "karnakbaevarthur-task-library",
+      "size": 3804,
+      "status": "selected"
+    },
+    "task271": {
+      "source": "magmacot-new-blending",
+      "size": 1423,
+      "status": "selected"
+    },
+    "task272": {
+      "source": "konbu17-may8",
+      "size": 1297,
+      "status": "selected"
+    },
+    "task273": {
+      "source": "konbu17-may8",
+      "size": 1601,
+      "status": "selected"
+    },
+    "task274": {
+      "source": "konbu17-may8",
+      "size": 3619,
+      "status": "selected"
+    },
+    "task275": {
+      "source": "afr1ste-5480-41",
+      "size": 29458,
+      "status": "selected"
+    },
+    "task276": {
+      "source": "magmacot-new-blending",
+      "size": 203,
+      "status": "selected"
+    },
+    "task277": {
+      "source": "karnakbaevarthur-task-library",
+      "size": 12126,
+      "status": "selected"
+    },
+    "task278": {
+      "source": "afr1ste-5480-41",
+      "size": 2853,
+      "status": "selected"
+    },
+    "task279": {
+      "source": "konbu17-may8",
+      "size": 4651,
+      "status": "selected"
+    },
+    "task280": {
+      "source": "konbu17-may8",
+      "size": 11540,
+      "status": "selected"
+    },
+    "task281": {
+      "source": "karnakbaevarthur-task-library",
+      "size": 3342,
+      "status": "selected"
+    },
+    "task282": {
+      "source": "konbu17-may8",
+      "size": 3834,
+      "status": "selected"
+    },
+    "task283": {
+      "source": "konbu17-may8",
+      "size": 2116,
+      "status": "selected"
+    },
+    "task284": {
+      "source": "afr1ste-5480-41",
+      "size": 4304,
+      "status": "selected"
+    },
+    "task285": {
+      "source": "konbu17-may8",
+      "size": 98389,
+      "status": "selected"
+    },
+    "task286": {
+      "source": "konbu17-may8",
+      "size": 14243,
+      "status": "selected"
+    },
+    "task287": {
+      "source": "konbu17-may8",
+      "size": 1011,
+      "status": "selected"
+    },
+    "task288": {
+      "source": "karnakbaevarthur-task-library",
+      "size": 6279,
+      "status": "selected"
+    },
+    "task289": {
+      "source": "konbu17-may8",
+      "size": 2005,
+      "status": "selected"
+    },
+    "task290": {
+      "source": "afr1ste-5480-41",
+      "size": 1846,
+      "status": "selected"
+    },
+    "task291": {
+      "source": "konbu17-may8",
+      "size": 5900,
+      "status": "selected"
+    },
+    "task292": {
+      "source": "konbu17-may8",
+      "size": 1209,
+      "status": "selected"
+    },
+    "task293": {
+      "source": "konbu17-may8",
+      "size": 7175,
+      "status": "selected"
+    },
+    "task294": {
+      "source": "magmacot-new-blending",
+      "size": 987,
+      "status": "selected"
+    },
+    "task295": {
+      "source": "konbu17-may8",
+      "size": 1994,
+      "status": "selected"
+    },
+    "task296": {
+      "source": "konbu17-may8",
+      "size": 2704,
+      "status": "selected"
+    },
+    "task297": {
+      "source": "konbu17-may8",
+      "size": 2296,
+      "status": "selected"
+    },
+    "task298": {
+      "source": "konbu17-may8",
+      "size": 4216,
+      "status": "selected"
+    },
+    "task299": {
+      "source": "karnakbaevarthur-task-library",
+      "size": 1037,
+      "status": "selected"
+    },
+    "task300": {
+      "source": "magmacot-new-blending",
+      "size": 2476,
+      "status": "selected"
+    },
+    "task301": {
+      "source": "karnakbaevarthur-task-library",
+      "size": 19199,
+      "status": "selected"
+    },
+    "task302": {
+      "source": "karnakbaevarthur-task-library",
+      "size": 2037,
+      "status": "selected"
+    },
+    "task303": {
+      "source": "konbu17-may8",
+      "size": 1855,
+      "status": "selected"
+    },
+    "task304": {
+      "source": "konbu17-may8",
+      "size": 1547,
+      "status": "selected"
+    },
+    "task305": {
+      "source": "konbu17-may8",
+      "size": 1683,
+      "status": "selected"
+    },
+    "task306": {
+      "source": "karnakbaevarthur-task-library",
+      "size": 2845,
+      "status": "selected"
+    },
+    "task307": {
+      "source": "magmacot-new-blending",
+      "size": 2326,
+      "status": "selected"
+    },
+    "task308": {
+      "source": "karnakbaevarthur-task-library",
+      "size": 3991,
+      "status": "selected"
+    },
+    "task309": {
+      "source": "magmacot-new-blending",
+      "size": 203,
+      "status": "selected"
+    },
+    "task310": {
+      "source": "magmacot-new-blending",
+      "size": 2835,
+      "status": "selected"
+    },
+    "task311": {
+      "source": "konbu17-may8",
+      "size": 479,
+      "status": "selected"
+    },
+    "task312": {
+      "source": "konbu17-may8",
+      "size": 788,
+      "status": "selected"
+    },
+    "task313": {
+      "source": "konbu17-may8",
+      "size": 39724,
+      "status": "selected"
+    },
+    "task314": {
+      "source": "karnakbaevarthur-task-library",
+      "size": 1979,
+      "status": "selected"
+    },
+    "task315": {
+      "source": "karnakbaevarthur-task-library",
+      "size": 1201,
+      "status": "selected"
+    },
+    "task316": {
+      "source": "konbu17-may8",
+      "size": 3697,
+      "status": "selected"
+    },
+    "task317": {
+      "source": "karnakbaevarthur-task-library",
+      "size": 696,
+      "status": "selected"
+    },
+    "task318": {
+      "source": "karnakbaevarthur-task-library",
+      "size": 1533,
+      "status": "selected"
+    },
+    "task319": {
+      "source": "konbu17-may8",
+      "size": 11412,
+      "status": "selected"
+    },
+    "task320": {
+      "source": "karnakbaevarthur-task-library",
+      "size": 842,
+      "status": "selected"
+    },
+    "task321": {
+      "source": "konbu17-may8",
+      "size": 1931,
+      "status": "selected"
+    },
+    "task322": {
+      "source": "konbu17-may8",
+      "size": 968,
+      "status": "selected"
+    },
+    "task323": {
+      "source": "afr1ste-5480-41",
+      "size": 6507,
+      "status": "selected"
+    },
+    "task324": {
+      "source": "konbu17-may8",
+      "size": 92671,
+      "status": "selected"
+    },
+    "task325": {
+      "source": "konbu17-may8",
+      "size": 4463,
+      "status": "selected"
+    },
+    "task326": {
+      "source": "karnakbaevarthur-task-library",
+      "size": 147,
+      "status": "selected"
+    },
+    "task327": {
+      "source": "karnakbaevarthur-task-library",
+      "size": 1676,
+      "status": "selected"
+    },
+    "task328": {
+      "source": "konbu17-may8",
+      "size": 14856,
+      "status": "selected"
+    },
+    "task329": {
+      "source": "karnakbaevarthur-task-library",
+      "size": 1195,
+      "status": "selected"
+    },
+    "task330": {
+      "source": "karnakbaevarthur-task-library",
+      "size": 11529,
+      "status": "selected"
+    },
+    "task331": {
+      "source": "afr1ste-5480-41",
+      "size": 1498,
+      "status": "selected"
+    },
+    "task332": {
+      "source": "konbu17-may8",
+      "size": 4191,
+      "status": "selected"
+    },
+    "task333": {
+      "source": "karnakbaevarthur-task-library",
+      "size": 2067,
+      "status": "selected"
+    },
+    "task334": {
+      "source": "konbu17-may8",
+      "size": 2063,
+      "status": "selected"
+    },
+    "task335": {
+      "source": "karnakbaevarthur-task-library",
+      "size": 1479,
+      "status": "selected"
+    },
+    "task336": {
+      "source": "karnakbaevarthur-task-library",
+      "size": 2008,
+      "status": "selected"
+    },
+    "task337": {
+      "source": "konbu17-may8",
+      "size": 159,
+      "status": "selected"
+    },
+    "task338": {
+      "source": "konbu17-may8",
+      "size": 5514,
+      "status": "selected"
+    },
+    "task339": {
+      "source": "konbu17-may8",
+      "size": 2038,
+      "status": "selected"
+    },
+    "task340": {
+      "source": "konbu17-may8",
+      "size": 3695,
+      "status": "selected"
+    },
+    "task341": {
+      "source": "karnakbaevarthur-task-library",
+      "size": 2146,
+      "status": "selected"
+    },
+    "task342": {
+      "source": "konbu17-may8",
+      "size": 3679,
+      "status": "selected"
+    },
+    "task343": {
+      "source": "konbu17-may8",
+      "size": 7380,
+      "status": "selected"
+    },
+    "task344": {
+      "source": "afr1ste-5480-41",
+      "size": 2729,
+      "status": "selected"
+    },
+    "task345": {
+      "source": "karnakbaevarthur-task-library",
+      "size": 5827,
+      "status": "selected"
+    },
+    "task346": {
+      "source": "afr1ste-5480-41",
+      "size": 2292,
+      "status": "selected"
+    },
+    "task347": {
+      "source": "konbu17-may8",
+      "size": 1315,
+      "status": "selected"
+    },
+    "task348": {
+      "source": "konbu17-may8",
+      "size": 1959,
+      "status": "selected"
+    },
+    "task349": {
+      "source": "konbu17-may8",
+      "size": 8197,
+      "status": "selected"
+    },
+    "task350": {
+      "source": "karnakbaevarthur-task-library",
+      "size": 1200,
+      "status": "selected"
+    },
+    "task351": {
+      "source": "magmacot-new-blending",
+      "size": 1256,
+      "status": "selected"
+    },
+    "task352": {
+      "source": "konbu17-may8",
+      "size": 1079,
+      "status": "selected"
+    },
+    "task353": {
+      "source": "konbu17-may8",
+      "size": 2206,
+      "status": "selected"
+    },
+    "task354": {
+      "source": "karnakbaevarthur-task-library",
+      "size": 2142,
+      "status": "selected"
+    },
+    "task355": {
+      "source": "afr1ste-5480-41",
+      "size": 4572,
+      "status": "selected"
+    },
+    "task356": {
+      "source": "karnakbaevarthur-task-library",
+      "size": 1237,
+      "status": "selected"
+    },
+    "task357": {
+      "source": "konbu17-may8",
+      "size": 1636,
+      "status": "selected"
+    },
+    "task358": {
+      "source": "konbu17-may8",
+      "size": 7583,
+      "status": "selected"
+    },
+    "task359": {
+      "source": "konbu17-may8",
+      "size": 2832,
+      "status": "selected"
+    },
+    "task360": {
+      "source": "afr1ste-5480-41",
+      "size": 987,
+      "status": "selected"
+    },
+    "task361": {
+      "source": "konbu17-may8",
+      "size": 6275,
+      "status": "selected"
+    },
+    "task362": {
+      "source": "afr1ste-5480-41",
+      "size": 2023,
+      "status": "selected"
+    },
+    "task363": {
+      "source": "konbu17-may8",
+      "size": 27811,
+      "status": "selected"
+    },
+    "task364": {
+      "source": "konbu17-may8",
+      "size": 10500,
+      "status": "selected"
+    },
+    "task365": {
+      "source": "konbu17-may8",
+      "size": 14408,
+      "status": "selected"
+    },
+    "task366": {
+      "source": "afr1ste-5480-41",
+      "size": 3772,
+      "status": "selected"
+    },
+    "task367": {
+      "source": "konbu17-may8",
+      "size": 32977,
+      "status": "selected"
+    },
+    "task368": {
+      "source": "karnakbaevarthur-task-library",
+      "size": 2416,
+      "status": "selected"
+    },
+    "task369": {
+      "source": "konbu17-may8",
+      "size": 4677,
+      "status": "selected"
+    },
+    "task370": {
+      "source": "konbu17-may8",
+      "size": 41171,
+      "status": "selected"
+    },
+    "task371": {
+      "source": "konbu17-may8",
+      "size": 1830,
+      "status": "selected"
+    },
+    "task372": {
+      "source": "afr1ste-5480-41",
+      "size": 1002,
+      "status": "selected"
+    },
+    "task373": {
+      "source": "konbu17-may8",
+      "size": 924,
+      "status": "selected"
+    },
+    "task374": {
+      "source": "afr1ste-5480-41",
+      "size": 18029,
+      "status": "selected"
+    },
+    "task375": {
+      "source": "afr1ste-5480-41",
+      "size": 1561,
+      "status": "selected"
+    },
+    "task376": {
+      "source": "konbu17-may8",
+      "size": 2229,
+      "status": "selected"
+    },
+    "task377": {
+      "source": "konbu17-may8",
+      "size": 17361,
+      "status": "selected"
+    },
+    "task378": {
+      "source": "konbu17-may8",
+      "size": 7256,
+      "status": "selected"
+    },
+    "task379": {
+      "source": "konbu17-may8",
+      "size": 12333,
+      "status": "selected"
+    },
+    "task380": {
+      "source": "karnakbaevarthur-task-library",
+      "size": 481,
+      "status": "selected"
+    },
+    "task381": {
+      "source": "karnakbaevarthur-task-library",
+      "size": 5241,
+      "status": "selected"
+    },
+    "task382": {
+      "source": "konbu17-may8",
+      "size": 67623,
+      "status": "selected"
+    },
+    "task383": {
+      "source": "konbu17-may8",
+      "size": 9781,
+      "status": "selected"
+    },
+    "task384": {
+      "source": "konbu17-may8",
+      "size": 3017,
+      "status": "selected"
+    },
+    "task385": {
+      "source": "magmacot-new-blending",
+      "size": 167,
+      "status": "selected"
+    },
+    "task386": {
+      "source": "konbu17-may8",
+      "size": 1409,
+      "status": "selected"
+    },
+    "task387": {
+      "source": "magmacot-new-blending",
+      "size": 9893,
+      "status": "selected"
+    },
+    "task388": {
+      "source": "karnakbaevarthur-task-library",
+      "size": 3500,
+      "status": "selected"
+    },
+    "task389": {
+      "source": "konbu17-may8",
+      "size": 1158,
+      "status": "selected"
+    },
+    "task390": {
+      "source": "magmacot-new-blending",
+      "size": 7410,
+      "status": "selected"
+    },
+    "task391": {
+      "source": "karnakbaevarthur-task-library",
+      "size": 1304,
+      "status": "selected"
+    },
+    "task392": {
+      "source": "afr1ste-5480-41",
+      "size": 12774,
+      "status": "selected"
+    },
+    "task393": {
+      "source": "karnakbaevarthur-task-library",
+      "size": 1289,
+      "status": "selected"
+    },
+    "task394": {
+      "source": "konbu17-may8",
+      "size": 5232,
+      "status": "selected"
+    },
+    "task395": {
+      "source": "karnakbaevarthur-task-library",
+      "size": 870,
+      "status": "selected"
+    },
+    "task396": {
+      "source": "magmacot-new-blending",
+      "size": 54678,
+      "status": "selected"
+    },
+    "task397": {
+      "source": "magmacot-new-blending",
+      "size": 3886,
+      "status": "selected"
+    },
+    "task398": {
+      "source": "konbu17-may8",
+      "size": 8759,
+      "status": "selected"
+    },
+    "task399": {
+      "source": "karnakbaevarthur-task-library",
+      "size": 1896,
+      "status": "selected"
+    },
+    "task400": {
+      "source": "afr1ste-5480-41",
+      "size": 2286,
+      "status": "selected"
+    }
+  }
+}

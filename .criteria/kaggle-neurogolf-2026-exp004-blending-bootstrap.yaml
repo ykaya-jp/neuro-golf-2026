@@ -1,0 +1,119 @@
+task_id: kaggle-neurogolf-2026-exp004-blending-bootstrap
+goal: |
+  公開 dataset (= konbu17/blended-401, karnakbaevarthur 系, magmacot 系) の per-task
+  ONNX を per-task argmin (cost) で blending、 即 LB 5000+ 帯到達。 自前 task276 は
+  「自前優位 (cost 100)」が確実なので blending 結果と比較し低い方を採用 (= 自前は
+  漸進的に拡張する base になる)。 同時に **新規性のある中期 plan の design note** を書く
+  (= multi-layer ONNX helper + LLM Cost-aware Refinement Loop の構想)。
+context:
+  branch: main
+  spec: docs/strategy/exp001-design.md (候補 3 + 候補 1 hedge + 新規性は次 plan)
+  prior_decision: |
+    User 判断 (2026-05-11): 「優勝できる方法でやって、 もちろん新規性のある新方法の
+    考案は重要だよ多分勝てないしそれがないと」 → blending bootstrap で短期 lift し
+    つつ、 multi-layer + Cost-aware Refinement Loop を新規性として並走開発。
+  risk_acknowledgement: |
+    W1 finding: 5/15 前後の metric 再改訂で公開 zip blending が catastrophic に消える
+    可能性。 本 plan は「自前 task276 + 公開 zip per-task min」 という hedge で、
+    metric 改訂時にも自前 component が残る形。 critic Objection 3 / 10 の license /
+    規約 risk も承認上で進む (= 公開 dataset のライセンスは CC0 系または Kaggle Terms
+    準拠で submission に流用可能、 主催者 ban announce があれば即撤回)。
+deliverables:
+  - path: src/neurogolf_2026/blending/__init__.py
+    purpose: blending sub-package entry
+  - path: src/neurogolf_2026/blending/source_pool.py
+    purpose: 公開 dataset の zip / dir を inventory 化、 各 source の per-task ONNX path index
+  - path: src/neurogolf_2026/blending/argmin.py
+    purpose: per-task で全 source の cost (= params + memory) を比較、 最小 cost source を選択
+  - path: src/neurogolf_2026/blending/build_blended.py
+    purpose: argmin 結果 + 自前 registry を統合し submission.zip を構築
+  - path: scripts/run_blending.py
+    purpose: CLI (= source download, argmin, build, validate)
+  - path: tests/test_blending.py
+    purpose: pytest (= source_pool / argmin / build_blended の unit + integration)
+  - path: docs/dev/exp004-blending-and-refinement-loop-design.md
+    purpose: |
+      短期 (blending) + 中期 (multi-layer helper + Cost-aware Refinement Loop) の
+      設計 note。 IJCAI talk 候補となる新規性を文書化:
+      - "Cost as MDL prior": LLM に cost 制約を fed back し、 architecture を log-scale で削る refinement
+      - "Layer search via LLM proposal + verifier gate": SOAR pattern を ONNX layer count に application
+baseline:
+  - metric: lb_score_public
+    value: 20.39
+    note: "exp001 baseline submit (52519770) 確認済"
+  - metric: lb_rank
+    value: null
+    note: "後で leaderboard download で取得"
+out_of_scope:
+  - multi-layer ONNX helper の実装 (= 中期 plan exp005 で)
+  - Cost-aware Refinement Loop の実装 (= 中期 plan exp006 で)
+  - Anthropic API client 実装 (= 並走別 plan)
+  - 公開 dataset の Kaggle Terms 詳細監査 (= 主催者 announcement があれば即撤回前提)
+risks:
+  - "5/15 metric 再改訂で公開 zip 全 score 0 → submission_id ごと最低保証 1 点に劣化。 自前 task276 component で hedge"
+  - "公開 zip の Kaggle Terms 違反指摘 → submit ban の可能性。 主催者 announcement 監視必須"
+  - "argmin 結果が functional incorrect な ONNX を選ぶ (= 公開作者の bug、 W2 finding の broken-task list 含む)。 score_network() で gate 必須"
+  - "submission.zip サイズ超過 (個別 1.44MB / 全体 100MB+ 級可能性)。 build_blended で個別 + 全体 size limit check"
+  - "scorer-poison op が公開 zip に紛れる (= W1 finding)。 build_blended で _validate_onnx 適用、 違反 task は自前 fallback"
+acceptance_criteria:
+  - id: AC-1
+    description: source_pool が data/external/ の公開 dataset から per-task ONNX path を inventory 化、 N task × M source のテーブルを生成
+    type: test_pass
+    severity: required
+    command: "uv run pytest tests/test_blending.py::test_source_pool_inventory -v"
+    expected_exit_code: 0
+    timeout_seconds: 120
+
+  - id: AC-2
+    description: argmin が per-task で全 source の cost を計算、 最小 cost ONNX を選択、 fail / functional incorrect / banned op を持つ source は除外
+    type: test_pass
+    severity: required
+    command: "uv run pytest tests/test_blending.py::test_argmin_selects_min_cost -v"
+    expected_exit_code: 0
+    timeout_seconds: 300
+
+  - id: AC-3
+    description: build_blended が 自前 registry (= task276) と argmin 結果を統合、 自前 cost が argmin 結果より小さい task は自前を採用
+    type: test_pass
+    severity: required
+    command: "uv run pytest tests/test_blending.py::test_build_blended_prefers_self -v"
+    expected_exit_code: 0
+    timeout_seconds: 60
+
+  - id: AC-4
+    description: 既存 baseline AC (= exp001 / exp002) regression なし
+    type: test_pass
+    severity: required
+    command: "uv run pytest tests/test_submission_pipeline.py tests/test_synthesis.py -v"
+    expected_exit_code: 0
+    timeout_seconds: 240
+
+  - id: AC-5
+    description: blended submission.zip が制約準拠 (= 個別 1.44 MB、 全体 100 MB 内、 全 ONNX が _validate_onnx pass)
+    type: test_pass
+    severity: required
+    command: "uv run pytest tests/test_blending.py::test_blended_submission_constraints -v"
+    expected_exit_code: 0
+    timeout_seconds: 300
+
+  - id: AC-6
+    description: code review (= reviewer agent) で blending 安全性・regression hedge・licensing comment を判定
+    type: manual_review
+    severity: required
+    rubric: |
+      - source_pool が path inventory のみ、 zip 中身を勝手に modify しない
+      - argmin が score_network() で全 source を gate、 functional incorrect / banned op / size 超過 を reject
+      - build_blended が **自前 registry を優先** する設計 (= cost 比較で同等以下なら自前)
+      - submission.zip 構築時に 5/15 metric 改訂対応の note (= "blending base は 改訂後再評価必須" コメント) を残す
+      - tests が 公開 zip 不在環境でも runnable (= synthetic 小 zip で argmin / build を unit test)
+      - design note (docs/dev/exp004-...md) で 中期 plan (multi-layer + Cost-aware Refinement Loop) の新規性を IJCAI talk 候補として整理
+
+  - id: AC-7
+    description: blended submission.zip を Kaggle に submit、 LB public_score ≥ 1000 (= 20.39 から 50× lift)
+    type: manual_review
+    severity: recommended
+    rubric: |
+      - submission_id を submissions/.history.csv に追記
+      - public_score が score 1000 以上を確認 (= 公開 blending の現実的射程は 5000-7000、 1000 は最低保証 line)
+      - score 5000 を超えれば LB top 100 圏到達、 8000 は 7/15 の Longest Leader 賞射程
+      - 5/15 metric 改訂で score が大幅劣化した場合は postmortem 起動
