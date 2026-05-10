@@ -1,0 +1,113 @@
+task_id: kaggle-neurogolf-2026-exp002-llm-synthesis
+goal: |
+  LLM-driven program synthesis pipeline (= 候補 2) の framework を構築し、
+  arc_explanations.json から `weight_fn` コードを LLM が generate → 局所 validate harness で
+  functional correct な ONNX のみ registry に追加する自動化基盤を確立する。
+  本 plan の scope は **framework 構築 + dummy / Agent dispatch client での dry-run + 5+ task の試行**。
+  実 LLM API (Anthropic / OpenAI) integration と全 400 task 走破は次 plan で。
+context:
+  branch: main
+  spec: docs/strategy/exp001-design.md (候補 2)
+  prior_lesson: |
+    SOAR 2025 ([source](https://arxiv.org/abs/2507.14172)) の sampling → refinement → hindsight learning loop を Python DSL でなく ONNX weight_fn に application。
+    arc_explanations.json (= 400 task の自然言語 logic 完備) を primary input とする。
+deliverables:
+  - path: src/neurogolf_2026/synthesis/__init__.py
+    purpose: synthesis sub-package entry
+  - path: src/neurogolf_2026/synthesis/prompts.py
+    purpose: LLM 用 prompt template (= explanation → weight_fn 生成 instruction)
+  - path: src/neurogolf_2026/synthesis/extractor.py
+    purpose: LLM 出力 Python code から weight_fn を AST 構文 + 安全性検査して抽出
+  - path: src/neurogolf_2026/synthesis/runner.py
+    purpose: 抽出 weight_fn を ONNX 化 → score_network で functional correct + scorer_ok を判定
+  - path: src/neurogolf_2026/synthesis/clients.py
+    purpose: LLM client abstraction (= DummyClient + AgentDispatchClient + 実 API client は次 plan で plug-in)
+  - path: src/neurogolf_2026/synthesis/pipeline.py
+    purpose: main orchestrator (= 指定 task list でループ、client 呼出、extract、run、結果集約)
+  - path: scripts/run_synthesis.py
+    purpose: CLI wrapper (= `uv run python scripts/run_synthesis.py --client dummy --tasks task276,task004 --out outputs/synthesis/<run_id>/`)
+  - path: tests/test_synthesis.py
+    purpose: pytest (extractor の AST 安全性 + dummy client end-to-end + runner の onnx export 確認)
+  - path: docs/dev/exp002-llm-synthesis-design.md
+    purpose: 設計 note (= 安全性、prompt 戦略、refinement loop 構想、次 plan の入口)
+baseline:
+  - metric: registry_size
+    value: 1
+    note: "exp001 で task276 のみ"
+  - metric: lb_score_offline
+    value: 20.394
+    note: "task276 単独 score (offline 計算)"
+out_of_scope:
+  - 実 Anthropic API client (= API key 設定後の別 plan)
+  - 実 OpenAI / Codex client
+  - Refinement loop (= 失敗 → LLM feedback → re-synthesize、次 plan)
+  - 全 400 task 走破 (= 本 plan は 5-10 task 試行までで打ち止め)
+  - INT8 quantize (= 1×1 conv は memory 0 なので効かず、3×3 conv 系 plan で扱う)
+  - LB submit (= 既存 baseline submit を活かし、新 task が registry 追加できた段階で再 build → 開発者の手動 submit)
+risks:
+  - "extractor が unsafe code (= eval / exec / __import__ / open) を素通しすると arbitrary code execution。AC-2 で sandbox AST whitelist 必須"
+  - "LLM が scorer-poison op (ArgMin / TopK / Compress 等) を含む weight_fn を提案 → submit で全 task 0 点 (W1 finding)。runner が ONNX export 後に banned op check で reject 必須"
+  - "LLM が arc_explanations.json の logic を misread し functional incorrect 提案。runner が score_network() で gate (= functional correct でないなら registry 追加せず)"
+  - "Agent dispatch client は Claude Code 内 subagent 呼出に依存、CLI 環境で再現性が異なる。dummy client で test を pin 可能にする"
+  - "registry 追加後の regression (= 既存 task276 が壊れる)。AC-4 で全 既存 baseline AC を pytest 再実行"
+acceptance_criteria:
+  - id: AC-1
+    description: pipeline が dummy client で end-to-end 動作 (= dummy が task276 reference code を返し、extractor + runner + registry 追加 まで通過)
+    type: test_pass
+    severity: required
+    command: "uv run pytest tests/test_synthesis.py::test_pipeline_dummy_end_to_end -v"
+    expected_exit_code: 0
+    timeout_seconds: 120
+
+  - id: AC-2
+    description: extractor が unsafe Python (= eval / exec / __import__ / open / subprocess / os) を含む LLM 出力を reject
+    type: test_pass
+    severity: required
+    command: "uv run pytest tests/test_synthesis.py::test_extractor_safety -v"
+    expected_exit_code: 0
+    timeout_seconds: 60
+
+  - id: AC-3
+    description: runner が weight_fn を ONNX 化後、banned op (Loop/Scan/NonZero/Unique/Script/Function/Compress) を含む model を reject
+    type: test_pass
+    severity: required
+    command: "uv run pytest tests/test_synthesis.py::test_runner_banned_op -v"
+    expected_exit_code: 0
+    timeout_seconds: 60
+
+  - id: AC-4
+    description: 既存 exp001 baseline AC (= AC-1/2/3/5 of exp001 yaml) が regression なし — 全 400 task ONNX 制約・task276 functional correct・scorer ok 維持
+    type: test_pass
+    severity: required
+    command: "uv run pytest tests/test_submission_pipeline.py -v"
+    expected_exit_code: 0
+    timeout_seconds: 180
+
+  - id: AC-5
+    description: pipeline で 5+ task を dry-run、結果が `outputs/synthesis/<run_id>/results.json` に集約 (per-task: status / cost / score / error)
+    type: output_exists
+    severity: required
+    path: outputs/synthesis/.gitkeep
+
+  - id: AC-6
+    description: code review (= reviewer agent) で synthesis sub-package の安全性・抽象化・error handling を判定
+    type: manual_review
+    severity: required
+    rubric: |
+      - extractor.py が AST whitelist で安全性を担保 (= ast.parse + ast.walk で禁止 node を reject、eval/exec を直接呼ばない)
+      - runner.py が weight_fn 評価を sandbox (= no globals, restricted builtins、または subprocess + timeout)
+      - clients.py の interface (= synthesize(task_id, explanation) -> str) が dummy / agent / 実 API client で同形に保たれる
+      - pipeline.py の error handling が silent fail なし (= LLM 出力 parse 失敗 / runner 失敗 / scorer 失敗 すべて results.json に明示記録)
+      - prompts.py の template が arc_explanations.json + neurogolf_utils.single_layer_conv2d_network signature を含み、LLM が必要 context を持つ
+      - tests/test_synthesis.py が dummy + safety + banned op の 3 軸を network 不要で実行可能 (= raw data 不要)
+      - 既存 build_submission / validate との結合が registry pattern (= registry に key 追加で済む) を保つ
+
+  - id: AC-7
+    description: 実 LLM (= Agent tool 経由で Claude を 1 回 dispatch) で task276 weight_fn を再現できる (= dummy 同等の output が得られる)
+    type: manual_review
+    severity: recommended
+    rubric: |
+      - Claude Code の Agent tool で general-purpose subagent を dispatch
+      - prompt = synthesis/prompts.py の template + arc_explanations[task276]
+      - 出力された Python code を extractor で sanitize → runner で functional correct かを判定
+      - functional correct なら AC-7 pass、 そうでなくとも error log を docs/dev/exp002-llm-synthesis-design.md の "実 LLM 試行ログ" 節に記録すれば pass

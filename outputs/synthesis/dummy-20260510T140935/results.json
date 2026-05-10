@@ -1,0 +1,121 @@
+{
+  "_meta": {
+    "run_at": "2026-05-10T14:09:35.938762+00:00",
+    "client": "DummyClient",
+    "kernel_size": 1,
+    "task_count": 5,
+    "accepted_count": 1
+  },
+  "results": [
+    {
+      "task_id": "task276",
+      "status": "accepted",
+      "raw_output": null,
+      "extract_error": null,
+      "run_result": {
+        "task_id": "task276",
+        "onnx_size": 572,
+        "constraint_violations": [],
+        "functional_correct": true,
+        "scorer_ok": true,
+        "cost": 100,
+        "score": 20.394829814011906,
+        "arc_agi_pass": 4,
+        "arc_agi_fail": 0,
+        "arc_gen_pass": 262,
+        "arc_gen_fail": 0,
+        "error": null,
+        "accepted": true
+      },
+      "accepted": true
+    },
+    {
+      "task_id": "task016",
+      "status": "run_failed",
+      "raw_output": null,
+      "extract_error": null,
+      "run_result": {
+        "task_id": "task016",
+        "onnx_size": 572,
+        "constraint_violations": [],
+        "functional_correct": false,
+        "scorer_ok": true,
+        "cost": 100,
+        "score": 20.394829814011906,
+        "arc_agi_pass": 0,
+        "arc_agi_fail": 5,
+        "arc_gen_pass": 0,
+        "arc_gen_fail": 262,
+        "error": null,
+        "accepted": false
+      },
+      "accepted": false
+    },
+    {
+      "task_id": "task040",
+      "status": "run_failed",
+      "raw_output": null,
+      "extract_error": null,
+      "run_result": {
+        "task_id": "task040",
+        "onnx_size": 572,
+        "constraint_violations": [],
+        "functional_correct": false,
+        "scorer_ok": true,
+        "cost": 100,
+        "score": 20.394829814011906,
+        "arc_agi_pass": 0,
+        "arc_agi_fail": 4,
+        "arc_gen_pass": 0,
+        "arc_gen_fail": 262,
+        "error": null,
+        "accepted": false
+      },
+      "accepted": false
+    },
+    {
+      "task_id": "task267",
+      "status": "run_failed",
+      "raw_output": null,
+      "extract_error": null,
+      "run_result": {
+        "task_id": "task267",
+        "onnx_size": 572,
+        "constraint_violations": [],
+        "functional_correct": false,
+        "scorer_ok": true,
+        "cost": 100,
+        "score": 20.394829814011906,
+        "arc_agi_pass": 0,
+        "arc_agi_fail": 3,
+        "arc_gen_pass": 0,
+        "arc_gen_fail": 261,
+        "error": null,
+        "accepted": false
+      },
+      "accepted": false
+    },
+    {
+      "task_id": "task373",
+      "status": "run_failed",
+      "raw_output": null,
+      "extract_error": null,
+      "run_result": {
+        "task_id": "task373",
+        "onnx_size": 572,
+        "constraint_violations": [],
+        "functional_correct": false,
+        "scorer_ok": true,
+        "cost": 100,
+        "score": 20.394829814011906,
+        "arc_agi_pass": 0,
+        "arc_agi_fail": 3,
+        "arc_gen_pass": 0,
+        "arc_gen_fail": 72,
+        "error": null,
+        "accepted": false
+      },
+      "accepted": false
+    }
+  ]
+}

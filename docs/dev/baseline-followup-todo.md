@@ -60,3 +60,48 @@
 3. exp001 verify (`/verify kaggle-neurogolf-2026-baseline`) で形名参同 Verify 段を通す
 4. 次 plan: **`exp002 = simple-task batch (Complexity 1-2 の 22 task hand-craft + INT8 quantize)`** で基本盤を作る (= 候補 1 の段階拡張)
 5. その後: 候補 2 (LLM-driven program synthesis) を Complexity 4-8 task (= 全 400 の 82.75%) に向けて投入
+
+---
+
+## exp002 reviewer (AC-6 pass with concerns) 由来 follow-up
+
+### 即修正済 (本 commit に含む)
+
+- [x] `extractor.py` に loop 系 node 意図的除外の docstring 追加 (= sandbox 暗黙前提を可視化)
+- [x] `scripts/run_synthesis.py` の score 0.0 vs None 判別 bug fix
+
+### exp003 で着手
+
+#### r-exp002-1: runner REGISTRY context manager 化
+
+- 場所: `src/neurogolf_2026/synthesis/runner.py:66-74`
+- 問題: `REGISTRY[task_id] = lambda: model` の global mutation は並列 dispatch (= 次 plan の Anthropic API multi-worker 化) で race。 同じ task_id に複数 model が一時 inject されたら結果汚染
+- 直し方: `_temp_registry(task_id, model)` を contextmanager 化、または `validate_task` に builder を直接渡す signature を追加
+- 優先度: **high** (= exp003 で API client 並列化する前に必須)
+
+#### r-exp002-2: pipeline exception narrowing
+
+- 場所: `src/neurogolf_2026/synthesis/pipeline.py:66`
+- 問題: `except Exception` が広すぎ、 真の bug (KeyboardInterrupt 以外の SystemExit / OOM 系) も握る
+- 直し方: 想定 client error 群 (TimeoutError / ValueError / api 固有 exception) に絞る、 BaseException は通す
+- 優先度: medium
+
+#### r-exp002-3: test marker 分離 (raw-data dependent vs not)
+
+- 場所: `tests/test_synthesis.py`
+- 問題: AC-1 / AC-3 integration test は `data/external/...` 依存、 rubric の「raw data 不要」と厳密には不整合
+- 直し方: `@pytest.mark.requires_raw_data` を導入、 `pytest -m "not requires_raw_data"` で sandbox-only test を独立実行可能に
+- 優先度: low
+
+## 設計上の懸念 — exp003 着手前の観察
+
+### d-exp002-1: prompts.py の kernel_size > 1 拡張
+
+- 現状 1×1 のみ。 3×3 / 5×5 用 prompt template を別途整備しないと rotation / reflection / pattern detection task に対応不能
+- exp003 で **kernel_size 自動選択** (= LLM に kernel_size も提案させる) か、 task category 別 fixed kernel か を決める必要
+
+### d-exp002-2: multi-layer ONNX support
+
+- `single_layer_conv2d_network` 単独では表現不能な task (= 例: edge detect → fill → recolor の 3 stage) が大半
+- 別 helper `multi_layer_conv2d_network(layers)` を実装する design 検討が exp003 候補
+- 主催者 starter にこの helper は無いため、 ONNX node 列を直接構築する level の実装が必要 (= scope 増大、 plan 分割推奨)

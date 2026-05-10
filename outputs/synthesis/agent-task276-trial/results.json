@@ -1,0 +1,22 @@
+{
+  "_meta": {
+    "client": "AgentDispatchClient (manual relay)",
+    "task_id": "task276",
+    "comment": "AC-7: 実 Claude (general-purpose subagent) が task276 weight_fn を再現"
+  },
+  "result": {
+    "task_id": "task276",
+    "onnx_size": 572,
+    "constraint_violations": [],
+    "functional_correct": true,
+    "scorer_ok": true,
+    "cost": 100,
+    "score": 20.394829814011906,
+    "arc_agi_pass": 4,
+    "arc_agi_fail": 0,
+    "arc_gen_pass": 262,
+    "arc_gen_fail": 0,
+    "error": null,
+    "accepted": true
+  }
+}

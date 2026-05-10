@@ -1,0 +1,4 @@
+```python
+def weight_fn(channel_out, channel_in, kernel_coord):
+    return 0.0
+```
