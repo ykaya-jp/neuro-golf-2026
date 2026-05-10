@@ -1,0 +1,4 @@
+submission_id,timestamp,build_commit,public_score,note
+# baseline submit はユーザーが web で comp rules accept した後に手動で:
+#   uv run kaggle competitions submit -c neurogolf-2026 -f submissions/submission.zip -m "exp001 baseline: task276 functional correct, fallback zero-conv for 399"
+# 実行後、submission_id / score を本ファイルに 1 row 追記する (= AC-4 / AC-7 必須)

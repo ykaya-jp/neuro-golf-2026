@@ -31,6 +31,11 @@ dependencies = [
     "pillow>=10.0",
     "ultralytics>=8.3",     # YOLO
     "transformers>=4.45",   # ViT/Swin/Qwen-VL も触れるように
+    # NeuroGolf 2026 specific (= ONNX submission build/validate)
+    "onnx>=1.17",
+    "onnxruntime>=1.20",
+    "onnx-tool==1.0.1",     # neurogolf_utils が profiler 経由で memory 計算に使用 (W1 finding: 公式が pin)
+    "ipython>=8.0",         # neurogolf_utils が IPython.display を import
 ]
 
 [project.optional-dependencies]
@@ -69,3 +74,7 @@ ignore = ["E501"]
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 addopts = "-q"
+markers = [
+    "unit: unit-level (pure-fn, fast)",
+    "integration: integration-level (file/zip/score_network)",
+]

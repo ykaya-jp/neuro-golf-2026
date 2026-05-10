@@ -77,3 +77,6 @@ agents/proxy/*.zip
 
 # LB snapshots (CSV) は docs/research/ 配下にあるので個別に追加可
 # `docs/research/lb_snapshot_*.csv` は commit する (= 履歴として残す)
+
+# onnxruntime profiler (validate.py 由来) — repo root に NNN_<ts>.json として吐かれる
+/[0-9][0-9][0-9]_*.json

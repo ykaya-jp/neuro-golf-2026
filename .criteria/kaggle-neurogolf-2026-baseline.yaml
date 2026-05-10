@@ -1,0 +1,113 @@
+task_id: kaggle-neurogolf-2026-baseline
+goal: |
+  NeuroGolf 2026 で 1 task MVP の submission pipeline を end-to-end 確立する。
+  最低 1 task の functional correct な ONNX + submission.zip を構築し、Kaggle へ submit して LB に score を載せる。残り 399 task は scope 外 (= 後続 plan で扱う、submission.zip には含めるが空 / placeholder のため score 0 でよい)。
+context:
+  branch: main
+  spec: docs/strategy/exp001-design.md
+  comp_url: https://www.kaggle.com/competitions/neurogolf-2026
+  notes: |
+    - exp001-design.md の候補 1 (= per-task hardcoded conv) のうち、最小 1 task を実装。
+    - critic Objection 5 (scorer-poison op private 発火) を pre-deploy gate で検証する目的も兼ねる。
+    - 候補 2 / 3 は本 baseline scope 外、後続 plan で。
+    - target task は実装側が arc_primitives.json + arc_explanations.json から「Estimated_Complexity ≤ 2」「Grid_Size_Changed = false」「1-2 layer Conv2D で hand-craft 可能」を自由選択。task001 (= 3×3→9×9 tiling, Complexity 3) は ConvTranspose 必須なので MVP では避けてよい。
+deliverables:
+  - path: src/neurogolf_2026/build_submission.py
+    purpose: 全 task をループして per-task ONNX を生成し submission.zip を構築する main script
+  - path: src/neurogolf_2026/networks/__init__.py
+    purpose: per-task ONNX 生成関数の registry (= task_id → builder fn)
+  - path: src/neurogolf_2026/networks/<chosen_task>.py
+    purpose: 選択した baseline task の ONNX 生成 (= weight ハードコード or 公式 single_layer_conv2d_network 経由)
+  - path: src/neurogolf_2026/networks/fallback.py
+    purpose: 残り 399 task 用の最小 ONNX (= zero-conv or identity 程度、各 task で functional correct でなくとも valid な ONNX 形式を保つ)
+  - path: src/neurogolf_2026/validate.py
+    purpose: data/raw/neurogolf_utils/neurogolf_utils.py の score_network() を全 task ONNX に対して走らせ、fail task を report
+  - path: tests/test_submission_pipeline.py
+    purpose: pytest smoke test (= build → validate → zip 構造 確認)
+  - path: submissions/submission.zip
+    purpose: 提出物本体 (= .gitignore 対象、生成可能、submit 後は履歴を .history.csv に追記)
+  - path: submissions/.history.csv
+    purpose: submit 履歴 (submission_id, timestamp, public_score) を記録 (commit 対象)
+baseline:
+  - metric: lb_score
+    value: 0
+    note: "未提出。LB top: yiheng 7290.56 (avg 18.2/task)。理論最大 10000。"
+  - metric: lb_rank
+    value: null
+out_of_scope:
+  - 候補 2 (LLM-driven program synthesis) の実装
+  - 候補 3 (public submission blending) の実装
+  - 2 task 以上の functional correct (= 後続 plan で simple-task batch に拡張)
+  - INT8 quantization の実装 (= MVP では float32 で OK、量子化は次 plan で +367 点を狙う)
+  - private benchmark での挙動推定 (= public submit の結果を見てから判断)
+  - Longest Leader $10K 戦略 (= 5/6 起算で既に 4 日経過、後続 plan で fast-iteration 戦略を検討)
+  - broken-task list (t045/067/111/159/176/192/210/256/309/320 + {21,55,80,184,202,366}) の処置 (= W2 fundament finding、後続 plan で)
+risks:
+  - "選択した baseline task が score_network で fail (= functional correct でない) → public submit しても 0 点"
+  - "scorer-poison op (ArgMin/TopK/Where+uint8/Compress) を踏む → submit が全 task 0 点 (W1 finding)。AC-3 で local 検証必須"
+  - "submission.zip サイズ超過 (個別 ONNX > 1.44 MB or zip 全体が kaggle 上限超え) → reject"
+  - "5/15 metric 改訂で baseline の cost 算出が変わる (W1 finding) → 提出前に neurogolf_utils.py の Version History を再確認"
+  - "Kaggle competitions submit が rules-not-accepted で reject → AC-4 を blocker、submit 前に web で rules accept"
+  - "fallback ONNX が ONNX validator で reject される → 全 task 0 になる、AC-2 で個別 file 検証必須"
+acceptance_criteria:
+  - id: AC-1
+    description: 選択した baseline task の ONNX が score_network() で全 train+test+arc-gen pair に対し functional correct (= 100% pass)
+    type: test_pass
+    severity: required
+    command: "uv run python -m neurogolf_2026.validate --task <chosen_task> --strict"
+    expected_exit_code: 0
+    timeout_seconds: 300
+
+  - id: AC-2
+    description: 全 400 task の ONNX (= baseline 1 件 + fallback 399 件) が ONNX 制約 (1.44 MB / file 以下、static shape、禁止 op {Loop,Scan,NonZero,Unique,Script,Function,Compress} なし、kernel_time 文字列なし、Multi-input/output graph なし) を満たす
+    type: test_pass
+    severity: required
+    command: "uv run pytest tests/test_submission_pipeline.py::test_onnx_constraints -v"
+    expected_exit_code: 0
+    timeout_seconds: 180
+
+  - id: AC-3
+    description: scorer-poison op を踏まないことを local で検証 (= W1 が報告した未公開 exploit 4 件と同種の crash がないか、score_network で全 task `score >= 0` が成立)
+    type: test_pass
+    severity: required
+    command: "uv run python -m neurogolf_2026.validate --all --check-scorer-poison"
+    expected_exit_code: 0
+    timeout_seconds: 600
+
+  - id: AC-4
+    description: submission.zip が `kaggle competitions submit` で受理される (= submission_id が返る、submissions/.history.csv に記録)
+    type: output_exists
+    severity: required
+    path: submissions/.history.csv
+    note: "AC-4 は submit 実行後に history が更新されることで pass。ローカル CI では skip 可、最終 verify で開発者が手動 submit して history を埋める"
+
+  - id: AC-5
+    description: submission.zip 内の file 構造が仕様準拠 (= task001.onnx ~ task400.onnx の命名、総 file 数 ≥ 1、zip overhead 込みで適切)
+    type: test_pass
+    severity: required
+    command: "uv run pytest tests/test_submission_pipeline.py::test_zip_structure -v"
+    expected_exit_code: 0
+    timeout_seconds: 60
+
+  - id: AC-6
+    description: code review (= reviewer agent) で per-task ONNX 生成 / build_submission / validate / fallback の品質を判定
+    type: manual_review
+    severity: required
+    rubric: |
+      - networks/ の per-task builder が pure function (= side effect なし、deterministic output) で書かれている
+      - fallback ONNX が「functional correct でなくとも ONNX validator 通過」を保証する設計 (= 後続 plan で各 task の正解 NN に置換可能なように registry pattern)
+      - build_submission.py が冪等 (= 同 input で同 zip を生成、再現性確保)
+      - validate.py が neurogolf_utils.py を import で正しく呼び出し、Version History 由来の制約 (Multi-input/output, kernel_time, Compress 等) を全部 check
+      - 公式 helper (= single_layer_conv2d_network) を使う場合、他人 kernel (mmoffitt starter) との一貫性を保ち、独自実装を増やさない
+      - error 握り潰しなし (= ONNX 生成 fail 時に traceback or context 付き Result を返す)
+      - test 名と AC-1〜AC-5 の対応が明示されている (= test_submission_pipeline.py 内に AC-N 参照コメント)
+
+  - id: AC-7
+    description: LB 反映スコア > 0 (= 動的スモーク、提出後に web で LB に乗ったことを開発者が確認、submissions/.history.csv の public_score field に記録)
+    type: manual_review
+    severity: recommended
+    rubric: |
+      - 提出後、Kaggle competitions submissions neurogolf-2026 で submission status が "Complete" または "Successful"
+      - public_score が submissions/.history.csv に記録され、その値が 0 でない (= 1 task は最低 1 点)
+      - 期待値: baseline 1 task (Complexity 1-2 の Color/identity 系) で float32 ONNX なら cost 800-3000 程度、score 17-22。残り 399 は 0 点なので合計 17-22 点
+      - もし score 0 なら critic Objection 5 (scorer-poison op private 発火) に該当、postmortem 起動
