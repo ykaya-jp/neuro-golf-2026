@@ -1,0 +1,28 @@
+{
+  "id": "karnakbaevarthur/logic-decoder",
+  "id_no": 116095130,
+  "title": "Logic Decoder",
+  "code_file": "logic-decoder.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": false,
+  "enable_gpu": false,
+  "enable_tpu": false,
+  "enable_internet": false,
+  "keywords": [],
+  "dataset_sources": [
+    "karnakbaevarthur/logic-for-each-arc-task",
+    "karnakbaevarthur/neurogolf-2026-task-transformation-library"
+  ],
+  "kernel_sources": [
+    "",
+    "jonathanchan/ngc26-constraint-smart-logic-mix-blending",
+    ""
+  ],
+  "competition_sources": [
+    "neurogolf-2026"
+  ],
+  "model_sources": [],
+  "docker_image": "gcr.io/kaggle-images/python@sha256:c370a5ff133d162d17c2dca332b50f3e85c0b0ed1471ee18e98e3009eee80b08",
+  "machine_shape": "None"
+}

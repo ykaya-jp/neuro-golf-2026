@@ -1,0 +1,39 @@
+# CV baseline config — RTX 3090 24GB
+slug: neurogolf-2026
+target: target
+id_col: id
+task: classification
+metric: accuracy
+
+cv:
+  kind: stratified
+  n_splits: 5
+  seed: 42
+
+image:
+  size: 384
+  mean: [0.485, 0.456, 0.406]
+  std:  [0.229, 0.224, 0.225]
+
+train:
+  batch_size: 32
+  num_workers: 8
+  precision: bf16-mixed
+  lr: 1.0e-4
+  epochs: 10
+  optimizer: adamw
+  scheduler: cosine
+  warmup_epochs: 1
+
+models:
+  - name: tf_efficientnet_b3.ns_jft_in1k
+  - name: convnext_base.fb_in22k_ft_in1k
+  - name: vit_base_patch16_384.augreg_in21k_ft_in1k
+  - name: swin_base_patch4_window12_384.ms_in22k_ft_in1k
+
+augmentation:
+  level: medium
+
+ensemble:
+  tta: true
+  rank_average: true

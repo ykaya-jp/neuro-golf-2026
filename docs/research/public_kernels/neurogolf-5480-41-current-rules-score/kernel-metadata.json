@@ -1,0 +1,26 @@
+{
+  "id": "afr1ste/neurogolf-5480-41-current-rules-score",
+  "id_no": 116884297,
+  "title": "NeuroGolf 5480.41 Current Rules Score",
+  "code_file": "neurogolf-5480-41-current-rules-score.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": false,
+  "enable_gpu": false,
+  "enable_tpu": false,
+  "enable_internet": true,
+  "keywords": [],
+  "dataset_sources": [
+    "afr1ste/neurogolf-5480-41-controlled-public-artifact"
+  ],
+  "kernel_sources": [
+    "",
+    "jonathanchan/ngc26-constraint-smart-logic-mix-blending"
+  ],
+  "competition_sources": [
+    "neurogolf-2026"
+  ],
+  "model_sources": [],
+  "docker_image": "gcr.io/kaggle-images/python@sha256:c370a5ff133d162d17c2dca332b50f3e85c0b0ed1471ee18e98e3009eee80b08",
+  "machine_shape": "None"
+}
