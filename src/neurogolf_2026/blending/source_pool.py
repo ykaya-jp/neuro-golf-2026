@@ -53,6 +53,42 @@ DEFAULT_SOURCES: list[Source] = [
         path_template="data/external/logic-for-each-arc-task/submission/task{n:03d}.onnx",
         license="kaggle-dataset",
     ),
+    # agentzz/neurogolf-submit-6284-v2 kernel output: 400 ONNX (LB 6284 帯 = 最高 score 帯)
+    Source(
+        name="agentzz-6284-v2",
+        path_template="data/external/agentzz-neurogolf-submit-6284-v2/sub/task{n:03d}.onnx",
+        license="kaggle-kernel-output",
+    ),
+    # jazivxt/infinitesimals kernel output: 397 ONNX (5/10 最新 update, votes 76)
+    Source(
+        name="jazivxt-infinitesimals",
+        path_template="data/external/jazivxt-infinitesimals/sub/task{n:03d}.onnx",
+        license="kaggle-kernel-output",
+    ),
+    # imaadmahmood/neurogolf-2026-rule-based-onnx-solver: 400 ONNX (votes 75)
+    Source(
+        name="imaadmahmood-rule-based",
+        path_template="data/external/imaadmahmood-neurogolf-2026-rule-based-onnx-solver/sub/task{n:03d}.onnx",
+        license="kaggle-kernel-output",
+    ),
+    # hanifnoerrofiq/8-may-update: 400 ONNX (5/7 update, votes 46)
+    Source(
+        name="hanifnoerrofiq-8may",
+        path_template="data/external/hanifnoerrofiq-8-may-update/sub/task{n:03d}.onnx",
+        license="kaggle-kernel-output",
+    ),
+    # vyankteshdwivedi/neurogolf-multi-source-onnx-solver: 371 ONNX (votes 64)
+    Source(
+        name="vyankteshdwivedi-multi-source",
+        path_template="data/external/vyankteshdwivedi-neurogolf-multi-source-onnx-solver/sub/task{n:03d}.onnx",
+        license="kaggle-kernel-output",
+    ),
+    # konbu17/neurogolf-2026-blended-till-4-27 kernel output: 401 ONNX (votes 60)
+    Source(
+        name="konbu17-till-4-27",
+        path_template="data/external/konbu17-neurogolf-2026-blended-till-4-27/sub/task{n:03d}.onnx",
+        license="kaggle-kernel-output",
+    ),
 ]
 
 

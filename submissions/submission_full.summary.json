@@ -1,21 +1,16 @@
 {
   "_meta": {
-    "out": "submissions/submission.zip",
-    "zip_size_bytes": 815865,
-    "uncompressed_total_bytes": 4013280,
+    "out": "submissions/submission_full.zip",
+    "zip_size_bytes": 977800,
+    "uncompressed_total_bytes": 5286508,
     "task_count": 400,
-    "fallback_count": 8,
+    "fallback_count": 10,
     "by_source_count": {
-      "konbu17-may8": 154,
-      "jazivxt-infinitesimals": 44,
-      "karnakbaevarthur-task-library": 57,
-      "afr1ste-5480-41": 45,
-      "imaadmahmood-rule-based": 61,
-      "vyankteshdwivedi-multi-source": 21,
-      "fallback-zero-conv": 8,
-      "magmacot-new-blending": 7,
-      "karnakbaevarthur-logic": 1,
-      "hanifnoerrofiq-8may": 2
+      "konbu17-may8": 247,
+      "afr1ste-5480-41": 133,
+      "karnakbaevarthur-task-library": 9,
+      "fallback-zero-conv": 10,
+      "karnakbaevarthur-logic": 1
     },
     "sources_evaluated": [
       "konbu17-may8",
@@ -24,16 +19,10 @@
       "magmacot-new-blending",
       "konbu17-blended-401-v117",
       "karnakbaevarthur-task-library",
-      "karnakbaevarthur-logic",
-      "agentzz-6284-v2",
-      "jazivxt-infinitesimals",
-      "imaadmahmood-rule-based",
-      "hanifnoerrofiq-8may",
-      "vyankteshdwivedi-multi-source",
-      "konbu17-till-4-27"
+      "karnakbaevarthur-logic"
     ],
-    "estimated_total_score": 5666.516522143907,
-    "mode": "quick"
+    "estimated_total_score": 5850.916103070757,
+    "mode": "full"
   },
   "per_task": {
     "task001": {
@@ -44,31 +33,31 @@
       "status": "selected"
     },
     "task002": {
-      "source": "jazivxt-infinitesimals",
-      "size": 9140,
-      "cost": 418517,
-      "score": 12.055527210646927,
+      "source": "konbu17-may8",
+      "size": 28687,
+      "cost": 280035,
+      "score": 12.457330125660462,
       "status": "selected"
     },
     "task003": {
-      "source": "karnakbaevarthur-task-library",
-      "size": 2848,
-      "cost": 10072,
-      "score": 15.782485424275817,
+      "source": "konbu17-may8",
+      "size": 3904,
+      "cost": 10035,
+      "score": 15.786165738769562,
       "status": "selected"
     },
     "task004": {
-      "source": "jazivxt-infinitesimals",
-      "size": 2415,
-      "cost": 427088,
-      "score": 12.035254640029683,
+      "source": "afr1ste-5480-41",
+      "size": 2672,
+      "cost": 110307,
+      "score": 13.388977333490157,
       "status": "selected"
     },
     "task005": {
-      "source": "konbu17-may8",
-      "size": 14885,
-      "cost": 355075,
-      "score": 12.21991568625067,
+      "source": "afr1ste-5480-41",
+      "size": 15449,
+      "cost": 353312,
+      "score": 12.224893201761136,
       "status": "selected"
     },
     "task006": {
@@ -100,10 +89,10 @@
       "status": "selected"
     },
     "task010": {
-      "source": "karnakbaevarthur-task-library",
-      "size": 4283,
-      "cost": 66026,
-      "score": 13.902196117171249,
+      "source": "konbu17-may8",
+      "size": 6061,
+      "cost": 8242,
+      "score": 15.983001688101238,
       "status": "selected"
     },
     "task011": {
@@ -121,24 +110,24 @@
       "status": "selected"
     },
     "task013": {
-      "source": "jazivxt-infinitesimals",
-      "size": 5401,
-      "cost": 502202,
-      "score": 11.873242291825207,
+      "source": "konbu17-may8",
+      "size": 22727,
+      "cost": 281505,
+      "score": 12.452094511606518,
       "status": "selected"
     },
     "task014": {
-      "source": "imaadmahmood-rule-based",
-      "size": 2662,
-      "cost": 328623,
-      "score": 12.297333523950583,
+      "source": "konbu17-may8",
+      "size": 3676,
+      "cost": 291964,
+      "score": 12.415614214021364,
       "status": "selected"
     },
     "task015": {
-      "source": "imaadmahmood-rule-based",
-      "size": 2375,
-      "cost": 87584,
-      "score": 13.619646388159595,
+      "source": "konbu17-may8",
+      "size": 3834,
+      "cost": 4500,
+      "score": 16.58816732424159,
       "status": "selected"
     },
     "task016": {
@@ -149,17 +138,17 @@
       "status": "selected"
     },
     "task017": {
-      "source": "imaadmahmood-rule-based",
-      "size": 17106,
-      "cost": 750242,
-      "score": 11.471848899866533,
+      "source": "fallback-zero-conv",
+      "size": 572,
+      "cost": null,
+      "score": null,
       "status": "selected"
     },
     "task018": {
-      "source": "konbu17-may8",
-      "size": 28217,
-      "cost": 130132,
-      "score": 13.223695401101164,
+      "source": "afr1ste-5480-41",
+      "size": 49368,
+      "cost": 114578,
+      "score": 13.35098890724301,
       "status": "selected"
     },
     "task019": {
@@ -184,17 +173,17 @@
       "status": "selected"
     },
     "task022": {
-      "source": "konbu17-may8",
-      "size": 29851,
-      "cost": 100807,
-      "score": 13.479036923347303,
+      "source": "afr1ste-5480-41",
+      "size": 45108,
+      "cost": 94995,
+      "score": 13.53842046238136,
       "status": "selected"
     },
     "task023": {
-      "source": "konbu17-may8",
-      "size": 2803,
-      "cost": 21828,
-      "score": 15.009051171693878,
+      "source": "afr1ste-5480-41",
+      "size": 2838,
+      "cost": 21433,
+      "score": 15.027312930662868,
       "status": "selected"
     },
     "task024": {
@@ -205,73 +194,73 @@
       "status": "selected"
     },
     "task025": {
-      "source": "jazivxt-infinitesimals",
-      "size": 4081,
-      "cost": 682384,
-      "score": 11.566652171774122,
+      "source": "konbu17-may8",
+      "size": 61508,
+      "cost": 89286,
+      "score": 13.600400020341894,
       "status": "selected"
     },
     "task026": {
-      "source": "vyankteshdwivedi-multi-source",
-      "size": 1175,
-      "cost": 4788,
-      "score": 16.526131933322134,
+      "source": "konbu17-may8",
+      "size": 1613,
+      "cost": 1188,
+      "score": 17.91997350007741,
       "status": "selected"
     },
     "task027": {
-      "source": "imaadmahmood-rule-based",
-      "size": 30420,
-      "cost": 56205,
-      "score": 14.063239000104103,
+      "source": "afr1ste-5480-41",
+      "size": 31128,
+      "cost": 56195,
+      "score": 14.063416936047632,
       "status": "selected"
     },
     "task028": {
-      "source": "karnakbaevarthur-task-library",
-      "size": 2174,
-      "cost": 20910,
-      "score": 15.05201720757732,
+      "source": "konbu17-may8",
+      "size": 2539,
+      "cost": 20068,
+      "score": 15.093118214395856,
       "status": "selected"
     },
     "task029": {
-      "source": "jazivxt-infinitesimals",
-      "size": 7953,
-      "cost": 369170,
-      "score": 12.180987478462074,
+      "source": "afr1ste-5480-41",
+      "size": 12396,
+      "cost": 329494,
+      "score": 12.294686576649289,
       "status": "selected"
     },
     "task030": {
-      "source": "imaadmahmood-rule-based",
-      "size": 4733,
-      "cost": 277672,
-      "score": 12.465804160020522,
+      "source": "konbu17-may8",
+      "size": 9573,
+      "cost": 54777,
+      "score": 14.088974323195158,
       "status": "selected"
     },
     "task031": {
-      "source": "imaadmahmood-rule-based",
-      "size": 2676,
-      "cost": 114065,
-      "score": 13.355476259673026,
+      "source": "afr1ste-5480-41",
+      "size": 2899,
+      "cost": 18963,
+      "score": 15.149755008859591,
       "status": "selected"
     },
     "task032": {
-      "source": "konbu17-may8",
-      "size": 1654,
-      "cost": 3415,
-      "score": 16.864067227995108,
+      "source": "afr1ste-5480-41",
+      "size": 1662,
+      "cost": 3405,
+      "score": 16.86699978141639,
       "status": "selected"
     },
     "task033": {
-      "source": "imaadmahmood-rule-based",
-      "size": 982,
-      "cost": 162497,
-      "score": 13.00158518095695,
+      "source": "konbu17-may8",
+      "size": 1311,
+      "cost": 162462,
+      "score": 13.001800592748191,
       "status": "selected"
     },
     "task034": {
-      "source": "jazivxt-infinitesimals",
-      "size": 8486,
-      "cost": 213093,
-      "score": 12.73051603088078,
+      "source": "afr1ste-5480-41",
+      "size": 13710,
+      "cost": 187994,
+      "score": 12.855834673590822,
       "status": "selected"
     },
     "task035": {
@@ -282,10 +271,10 @@
       "status": "selected"
     },
     "task036": {
-      "source": "konbu17-may8",
-      "size": 4194,
-      "cost": 122014,
-      "score": 13.288108928769994,
+      "source": "afr1ste-5480-41",
+      "size": 5765,
+      "cost": 121892,
+      "score": 13.289109314247797,
       "status": "selected"
     },
     "task037": {
@@ -317,10 +306,10 @@
       "status": "selected"
     },
     "task041": {
-      "source": "imaadmahmood-rule-based",
-      "size": 697,
-      "cost": 226822,
-      "score": 12.668079152104964,
+      "source": "konbu17-may8",
+      "size": 1313,
+      "cost": 16327,
+      "score": 15.299424541873835,
       "status": "selected"
     },
     "task042": {
@@ -331,17 +320,17 @@
       "status": "selected"
     },
     "task043": {
-      "source": "konbu17-may8",
-      "size": 1181,
-      "cost": 9836,
-      "score": 15.806195596663917,
+      "source": "afr1ste-5480-41",
+      "size": 1628,
+      "cost": 9119,
+      "score": 15.881884572066335,
       "status": "selected"
     },
     "task044": {
-      "source": "jazivxt-infinitesimals",
-      "size": 21678,
-      "cost": 45966,
-      "score": 14.264342728255125,
+      "source": "konbu17-may8",
+      "size": 25407,
+      "cost": 31805,
+      "score": 14.632621210887095,
       "status": "selected"
     },
     "task045": {
@@ -366,38 +355,38 @@
       "status": "selected"
     },
     "task048": {
-      "source": "vyankteshdwivedi-multi-source",
-      "size": 5784,
-      "cost": 12295,
-      "score": 15.583052045349707,
+      "source": "konbu17-may8",
+      "size": 5977,
+      "cost": 8832,
+      "score": 15.913863231483123,
       "status": "selected"
     },
     "task049": {
-      "source": "karnakbaevarthur-task-library",
-      "size": 2586,
-      "cost": 87599,
-      "score": 13.61947513866579,
+      "source": "konbu17-may8",
+      "size": 2631,
+      "cost": 52424,
+      "score": 14.132880219280667,
       "status": "selected"
     },
     "task050": {
-      "source": "karnakbaevarthur-task-library",
-      "size": 1200,
-      "cost": 46863,
-      "score": 14.245016269500882,
+      "source": "konbu17-may8",
+      "size": 1776,
+      "cost": 10375,
+      "score": 15.752845654901101,
       "status": "selected"
     },
     "task051": {
-      "source": "konbu17-may8",
-      "size": 8106,
-      "cost": 266129,
-      "score": 12.508263567386411,
+      "source": "afr1ste-5480-41",
+      "size": 8540,
+      "cost": 266078,
+      "score": 12.508455222137874,
       "status": "selected"
     },
     "task052": {
-      "source": "konbu17-may8",
-      "size": 918,
-      "cost": 1701,
-      "score": 17.561028407604137,
+      "source": "afr1ste-5480-41",
+      "size": 959,
+      "cost": 1690,
+      "score": 17.56751619208288,
       "status": "selected"
     },
     "task053": {
@@ -415,10 +404,10 @@
       "status": "selected"
     },
     "task055": {
-      "source": "konbu17-may8",
-      "size": 14976,
-      "cost": 48816,
-      "score": 14.204186593043548,
+      "source": "afr1ste-5480-41",
+      "size": 20952,
+      "cost": 48086,
+      "score": 14.219253646563475,
       "status": "selected"
     },
     "task056": {
@@ -429,10 +418,10 @@
       "status": "selected"
     },
     "task057": {
-      "source": "karnakbaevarthur-task-library",
-      "size": 1031,
-      "cost": 80956,
-      "score": 13.698338923813903,
+      "source": "konbu17-may8",
+      "size": 1453,
+      "cost": 80955,
+      "score": 13.698351276279148,
       "status": "selected"
     },
     "task058": {
@@ -450,10 +439,10 @@
       "status": "selected"
     },
     "task060": {
-      "source": "jazivxt-infinitesimals",
-      "size": 1716,
-      "cost": 14606,
-      "score": 15.410812317819945,
+      "source": "konbu17-may8",
+      "size": 2234,
+      "cost": 12393,
+      "score": 15.575112923935126,
       "status": "selected"
     },
     "task061": {
@@ -471,10 +460,10 @@
       "status": "selected"
     },
     "task063": {
-      "source": "karnakbaevarthur-task-library",
-      "size": 2197,
-      "cost": 66836,
-      "score": 13.890002863485966,
+      "source": "konbu17-may8",
+      "size": 2387,
+      "cost": 30732,
+      "score": 14.666940264012474,
       "status": "selected"
     },
     "task064": {
@@ -485,17 +474,17 @@
       "status": "selected"
     },
     "task065": {
-      "source": "konbu17-may8",
-      "size": 1908,
-      "cost": 51454,
-      "score": 14.151556516375953,
+      "source": "afr1ste-5480-41",
+      "size": 1944,
+      "cost": 51415,
+      "score": 14.15231476233671,
       "status": "selected"
     },
     "task066": {
-      "source": "imaadmahmood-rule-based",
-      "size": 20606,
-      "cost": 100610,
-      "score": 13.480993064713903,
+      "source": "konbu17-may8",
+      "size": 22387,
+      "cost": 21408,
+      "score": 15.028480037072045,
       "status": "selected"
     },
     "task067": {
@@ -506,17 +495,17 @@
       "status": "selected"
     },
     "task068": {
-      "source": "vyankteshdwivedi-multi-source",
-      "size": 1386,
-      "cost": 21947,
-      "score": 15.003614265097141,
+      "source": "konbu17-may8",
+      "size": 1520,
+      "cost": 17951,
+      "score": 15.20459889732893,
       "status": "selected"
     },
     "task069": {
-      "source": "jazivxt-infinitesimals",
-      "size": 5853,
-      "cost": 313491,
-      "score": 12.344474069490945,
+      "source": "afr1ste-5480-41",
+      "size": 36370,
+      "cost": 141151,
+      "score": 13.142414481681753,
       "status": "selected"
     },
     "task070": {
@@ -534,10 +523,10 @@
       "status": "selected"
     },
     "task072": {
-      "source": "vyankteshdwivedi-multi-source",
-      "size": 1243,
-      "cost": 5718,
-      "score": 16.34862562711774,
+      "source": "konbu17-may8",
+      "size": 1625,
+      "cost": 2118,
+      "score": 17.34177247383865,
       "status": "selected"
     },
     "task073": {
@@ -548,43 +537,43 @@
       "status": "selected"
     },
     "task074": {
-      "source": "imaadmahmood-rule-based",
-      "size": 1797,
-      "cost": 583227,
-      "score": 11.723668245098759,
+      "source": "konbu17-may8",
+      "size": 2235,
+      "cost": 388879,
+      "score": 12.128976479771318,
       "status": "selected"
     },
     "task075": {
-      "source": "vyankteshdwivedi-multi-source",
-      "size": 6589,
-      "cost": 74368,
-      "score": 13.783218979228472,
+      "source": "konbu17-may8",
+      "size": 7717,
+      "cost": 52669,
+      "score": 14.128217673842922,
       "status": "selected"
     },
     "task076": {
-      "source": "imaadmahmood-rule-based",
-      "size": 21250,
-      "cost": 36188,
-      "score": 14.503517148854367,
+      "source": "konbu17-may8",
+      "size": 21727,
+      "cost": 36184,
+      "score": 14.503627688842322,
       "status": "selected"
     },
     "task077": {
-      "source": "konbu17-may8",
-      "size": 11626,
-      "cost": 530203,
-      "score": 11.818984768936772,
+      "source": "afr1ste-5480-41",
+      "size": 11633,
+      "cost": 528524,
+      "score": 11.822156505196544,
       "status": "selected"
     },
     "task078": {
-      "source": "jazivxt-infinitesimals",
-      "size": 1329,
-      "cost": 19743,
-      "score": 15.10944572287577,
+      "source": "konbu17-may8",
+      "size": 2575,
+      "cost": 15756,
+      "score": 15.335023475909203,
       "status": "selected"
     },
     "task079": {
-      "source": "afr1ste-5480-41",
-      "size": 2165,
+      "source": "konbu17-may8",
+      "size": 2233,
       "cost": 24953,
       "score": 14.87525066556768,
       "status": "selected"
@@ -597,38 +586,38 @@
       "status": "selected"
     },
     "task081": {
-      "source": "imaadmahmood-rule-based",
-      "size": 2327,
-      "cost": 58044,
-      "score": 14.031043377389016,
+      "source": "konbu17-may8",
+      "size": 3537,
+      "cost": 7493,
+      "score": 16.07827546963569,
       "status": "selected"
     },
     "task082": {
-      "source": "konbu17-may8",
-      "size": 1755,
-      "cost": 43047,
-      "score": 14.329952178983485,
+      "source": "afr1ste-5480-41",
+      "size": 2240,
+      "cost": 42319,
+      "score": 14.347008563236603,
       "status": "selected"
     },
     "task083": {
-      "source": "konbu17-may8",
-      "size": 923,
-      "cost": 5877,
-      "score": 16.321198293387347,
+      "source": "afr1ste-5480-41",
+      "size": 7454,
+      "cost": 1800,
+      "score": 17.504458056115745,
       "status": "selected"
     },
     "task084": {
-      "source": "konbu17-may8",
-      "size": 1945,
-      "cost": 19523,
-      "score": 15.120651463317198,
+      "source": "afr1ste-5480-41",
+      "size": 2820,
+      "cost": 19513,
+      "score": 15.121163810905001,
       "status": "selected"
     },
     "task085": {
-      "source": "jazivxt-infinitesimals",
-      "size": 1475,
-      "cost": 284513,
-      "score": 12.441465774295073,
+      "source": "konbu17-may8",
+      "size": 2013,
+      "cost": 190218,
+      "score": 12.844073938160419,
       "status": "selected"
     },
     "task086": {
@@ -646,17 +635,17 @@
       "status": "selected"
     },
     "task088": {
-      "source": "jazivxt-infinitesimals",
-      "size": 3688,
-      "cost": 205873,
-      "score": 12.764985247199911,
+      "source": "konbu17-may8",
+      "size": 12966,
+      "cost": 165259,
+      "score": 12.984730780834171,
       "status": "selected"
     },
     "task089": {
-      "source": "magmacot-new-blending",
-      "size": 19484,
-      "cost": 1153304,
-      "score": 11.041858575483651,
+      "source": "konbu17-may8",
+      "size": 110495,
+      "cost": 541466,
+      "score": 11.797964445098424,
       "status": "selected"
     },
     "task090": {
@@ -674,24 +663,24 @@
       "status": "selected"
     },
     "task092": {
-      "source": "karnakbaevarthur-task-library",
-      "size": 2049,
-      "cost": 668251,
-      "score": 11.587580869554014,
+      "source": "konbu17-may8",
+      "size": 3290,
+      "cost": 338408,
+      "score": 12.267992452903293,
       "status": "selected"
     },
     "task093": {
-      "source": "jazivxt-infinitesimals",
-      "size": 3394,
-      "cost": 159030,
-      "score": 13.023151857350038,
+      "source": "konbu17-may8",
+      "size": 3751,
+      "cost": 47377,
+      "score": 14.23410784214752,
       "status": "selected"
     },
     "task094": {
-      "source": "konbu17-may8",
-      "size": 2051,
-      "cost": 51813,
-      "score": 14.144603637987972,
+      "source": "afr1ste-5480-41",
+      "size": 2764,
+      "cost": 48163,
+      "score": 14.217653629598582,
       "status": "selected"
     },
     "task095": {
@@ -702,8 +691,8 @@
       "status": "selected"
     },
     "task096": {
-      "source": "afr1ste-5480-41",
-      "size": 19499,
+      "source": "konbu17-may8",
+      "size": 19557,
       "cost": 29368,
       "score": 14.71233907482333,
       "status": "selected"
@@ -730,10 +719,10 @@
       "status": "selected"
     },
     "task100": {
-      "source": "karnakbaevarthur-task-library",
-      "size": 4773,
-      "cost": 68294,
-      "score": 13.868422806030557,
+      "source": "afr1ste-5480-41",
+      "size": 4992,
+      "cost": 7077,
+      "score": 16.135394631924214,
       "status": "selected"
     },
     "task101": {
@@ -744,31 +733,31 @@
       "status": "selected"
     },
     "task102": {
-      "source": "jazivxt-infinitesimals",
-      "size": 5285,
-      "cost": 148371,
-      "score": 13.092528827170884,
+      "source": "konbu17-may8",
+      "size": 36416,
+      "cost": 132850,
+      "score": 13.20302404881204,
       "status": "selected"
     },
     "task103": {
-      "source": "karnakbaevarthur-task-library",
-      "size": 1443,
-      "cost": 36366,
-      "score": 14.49861044882066,
+      "source": "konbu17-may8",
+      "size": 1582,
+      "cost": 278,
+      "score": 19.372378886309363,
       "status": "selected"
     },
     "task104": {
-      "source": "vyankteshdwivedi-multi-source",
-      "size": 5543,
-      "cost": 7385,
-      "score": 16.092793805034518,
+      "source": "konbu17-may8",
+      "size": 5723,
+      "cost": 6382,
+      "score": 16.23876319316181,
       "status": "selected"
     },
     "task105": {
-      "source": "vyankteshdwivedi-multi-source",
-      "size": 35058,
-      "cost": 80911,
-      "score": 13.6988949358628,
+      "source": "afr1ste-5480-41",
+      "size": 35213,
+      "cost": 51232,
+      "score": 14.15588038420356,
       "status": "selected"
     },
     "task106": {
@@ -786,10 +775,10 @@
       "status": "selected"
     },
     "task108": {
-      "source": "magmacot-new-blending",
-      "size": 3957,
-      "cost": 76563,
-      "score": 13.754130789687895,
+      "source": "konbu17-may8",
+      "size": 7454,
+      "cost": 1800,
+      "score": 17.504458056115745,
       "status": "selected"
     },
     "task109": {
@@ -800,10 +789,10 @@
       "status": "selected"
     },
     "task110": {
-      "source": "imaadmahmood-rule-based",
-      "size": 14028,
-      "cost": 598141,
-      "score": 11.698418208907192,
+      "source": "konbu17-may8",
+      "size": 16176,
+      "cost": 521451,
+      "score": 11.835629410723072,
       "status": "selected"
     },
     "task111": {
@@ -814,10 +803,10 @@
       "status": "selected"
     },
     "task112": {
-      "source": "jazivxt-infinitesimals",
-      "size": 2505,
-      "cost": 88900,
-      "score": 13.604732578498004,
+      "source": "afr1ste-5480-41",
+      "size": 3983,
+      "cost": 82314,
+      "score": 13.68170351844578,
       "status": "selected"
     },
     "task113": {
@@ -828,17 +817,17 @@
       "status": "selected"
     },
     "task114": {
-      "source": "imaadmahmood-rule-based",
-      "size": 1781,
-      "cost": 13811,
-      "score": 15.466779344922072,
+      "source": "konbu17-may8",
+      "size": 4719,
+      "cost": 1254,
+      "score": 17.865906278807135,
       "status": "selected"
     },
     "task115": {
-      "source": "magmacot-new-blending",
-      "size": 3652,
-      "cost": 224606,
-      "score": 12.677896964911833,
+      "source": "konbu17-may8",
+      "size": 5069,
+      "cost": 4122,
+      "score": 16.675906238549594,
       "status": "selected"
     },
     "task116": {
@@ -863,24 +852,24 @@
       "status": "selected"
     },
     "task119": {
-      "source": "konbu17-may8",
-      "size": 48756,
-      "cost": 373154,
-      "score": 12.170253517948142,
+      "source": "afr1ste-5480-41",
+      "size": 48761,
+      "cost": 372579,
+      "score": 12.171795625147235,
       "status": "selected"
     },
     "task120": {
-      "source": "jazivxt-infinitesimals",
-      "size": 1801,
-      "cost": 32935,
-      "score": 14.597708798925206,
+      "source": "konbu17-may8",
+      "size": 4834,
+      "cost": 16060,
+      "score": 15.315913012499248,
       "status": "selected"
     },
     "task121": {
-      "source": "jazivxt-infinitesimals",
-      "size": 1481,
-      "cost": 48245,
-      "score": 14.215952525545516,
+      "source": "afr1ste-5480-41",
+      "size": 3339,
+      "cost": 6530,
+      "score": 16.215837777729526,
       "status": "selected"
     },
     "task122": {
@@ -912,22 +901,22 @@
       "status": "selected"
     },
     "task126": {
-      "source": "imaadmahmood-rule-based",
-      "size": 1827,
-      "cost": 152382,
-      "score": 13.065854194977101,
+      "source": "konbu17-may8",
+      "size": 2488,
+      "cost": 152334,
+      "score": 13.066169242433729,
       "status": "selected"
     },
     "task127": {
-      "source": "jazivxt-infinitesimals",
-      "size": 1559,
-      "cost": 4050,
-      "score": 16.693527839899417,
+      "source": "konbu17-may8",
+      "size": 3772,
+      "cost": 900,
+      "score": 18.197605236675688,
       "status": "selected"
     },
     "task128": {
-      "source": "imaadmahmood-rule-based",
-      "size": 2418,
+      "source": "afr1ste-5480-41",
+      "size": 3224,
       "cost": 175761,
       "score": 12.923119603380998,
       "status": "selected"
@@ -940,24 +929,24 @@
       "status": "selected"
     },
     "task130": {
-      "source": "afr1ste-5480-41",
-      "size": 1012,
+      "source": "konbu17-may8",
+      "size": 1050,
       "cost": 15948,
       "score": 15.322911291498754,
       "status": "selected"
     },
     "task131": {
-      "source": "imaadmahmood-rule-based",
-      "size": 9691,
-      "cost": 63886,
-      "score": 13.935144475970374,
+      "source": "konbu17-may8",
+      "size": 12240,
+      "cost": 63872,
+      "score": 13.935363640328864,
       "status": "selected"
     },
     "task132": {
-      "source": "karnakbaevarthur-task-library",
-      "size": 1988,
-      "cost": 156767,
-      "score": 13.037484094434872,
+      "source": "afr1ste-5480-41",
+      "size": 2331,
+      "cost": 40879,
+      "score": 14.38162823726114,
       "status": "selected"
     },
     "task133": {
@@ -968,10 +957,10 @@
       "status": "selected"
     },
     "task134": {
-      "source": "imaadmahmood-rule-based",
-      "size": 5153,
-      "cost": 18407,
-      "score": 15.179513693967278,
+      "source": "afr1ste-5480-41",
+      "size": 7283,
+      "cost": 17068,
+      "score": 15.255039355692109,
       "status": "selected"
     },
     "task135": {
@@ -982,31 +971,31 @@
       "status": "selected"
     },
     "task136": {
-      "source": "jazivxt-infinitesimals",
-      "size": 4321,
-      "cost": 332776,
-      "score": 12.284775130055865,
+      "source": "konbu17-may8",
+      "size": 8371,
+      "cost": 28515,
+      "score": 14.741814456409362,
       "status": "selected"
     },
     "task137": {
-      "source": "vyankteshdwivedi-multi-source",
-      "size": 1996,
-      "cost": 138957,
-      "score": 13.158080188264517,
+      "source": "afr1ste-5480-41",
+      "size": 2460,
+      "cost": 134823,
+      "score": 13.188281913948728,
       "status": "selected"
     },
     "task138": {
-      "source": "jazivxt-infinitesimals",
-      "size": 8242,
-      "cost": 651358,
-      "score": 11.613185306766557,
+      "source": "afr1ste-5480-41",
+      "size": 10905,
+      "cost": 523774,
+      "score": 11.831184427442354,
       "status": "selected"
     },
     "task139": {
-      "source": "konbu17-may8",
-      "size": 1588,
-      "cost": 12854,
-      "score": 15.538589674068769,
+      "source": "afr1ste-5480-41",
+      "size": 1616,
+      "cost": 12207,
+      "score": 15.5902351633302,
       "status": "selected"
     },
     "task140": {
@@ -1017,31 +1006,31 @@
       "status": "selected"
     },
     "task141": {
-      "source": "imaadmahmood-rule-based",
-      "size": 1372,
-      "cost": 102355,
-      "score": 13.463797558125279,
+      "source": "konbu17-may8",
+      "size": 1743,
+      "cost": 15831,
+      "score": 15.330274677926223,
       "status": "selected"
     },
     "task142": {
-      "source": "konbu17-may8",
-      "size": 915,
-      "cost": 4428,
-      "score": 16.604296706171475,
+      "source": "afr1ste-5480-41",
+      "size": 7454,
+      "cost": 1800,
+      "score": 17.504458056115745,
       "status": "selected"
     },
     "task143": {
-      "source": "magmacot-new-blending",
-      "size": 1543,
-      "cost": 206989,
-      "score": 12.759579069261097,
+      "source": "konbu17-may8",
+      "size": 2099,
+      "cost": 23015,
+      "score": 14.956098543748658,
       "status": "selected"
     },
     "task144": {
-      "source": "vyankteshdwivedi-multi-source",
-      "size": 1183,
-      "cost": 4866,
-      "score": 16.509972476656532,
+      "source": "konbu17-may8",
+      "size": 1626,
+      "cost": 1266,
+      "score": 17.856382397295878,
       "status": "selected"
     },
     "task145": {
@@ -1052,10 +1041,10 @@
       "status": "selected"
     },
     "task146": {
-      "source": "konbu17-may8",
-      "size": 1351,
-      "cost": 220366,
-      "score": 12.696954920611946,
+      "source": "afr1ste-5480-41",
+      "size": 1408,
+      "cost": 220351,
+      "score": 12.697022991505538,
       "status": "selected"
     },
     "task147": {
@@ -1066,17 +1055,17 @@
       "status": "selected"
     },
     "task148": {
-      "source": "jazivxt-infinitesimals",
-      "size": 8362,
-      "cost": 364191,
-      "score": 12.194566265726564,
+      "source": "afr1ste-5480-41",
+      "size": 10473,
+      "cost": 35893,
+      "score": 14.51170243060831,
       "status": "selected"
     },
     "task149": {
-      "source": "imaadmahmood-rule-based",
-      "size": 1125,
-      "cost": 5211,
-      "score": 16.441472945090787,
+      "source": "konbu17-may8",
+      "size": 1420,
+      "cost": 5202,
+      "score": 16.4432015539914,
       "status": "selected"
     },
     "task150": {
@@ -1087,31 +1076,31 @@
       "status": "selected"
     },
     "task151": {
-      "source": "imaadmahmood-rule-based",
-      "size": 1335,
-      "cost": 115270,
-      "score": 13.344967518404943,
+      "source": "afr1ste-5480-41",
+      "size": 1808,
+      "cost": 23126,
+      "score": 14.951287195311092,
       "status": "selected"
     },
     "task152": {
-      "source": "konbu17-may8",
-      "size": 915,
-      "cost": 4428,
-      "score": 16.604296706171475,
+      "source": "afr1ste-5480-41",
+      "size": 7454,
+      "cost": 1800,
+      "score": 17.504458056115745,
       "status": "selected"
     },
     "task153": {
-      "source": "afr1ste-5480-41",
-      "size": 4925,
+      "source": "konbu17-may8",
+      "size": 4975,
       "cost": 11500,
       "score": 15.649897685648659,
       "status": "selected"
     },
     "task154": {
-      "source": "konbu17-may8",
-      "size": 2826,
-      "cost": 77441,
-      "score": 13.742728364909777,
+      "source": "afr1ste-5480-41",
+      "size": 7650,
+      "cost": 74350,
+      "score": 13.783461048111699,
       "status": "selected"
     },
     "task155": {
@@ -1122,15 +1111,15 @@
       "status": "selected"
     },
     "task156": {
-      "source": "jazivxt-infinitesimals",
-      "size": 5998,
-      "cost": 90312,
-      "score": 13.588974379058618,
+      "source": "afr1ste-5480-41",
+      "size": 9609,
+      "cost": 80138,
+      "score": 13.708494572447707,
       "status": "selected"
     },
     "task157": {
-      "source": "afr1ste-5480-41",
-      "size": 49460,
+      "source": "konbu17-may8",
+      "size": 49526,
       "cost": 85241,
       "score": 13.646762182274843,
       "status": "selected"
@@ -1143,24 +1132,24 @@
       "status": "selected"
     },
     "task159": {
-      "source": "imaadmahmood-rule-based",
-      "size": 19000,
-      "cost": 251697,
-      "score": 12.564018737898756,
+      "source": "konbu17-may8",
+      "size": 20168,
+      "cost": 251649,
+      "score": 12.564209461576487,
       "status": "selected"
     },
     "task160": {
-      "source": "karnakbaevarthur-task-library",
-      "size": 1506,
-      "cost": 200770,
-      "score": 12.790084746752376,
+      "source": "konbu17-may8",
+      "size": 1914,
+      "cost": 13997,
+      "score": 15.453401700079354,
       "status": "selected"
     },
     "task161": {
-      "source": "karnakbaevarthur-task-library",
-      "size": 2323,
-      "cost": 438435,
-      "score": 12.009033152804339,
+      "source": "konbu17-may8",
+      "size": 5813,
+      "cost": 199615,
+      "score": 12.79585420966354,
       "status": "selected"
     },
     "task162": {
@@ -1171,10 +1160,10 @@
       "status": "selected"
     },
     "task163": {
-      "source": "jazivxt-infinitesimals",
-      "size": 4677,
-      "cost": 48137,
-      "score": 14.21819360884327,
+      "source": "konbu17-may8",
+      "size": 13789,
+      "cost": 40535,
+      "score": 14.390078922578192,
       "status": "selected"
     },
     "task164": {
@@ -1192,10 +1181,10 @@
       "status": "selected"
     },
     "task166": {
-      "source": "jazivxt-infinitesimals",
-      "size": 999,
-      "cost": 83144,
-      "score": 13.671670676731742,
+      "source": "konbu17-may8",
+      "size": 1246,
+      "cost": 33861,
+      "score": 14.569980811376263,
       "status": "selected"
     },
     "task167": {
@@ -1206,17 +1195,17 @@
       "status": "selected"
     },
     "task168": {
-      "source": "konbu17-may8",
-      "size": 8303,
-      "cost": 571422,
-      "score": 11.744116730037273,
+      "source": "afr1ste-5480-41",
+      "size": 14983,
+      "cost": 54206,
+      "score": 14.099453117592168,
       "status": "selected"
     },
     "task169": {
-      "source": "karnakbaevarthur-task-library",
-      "size": 2955,
-      "cost": 368184,
-      "score": 12.18366190780728,
+      "source": "afr1ste-5480-41",
+      "size": 17705,
+      "cost": 58787,
+      "score": 14.018323978992306,
       "status": "selected"
     },
     "task170": {
@@ -1241,10 +1230,10 @@
       "status": "selected"
     },
     "task173": {
-      "source": "imaadmahmood-rule-based",
-      "size": 3951,
-      "cost": 472706,
-      "score": 11.933771090259246,
+      "source": "afr1ste-5480-41",
+      "size": 6012,
+      "cost": 441715,
+      "score": 12.001579843290845,
       "status": "selected"
     },
     "task174": {
@@ -1255,10 +1244,10 @@
       "status": "selected"
     },
     "task175": {
-      "source": "imaadmahmood-rule-based",
-      "size": 4350,
-      "cost": 32680,
-      "score": 14.60548145102606,
+      "source": "konbu17-may8",
+      "size": 5068,
+      "cost": 32678,
+      "score": 14.60554265240923,
       "status": "selected"
     },
     "task176": {
@@ -1269,10 +1258,10 @@
       "status": "selected"
     },
     "task177": {
-      "source": "konbu17-may8",
-      "size": 2698,
-      "cost": 114066,
-      "score": 13.355467492780319,
+      "source": "afr1ste-5480-41",
+      "size": 2815,
+      "cost": 114065,
+      "score": 13.355476259673026,
       "status": "selected"
     },
     "task178": {
@@ -1283,8 +1272,8 @@
       "status": "selected"
     },
     "task179": {
-      "source": "vyankteshdwivedi-multi-source",
-      "size": 139,
+      "source": "konbu17-may8",
+      "size": 170,
       "cost": 0,
       "score": 25.0,
       "status": "selected"
@@ -1297,15 +1286,15 @@
       "status": "selected"
     },
     "task181": {
-      "source": "konbu17-may8",
-      "size": 1230,
-      "cost": 77114,
-      "score": 13.74695987457209,
+      "source": "afr1ste-5480-41",
+      "size": 1934,
+      "cost": 73508,
+      "score": 13.794850477184685,
       "status": "selected"
     },
     "task182": {
-      "source": "afr1ste-5480-41",
-      "size": 462279,
+      "source": "konbu17-may8",
+      "size": 462321,
       "cost": 209249,
       "score": 12.748719790632219,
       "status": "selected"
@@ -1318,17 +1307,17 @@
       "status": "selected"
     },
     "task184": {
-      "source": "jazivxt-infinitesimals",
-      "size": 5140,
-      "cost": 372543,
-      "score": 12.171892253618887,
+      "source": "konbu17-may8",
+      "size": 6823,
+      "cost": 53007,
+      "score": 14.12182074071524,
       "status": "selected"
     },
     "task185": {
-      "source": "jazivxt-infinitesimals",
-      "size": 5340,
-      "cost": 78146,
-      "score": 13.733665849081545,
+      "source": "afr1ste-5480-41",
+      "size": 18881,
+      "cost": 75838,
+      "score": 13.763645234726843,
       "status": "selected"
     },
     "task186": {
@@ -1339,17 +1328,17 @@
       "status": "selected"
     },
     "task187": {
-      "source": "konbu17-may8",
-      "size": 6346,
-      "cost": 282646,
-      "score": 12.448049489774517,
+      "source": "afr1ste-5480-41",
+      "size": 8415,
+      "cost": 278587,
+      "score": 12.46251432264169,
       "status": "selected"
     },
     "task188": {
-      "source": "vyankteshdwivedi-multi-source",
-      "size": 2471,
-      "cost": 27332,
-      "score": 14.784186544099331,
+      "source": "konbu17-may8",
+      "size": 2963,
+      "cost": 11021,
+      "score": 15.692442177308457,
       "status": "selected"
     },
     "task189": {
@@ -1374,38 +1363,38 @@
       "status": "selected"
     },
     "task192": {
-      "source": "karnakbaevarthur-task-library",
-      "size": 1290,
-      "cost": 102790,
-      "score": 13.459556648993033,
+      "source": "konbu17-may8",
+      "size": 1760,
+      "cost": 76201,
+      "score": 13.758870135051794,
       "status": "selected"
     },
     "task193": {
-      "source": "karnakbaevarthur-task-library",
-      "size": 913,
-      "cost": 102641,
-      "score": 13.461007257967607,
+      "source": "konbu17-may8",
+      "size": 1530,
+      "cost": 74463,
+      "score": 13.781942363296277,
       "status": "selected"
     },
     "task194": {
-      "source": "imaadmahmood-rule-based",
-      "size": 995,
-      "cost": 12246,
-      "score": 15.5870453679621,
+      "source": "konbu17-may8",
+      "size": 7454,
+      "cost": 1800,
+      "score": 17.504458056115745,
       "status": "selected"
     },
     "task195": {
-      "source": "jazivxt-infinitesimals",
-      "size": 5716,
-      "cost": 89324,
-      "score": 13.599974512245222,
+      "source": "konbu17-may8",
+      "size": 6814,
+      "cost": 88648,
+      "score": 13.607571249383838,
       "status": "selected"
     },
     "task196": {
-      "source": "karnakbaevarthur-task-library",
-      "size": 1964,
-      "cost": 136892,
-      "score": 13.17305242724615,
+      "source": "konbu17-may8",
+      "size": 2477,
+      "cost": 46868,
+      "score": 14.244909581211953,
       "status": "selected"
     },
     "task197": {
@@ -1416,10 +1405,10 @@
       "status": "selected"
     },
     "task198": {
-      "source": "imaadmahmood-rule-based",
-      "size": 7121,
-      "cost": 181485,
-      "score": 12.891071715356311,
+      "source": "konbu17-may8",
+      "size": 8467,
+      "cost": 174269,
+      "score": 12.931644638584075,
       "status": "selected"
     },
     "task199": {
@@ -1437,17 +1426,17 @@
       "status": "selected"
     },
     "task201": {
-      "source": "konbu17-may8",
-      "size": 12203,
-      "cost": 171228,
-      "score": 12.949248719281425,
+      "source": "afr1ste-5480-41",
+      "size": 12285,
+      "cost": 171221,
+      "score": 12.949289601281377,
       "status": "selected"
     },
     "task202": {
-      "source": "jazivxt-infinitesimals",
-      "size": 5936,
-      "cost": 415916,
-      "score": 12.061761404222732,
+      "source": "konbu17-may8",
+      "size": 5974,
+      "cost": 291333,
+      "score": 12.417777778195852,
       "status": "selected"
     },
     "task203": {
@@ -1458,38 +1447,38 @@
       "status": "selected"
     },
     "task204": {
-      "source": "konbu17-may8",
-      "size": 2713,
-      "cost": 159448,
-      "score": 13.020526870757427,
+      "source": "afr1ste-5480-41",
+      "size": 7574,
+      "cost": 153144,
+      "score": 13.060866065783708,
       "status": "selected"
     },
     "task205": {
-      "source": "konbu17-may8",
-      "size": 53591,
-      "cost": 333684,
-      "score": 12.282050283668058,
+      "source": "afr1ste-5480-41",
+      "size": 83537,
+      "cost": 120406,
+      "score": 13.301375355497767,
       "status": "selected"
     },
     "task206": {
-      "source": "konbu17-may8",
-      "size": 19041,
-      "cost": 124521,
-      "score": 13.267770344638283,
+      "source": "afr1ste-5480-41",
+      "size": 20541,
+      "cost": 121066,
+      "score": 13.295908869581925,
       "status": "selected"
     },
     "task207": {
-      "source": "vyankteshdwivedi-multi-source",
-      "size": 1740,
-      "cost": 2878,
-      "score": 17.035149112552688,
+      "source": "konbu17-may8",
+      "size": 1759,
+      "cost": 2387,
+      "score": 17.22220737366117,
       "status": "selected"
     },
     "task208": {
-      "source": "jazivxt-infinitesimals",
-      "size": 18995,
-      "cost": 160428,
-      "score": 13.014399477228878,
+      "source": "konbu17-may8",
+      "size": 19596,
+      "cost": 143869,
+      "score": 13.123341557712477,
       "status": "selected"
     },
     "task209": {
@@ -1507,17 +1496,17 @@
       "status": "selected"
     },
     "task211": {
-      "source": "magmacot-new-blending",
-      "size": 3957,
-      "cost": 76563,
-      "score": 13.754130789687895,
+      "source": "konbu17-may8",
+      "size": 7454,
+      "cost": 1800,
+      "score": 17.504458056115745,
       "status": "selected"
     },
     "task212": {
-      "source": "karnakbaevarthur-task-library",
-      "size": 3235,
-      "cost": 339246,
-      "score": 12.265519213087208,
+      "source": "konbu17-may8",
+      "size": 6074,
+      "cost": 17211,
+      "score": 15.24669600673002,
       "status": "selected"
     },
     "task213": {
@@ -1528,10 +1517,10 @@
       "status": "selected"
     },
     "task214": {
-      "source": "imaadmahmood-rule-based",
-      "size": 663,
-      "cost": 6971,
-      "score": 16.1504860345136,
+      "source": "konbu17-may8",
+      "size": 7454,
+      "cost": 1800,
+      "score": 17.504458056115745,
       "status": "selected"
     },
     "task215": {
@@ -1549,17 +1538,17 @@
       "status": "selected"
     },
     "task217": {
-      "source": "magmacot-new-blending",
-      "size": 4218,
-      "cost": 150912,
-      "score": 13.075547835543011,
+      "source": "konbu17-may8",
+      "size": 7326,
+      "cost": 146640,
+      "score": 13.104264117486414,
       "status": "selected"
     },
     "task218": {
-      "source": "imaadmahmood-rule-based",
-      "size": 6291,
-      "cost": 23886,
-      "score": 14.918952207771628,
+      "source": "afr1ste-5480-41",
+      "size": 9724,
+      "cost": 23369,
+      "score": 14.940834363284193,
       "status": "selected"
     },
     "task219": {
@@ -1570,24 +1559,24 @@
       "status": "selected"
     },
     "task220": {
-      "source": "karnakbaevarthur-task-library",
-      "size": 1594,
-      "cost": 272012,
-      "score": 12.486398538047961,
+      "source": "afr1ste-5480-41",
+      "size": 3834,
+      "cost": 4500,
+      "score": 16.58816732424159,
       "status": "selected"
     },
     "task221": {
-      "source": "jazivxt-infinitesimals",
-      "size": 8471,
-      "cost": 130930,
-      "score": 13.2175818917782,
+      "source": "konbu17-may8",
+      "size": 21930,
+      "cost": 117342,
+      "score": 13.327151973179296,
       "status": "selected"
     },
     "task222": {
-      "source": "karnakbaevarthur-task-library",
-      "size": 1496,
-      "cost": 281076,
-      "score": 12.45361962561909,
+      "source": "konbu17-may8",
+      "size": 1889,
+      "cost": 90374,
+      "score": 13.588288105607068,
       "status": "selected"
     },
     "task223": {
@@ -1598,24 +1587,24 @@
       "status": "selected"
     },
     "task224": {
-      "source": "imaadmahmood-rule-based",
-      "size": 4041,
-      "cost": 174520,
-      "score": 12.930205372762455,
+      "source": "konbu17-may8",
+      "size": 4784,
+      "cost": 71266,
+      "score": 13.825825365675732,
       "status": "selected"
     },
     "task225": {
-      "source": "jazivxt-infinitesimals",
-      "size": 4988,
-      "cost": 21996,
-      "score": 15.001384102372295,
+      "source": "konbu17-may8",
+      "size": 5386,
+      "cost": 18992,
+      "score": 15.148226883150551,
       "status": "selected"
     },
     "task226": {
-      "source": "vyankteshdwivedi-multi-source",
-      "size": 3209,
-      "cost": 13702,
-      "score": 15.474702913437156,
+      "source": "konbu17-may8",
+      "size": 4853,
+      "cost": 9307,
+      "score": 15.86147791581429,
       "status": "selected"
     },
     "task227": {
@@ -1633,31 +1622,31 @@
       "status": "selected"
     },
     "task229": {
-      "source": "karnakbaevarthur-task-library",
-      "size": 675,
-      "cost": 82945,
-      "score": 13.674066983473624,
+      "source": "afr1ste-5480-41",
+      "size": 1658,
+      "cost": 2094,
+      "score": 17.35316860856952,
       "status": "selected"
     },
     "task230": {
-      "source": "imaadmahmood-rule-based",
-      "size": 1242,
-      "cost": 65832,
-      "score": 13.90513867871445,
+      "source": "karnakbaevarthur-task-library",
+      "size": 1894,
+      "cost": 163186,
+      "score": 12.997354066481266,
       "status": "selected"
     },
     "task231": {
-      "source": "imaadmahmood-rule-based",
-      "size": 2141,
-      "cost": 44859,
-      "score": 14.288720483748047,
+      "source": "afr1ste-5480-41",
+      "size": 3425,
+      "cost": 44778,
+      "score": 14.290527773640557,
       "status": "selected"
     },
     "task232": {
-      "source": "konbu17-may8",
-      "size": 1684,
-      "cost": 42310,
-      "score": 14.347221256285886,
+      "source": "afr1ste-5480-41",
+      "size": 2428,
+      "cost": 41481,
+      "score": 14.367009229943273,
       "status": "selected"
     },
     "task233": {
@@ -1668,31 +1657,31 @@
       "status": "selected"
     },
     "task234": {
-      "source": "imaadmahmood-rule-based",
-      "size": 10178,
-      "cost": 285125,
-      "score": 12.43931704041331,
+      "source": "afr1ste-5480-41",
+      "size": 13400,
+      "cost": 284765,
+      "score": 12.440580442290464,
       "status": "selected"
     },
     "task235": {
-      "source": "jazivxt-infinitesimals",
-      "size": 2837,
-      "cost": 234354,
-      "score": 12.635411928307507,
+      "source": "konbu17-may8",
+      "size": 3900,
+      "cost": 2158,
+      "score": 17.32306285418192,
       "status": "selected"
     },
     "task236": {
-      "source": "vyankteshdwivedi-multi-source",
-      "size": 1129,
-      "cost": 4738,
-      "score": 16.53662961528127,
+      "source": "konbu17-may8",
+      "size": 1511,
+      "cost": 1138,
+      "score": 17.962972385313723,
       "status": "selected"
     },
     "task237": {
-      "source": "imaadmahmood-rule-based",
-      "size": 1546,
-      "cost": 22560,
-      "score": 14.976066294388005,
+      "source": "konbu17-may8",
+      "size": 2210,
+      "cost": 22559,
+      "score": 14.976110621611577,
       "status": "selected"
     },
     "task238": {
@@ -1710,15 +1699,15 @@
       "status": "selected"
     },
     "task240": {
-      "source": "imaadmahmood-rule-based",
-      "size": 2834,
-      "cost": 66595,
-      "score": 13.893615221364868,
+      "source": "konbu17-may8",
+      "size": 3841,
+      "cost": 66594,
+      "score": 13.893630237619966,
       "status": "selected"
     },
     "task241": {
-      "source": "vyankteshdwivedi-multi-source",
-      "size": 139,
+      "source": "konbu17-may8",
+      "size": 170,
       "cost": 0,
       "score": 25.0,
       "status": "selected"
@@ -1738,31 +1727,31 @@
       "status": "selected"
     },
     "task244": {
-      "source": "imaadmahmood-rule-based",
-      "size": 3265,
-      "cost": 55335,
-      "score": 14.078839101301114,
+      "source": "afr1ste-5480-41",
+      "size": 4888,
+      "cost": 55302,
+      "score": 14.07943564677828,
       "status": "selected"
     },
     "task245": {
-      "source": "konbu17-may8",
-      "size": 3138,
-      "cost": 175552,
-      "score": 12.924309425702726,
+      "source": "afr1ste-5480-41",
+      "size": 3288,
+      "cost": 175551,
+      "score": 12.92431512203685,
       "status": "selected"
     },
     "task246": {
-      "source": "imaadmahmood-rule-based",
-      "size": 2207,
-      "cost": 63184,
-      "score": 13.94619361647357,
+      "source": "konbu17-may8",
+      "size": 2621,
+      "cost": 13391,
+      "score": 15.497661881504435,
       "status": "selected"
     },
     "task247": {
-      "source": "imaadmahmood-rule-based",
-      "size": 1345,
-      "cost": 22337,
-      "score": 14.986000224666443,
+      "source": "afr1ste-5480-41",
+      "size": 2070,
+      "cost": 22292,
+      "score": 14.988016851310572,
       "status": "selected"
     },
     "task248": {
@@ -1773,24 +1762,24 @@
       "status": "selected"
     },
     "task249": {
-      "source": "imaadmahmood-rule-based",
-      "size": 1039,
-      "cost": 51502,
-      "score": 14.150624079150774,
+      "source": "konbu17-may8",
+      "size": 1635,
+      "cost": 17894,
+      "score": 15.207779259892458,
       "status": "selected"
     },
     "task250": {
-      "source": "karnakbaevarthur-task-library",
-      "size": 2683,
-      "cost": 181663,
-      "score": 12.890091398712656,
+      "source": "afr1ste-5480-41",
+      "size": 8401,
+      "cost": 20640,
+      "score": 15.0650137804045,
       "status": "selected"
     },
     "task251": {
-      "source": "konbu17-may8",
-      "size": 6992,
-      "cost": 205651,
-      "score": 12.76606416372257,
+      "source": "afr1ste-5480-41",
+      "size": 7057,
+      "cost": 205639,
+      "score": 12.76612251670953,
       "status": "selected"
     },
     "task252": {
@@ -1808,17 +1797,17 @@
       "status": "selected"
     },
     "task254": {
-      "source": "karnakbaevarthur-task-library",
-      "size": 5815,
-      "cost": 60804,
-      "score": 13.98458914473609,
+      "source": "konbu17-may8",
+      "size": 5954,
+      "cost": 9274,
+      "score": 15.865029935048593,
       "status": "selected"
     },
     "task255": {
-      "source": "imaadmahmood-rule-based",
-      "size": 30743,
-      "cost": 146405,
-      "score": 13.105867967068388,
+      "source": "afr1ste-5480-41",
+      "size": 34028,
+      "cost": 142805,
+      "score": 13.130764657719753,
       "status": "selected"
     },
     "task256": {
@@ -1843,10 +1832,10 @@
       "status": "selected"
     },
     "task259": {
-      "source": "jazivxt-infinitesimals",
-      "size": 3060,
-      "cost": 222087,
-      "score": 12.689175524023263,
+      "source": "afr1ste-5480-41",
+      "size": 4062,
+      "cost": 6955,
+      "score": 16.152783895642457,
       "status": "selected"
     },
     "task260": {
@@ -1857,10 +1846,10 @@
       "status": "selected"
     },
     "task261": {
-      "source": "vyankteshdwivedi-multi-source",
-      "size": 722,
-      "cost": 25088,
-      "score": 14.869855076849866,
+      "source": "afr1ste-5480-41",
+      "size": 3834,
+      "cost": 4500,
+      "score": 16.58816732424159,
       "status": "selected"
     },
     "task262": {
@@ -1871,10 +1860,10 @@
       "status": "selected"
     },
     "task263": {
-      "source": "karnakbaevarthur-task-library",
-      "size": 1827,
-      "cost": 155340,
-      "score": 13.046628458026362,
+      "source": "afr1ste-5480-41",
+      "size": 10939,
+      "cost": 8293,
+      "score": 15.976832935548796,
       "status": "selected"
     },
     "task264": {
@@ -1885,17 +1874,17 @@
       "status": "selected"
     },
     "task265": {
-      "source": "konbu17-may8",
-      "size": 2945,
-      "cost": 79779,
-      "score": 13.712984409088952,
+      "source": "afr1ste-5480-41",
+      "size": 2952,
+      "cost": 78484,
+      "score": 13.729349938660008,
       "status": "selected"
     },
     "task266": {
-      "source": "vyankteshdwivedi-multi-source",
-      "size": 1908,
-      "cost": 1370,
-      "score": 17.77743398117783,
+      "source": "konbu17-may8",
+      "size": 2465,
+      "cost": 1188,
+      "score": 17.91997350007741,
       "status": "selected"
     },
     "task267": {
@@ -1906,10 +1895,10 @@
       "status": "selected"
     },
     "task268": {
-      "source": "jazivxt-infinitesimals",
-      "size": 16667,
-      "cost": 195371,
-      "score": 12.817344405934303,
+      "source": "konbu17-may8",
+      "size": 18815,
+      "cost": 26475,
+      "score": 14.816043829530393,
       "status": "selected"
     },
     "task269": {
@@ -1920,17 +1909,17 @@
       "status": "selected"
     },
     "task270": {
-      "source": "karnakbaevarthur-task-library",
-      "size": 3804,
-      "cost": 435734,
-      "score": 12.015212755593645,
+      "source": "konbu17-may8",
+      "size": 10862,
+      "cost": 47315,
+      "score": 14.235417351057666,
       "status": "selected"
     },
     "task271": {
-      "source": "magmacot-new-blending",
-      "size": 1423,
-      "cost": 32126,
-      "score": 14.622579049882289,
+      "source": "konbu17-may8",
+      "size": 1432,
+      "cost": 28991,
+      "score": 14.725259284025897,
       "status": "selected"
     },
     "task272": {
@@ -1941,10 +1930,10 @@
       "status": "selected"
     },
     "task273": {
-      "source": "konbu17-may8",
-      "size": 1601,
-      "cost": 10435,
-      "score": 15.747079180488699,
+      "source": "afr1ste-5480-41",
+      "size": 1645,
+      "cost": 10036,
+      "score": 15.786066092513687,
       "status": "selected"
     },
     "task274": {
@@ -1962,10 +1951,10 @@
       "status": "selected"
     },
     "task276": {
-      "source": "karnakbaevarthur-task-library",
-      "size": 211,
-      "cost": 50,
-      "score": 21.087976994571854,
+      "source": "konbu17-may8",
+      "size": 217,
+      "cost": 10,
+      "score": 22.697414907005953,
       "status": "selected"
     },
     "task277": {
@@ -1997,10 +1986,10 @@
       "status": "selected"
     },
     "task281": {
-      "source": "karnakbaevarthur-task-library",
-      "size": 3342,
-      "cost": 296493,
-      "score": 12.400221111627745,
+      "source": "afr1ste-5480-41",
+      "size": 5896,
+      "cost": 172490,
+      "score": 12.941905457241326,
       "status": "selected"
     },
     "task282": {
@@ -2032,10 +2021,10 @@
       "status": "selected"
     },
     "task286": {
-      "source": "imaadmahmood-rule-based",
-      "size": 13515,
-      "cost": 438802,
-      "score": 12.008196434742034,
+      "source": "konbu17-may8",
+      "size": 14243,
+      "cost": 421295,
+      "score": 12.048911420130851,
       "status": "selected"
     },
     "task287": {
@@ -2046,24 +2035,24 @@
       "status": "selected"
     },
     "task288": {
-      "source": "jazivxt-infinitesimals",
-      "size": 4502,
-      "cost": 479918,
-      "score": 11.918629465042935,
+      "source": "konbu17-may8",
+      "size": 7578,
+      "cost": 50788,
+      "score": 14.164584614810318,
       "status": "selected"
     },
     "task289": {
-      "source": "jazivxt-infinitesimals",
-      "size": 1562,
-      "cost": 46898,
-      "score": 14.244269690398148,
+      "source": "konbu17-may8",
+      "size": 2005,
+      "cost": 31794,
+      "score": 14.632967128279184,
       "status": "selected"
     },
     "task290": {
-      "source": "hanifnoerrofiq-8may",
-      "size": 1778,
-      "cost": 332133,
-      "score": 12.286709229911457,
+      "source": "konbu17-may8",
+      "size": 3310,
+      "cost": 136405,
+      "score": 13.176616319388852,
       "status": "selected"
     },
     "task291": {
@@ -2095,17 +2084,17 @@
       "status": "selected"
     },
     "task295": {
-      "source": "imaadmahmood-rule-based",
-      "size": 1786,
-      "cost": 89397,
-      "score": 13.599157596448425,
+      "source": "konbu17-may8",
+      "size": 1994,
+      "cost": 22749,
+      "score": 14.967723532630954,
       "status": "selected"
     },
     "task296": {
-      "source": "jazivxt-infinitesimals",
-      "size": 1314,
-      "cost": 356773,
-      "score": 12.215144995821067,
+      "source": "konbu17-may8",
+      "size": 2704,
+      "cost": 4359,
+      "score": 16.62000204776161,
       "status": "selected"
     },
     "task297": {
@@ -2116,52 +2105,52 @@
       "status": "selected"
     },
     "task298": {
-      "source": "jazivxt-infinitesimals",
-      "size": 2848,
-      "cost": 374570,
-      "score": 12.166466019639337,
+      "source": "konbu17-may8",
+      "size": 4216,
+      "cost": 22969,
+      "score": 14.958099240310245,
       "status": "selected"
     },
     "task299": {
-      "source": "karnakbaevarthur-task-library",
-      "size": 1037,
-      "cost": 43485,
-      "score": 14.319828669976134,
+      "source": "konbu17-may8",
+      "size": 1387,
+      "cost": 2678,
+      "score": 17.107174473748884,
       "status": "selected"
     },
     "task300": {
-      "source": "konbu17-may8",
-      "size": 3308,
-      "cost": 117996,
-      "score": 13.321593995431844,
+      "source": "afr1ste-5480-41",
+      "size": 4533,
+      "cost": 117955,
+      "score": 13.321941525219067,
       "status": "selected"
     },
     "task301": {
-      "source": "jazivxt-infinitesimals",
-      "size": 4528,
-      "cost": 167722,
-      "score": 12.9699368741501,
+      "source": "konbu17-may8",
+      "size": 19286,
+      "cost": 86952,
+      "score": 13.626888478756976,
       "status": "selected"
     },
     "task302": {
-      "source": "vyankteshdwivedi-multi-source",
-      "size": 1802,
-      "cost": 108005,
-      "score": 13.410067198668987,
+      "source": "konbu17-may8",
+      "size": 2439,
+      "cost": 28829,
+      "score": 14.730862896060007,
       "status": "selected"
     },
     "task303": {
-      "source": "imaadmahmood-rule-based",
-      "size": 1127,
-      "cost": 127681,
-      "score": 13.242709755266834,
+      "source": "fallback-zero-conv",
+      "size": 572,
+      "cost": null,
+      "score": null,
       "status": "selected"
     },
     "task304": {
-      "source": "konbu17-may8",
-      "size": 1547,
-      "cost": 14577,
-      "score": 15.412799776925988,
+      "source": "afr1ste-5480-41",
+      "size": 1557,
+      "cost": 14574,
+      "score": 15.413005601769772,
       "status": "selected"
     },
     "task305": {
@@ -2172,38 +2161,38 @@
       "status": "selected"
     },
     "task306": {
-      "source": "karnakbaevarthur-task-library",
-      "size": 2845,
-      "cost": 530597,
-      "score": 11.818241933306838,
+      "source": "konbu17-may8",
+      "size": 3086,
+      "cost": 99249,
+      "score": 13.494612877068073,
       "status": "selected"
     },
     "task307": {
-      "source": "imaadmahmood-rule-based",
-      "size": 268,
-      "cost": 36060,
-      "score": 14.507060503242691,
+      "source": "konbu17-may8",
+      "size": 7454,
+      "cost": 1800,
+      "score": 17.504458056115745,
       "status": "selected"
     },
     "task308": {
-      "source": "karnakbaevarthur-task-library",
-      "size": 3991,
-      "cost": 405214,
-      "score": 12.087829398401109,
+      "source": "afr1ste-5480-41",
+      "size": 16770,
+      "cost": 36574,
+      "score": 14.492907115565421,
       "status": "selected"
     },
     "task309": {
-      "source": "karnakbaevarthur-task-library",
-      "size": 211,
-      "cost": 50,
-      "score": 21.087976994571854,
+      "source": "konbu17-may8",
+      "size": 217,
+      "cost": 10,
+      "score": 22.697414907005953,
       "status": "selected"
     },
     "task310": {
-      "source": "imaadmahmood-rule-based",
-      "size": 2439,
-      "cost": 321428,
-      "score": 12.319471152654069,
+      "source": "konbu17-may8",
+      "size": 4108,
+      "cost": 168708,
+      "score": 12.964075311132092,
       "status": "selected"
     },
     "task311": {
@@ -2214,31 +2203,31 @@
       "status": "selected"
     },
     "task312": {
-      "source": "jazivxt-infinitesimals",
-      "size": 663,
-      "cost": 46097,
-      "score": 14.261496849054698,
+      "source": "konbu17-may8",
+      "size": 788,
+      "cost": 12740,
+      "score": 15.547498070873846,
       "status": "selected"
     },
     "task313": {
-      "source": "jazivxt-infinitesimals",
-      "size": 18941,
-      "cost": 155787,
-      "score": 13.043755031370639,
+      "source": "afr1ste-5480-41",
+      "size": 39848,
+      "cost": 108053,
+      "score": 13.409622873526759,
       "status": "selected"
     },
     "task314": {
-      "source": "karnakbaevarthur-task-library",
-      "size": 1979,
-      "cost": 345882,
-      "score": 12.24614704459009,
+      "source": "konbu17-may8",
+      "size": 28158,
+      "cost": 11890,
+      "score": 15.616547010315173,
       "status": "selected"
     },
     "task315": {
-      "source": "konbu17-may8",
-      "size": 1209,
-      "cost": 13781,
-      "score": 15.468953889124855,
+      "source": "afr1ste-5480-41",
+      "size": 1210,
+      "cost": 13779,
+      "score": 15.469099027006097,
       "status": "selected"
     },
     "task316": {
@@ -2256,10 +2245,10 @@
       "status": "selected"
     },
     "task318": {
-      "source": "vyankteshdwivedi-multi-source",
-      "size": 1157,
-      "cost": 4802,
-      "score": 16.5232122232188,
+      "source": "konbu17-may8",
+      "size": 1560,
+      "cost": 1202,
+      "score": 17.90825788490485,
       "status": "selected"
     },
     "task319": {
@@ -2270,17 +2259,17 @@
       "status": "selected"
     },
     "task320": {
-      "source": "karnakbaevarthur-task-library",
-      "size": 842,
-      "cost": 58786,
-      "score": 14.018340989700548,
+      "source": "konbu17-may8",
+      "size": 1491,
+      "cost": 13309,
+      "score": 15.503804222913445,
       "status": "selected"
     },
     "task321": {
-      "source": "imaadmahmood-rule-based",
-      "size": 1679,
-      "cost": 10663,
-      "score": 15.72546491598182,
+      "source": "konbu17-may8",
+      "size": 1931,
+      "cost": 8331,
+      "score": 15.972261224025091,
       "status": "selected"
     },
     "task322": {
@@ -2319,10 +2308,10 @@
       "status": "selected"
     },
     "task327": {
-      "source": "karnakbaevarthur-task-library",
-      "size": 1676,
-      "cost": 20112,
-      "score": 15.090928069169971,
+      "source": "konbu17-may8",
+      "size": 2356,
+      "cost": 20104,
+      "score": 15.091325920776573,
       "status": "selected"
     },
     "task328": {
@@ -2333,17 +2322,17 @@
       "status": "selected"
     },
     "task329": {
-      "source": "vyankteshdwivedi-multi-source",
-      "size": 1133,
-      "cost": 80338,
-      "score": 13.706001986596243,
+      "source": "konbu17-may8",
+      "size": 1574,
+      "cost": 13994,
+      "score": 15.453616054694159,
       "status": "selected"
     },
     "task330": {
-      "source": "karnakbaevarthur-task-library",
-      "size": 11529,
-      "cost": 10987250,
-      "score": 8.787753932411842,
+      "source": "afr1ste-5480-41",
+      "size": 36680,
+      "cost": 160741,
+      "score": 13.012450347025817,
       "status": "selected"
     },
     "task331": {
@@ -2375,17 +2364,17 @@
       "status": "selected"
     },
     "task335": {
-      "source": "karnakbaevarthur-task-library",
-      "size": 1479,
-      "cost": 162747,
-      "score": 13.0000478732788,
+      "source": "afr1ste-5480-41",
+      "size": 2785,
+      "cost": 60250,
+      "score": 13.9937421486471,
       "status": "selected"
     },
     "task336": {
-      "source": "karnakbaevarthur-task-library",
-      "size": 2008,
-      "cost": 233127,
-      "score": 12.640661351568111,
+      "source": "konbu17-may8",
+      "size": 4934,
+      "cost": 20483,
+      "score": 15.072649447199344,
       "status": "selected"
     },
     "task337": {
@@ -2403,24 +2392,24 @@
       "status": "selected"
     },
     "task339": {
-      "source": "imaadmahmood-rule-based",
-      "size": 991,
-      "cost": 3965,
-      "score": 16.714738865931054,
+      "source": "konbu17-may8",
+      "size": 2038,
+      "cost": 980,
+      "score": 18.112447428335383,
       "status": "selected"
     },
     "task340": {
-      "source": "konbu17-may8",
-      "size": 3695,
-      "cost": 98315,
-      "score": 13.504068111406342,
+      "source": "afr1ste-5480-41",
+      "size": 6201,
+      "cost": 91433,
+      "score": 13.576638257392517,
       "status": "selected"
     },
     "task341": {
-      "source": "karnakbaevarthur-task-library",
-      "size": 2146,
-      "cost": 119433,
-      "score": 13.309489176336257,
+      "source": "konbu17-may8",
+      "size": 8614,
+      "cost": 22241,
+      "score": 14.990307288617556,
       "status": "selected"
     },
     "task342": {
@@ -2431,24 +2420,24 @@
       "status": "selected"
     },
     "task343": {
-      "source": "konbu17-may8",
-      "size": 7380,
-      "cost": 38848,
-      "score": 14.43258812558083,
+      "source": "afr1ste-5480-41",
+      "size": 7399,
+      "cost": 38822,
+      "score": 14.433257624768963,
       "status": "selected"
     },
     "task344": {
-      "source": "imaadmahmood-rule-based",
-      "size": 2173,
-      "cost": 61490,
-      "score": 13.973370161052484,
+      "source": "afr1ste-5480-41",
+      "size": 2729,
+      "cost": 15115,
+      "score": 15.376557092786442,
       "status": "selected"
     },
     "task345": {
-      "source": "karnakbaevarthur-task-library",
-      "size": 5827,
-      "cost": 59438,
-      "score": 14.00731096854995,
+      "source": "afr1ste-5480-41",
+      "size": 6689,
+      "cost": 51329,
+      "score": 14.153988826419955,
       "status": "selected"
     },
     "task346": {
@@ -2473,31 +2462,31 @@
       "status": "selected"
     },
     "task349": {
-      "source": "imaadmahmood-rule-based",
-      "size": 5633,
-      "cost": 323091,
-      "score": 12.314310703728575,
+      "source": "afr1ste-5480-41",
+      "size": 8240,
+      "cost": 319461,
+      "score": 12.3256095203786,
       "status": "selected"
     },
     "task350": {
-      "source": "karnakbaevarthur-task-library",
-      "size": 1200,
-      "cost": 46863,
-      "score": 14.245016269500882,
+      "source": "konbu17-may8",
+      "size": 2016,
+      "cost": 28729,
+      "score": 14.734337655454574,
       "status": "selected"
     },
     "task351": {
-      "source": "konbu17-may8",
-      "size": 1769,
-      "cost": 93330,
-      "score": 13.556103121440207,
+      "source": "afr1ste-5480-41",
+      "size": 1780,
+      "cost": 91323,
+      "score": 13.577842048384698,
       "status": "selected"
     },
     "task352": {
-      "source": "imaadmahmood-rule-based",
-      "size": 771,
-      "cost": 54916,
-      "score": 14.086439975982504,
+      "source": "konbu17-may8",
+      "size": 1079,
+      "cost": 6629,
+      "score": 16.20079075775861,
       "status": "selected"
     },
     "task353": {
@@ -2515,17 +2504,17 @@
       "status": "selected"
     },
     "task355": {
-      "source": "imaadmahmood-rule-based",
-      "size": 3188,
-      "cost": 24751,
-      "score": 14.88337882877898,
+      "source": "afr1ste-5480-41",
+      "size": 4572,
+      "cost": 24622,
+      "score": 14.88860436879244,
       "status": "selected"
     },
     "task356": {
-      "source": "karnakbaevarthur-task-library",
-      "size": 1237,
-      "cost": 50463,
-      "score": 14.171004326540109,
+      "source": "konbu17-may8",
+      "size": 1569,
+      "cost": 5002,
+      "score": 16.482406888562437,
       "status": "selected"
     },
     "task357": {
@@ -2536,17 +2525,17 @@
       "status": "selected"
     },
     "task358": {
-      "source": "jazivxt-infinitesimals",
-      "size": 7419,
-      "cost": 325758,
-      "score": 12.306089946603802,
+      "source": "konbu17-may8",
+      "size": 7583,
+      "cost": 186091,
+      "score": 12.866008919635279,
       "status": "selected"
     },
     "task359": {
-      "source": "konbu17-may8",
-      "size": 2832,
-      "cost": 89358,
-      "score": 13.599593947886078,
+      "source": "afr1ste-5480-41",
+      "size": 2920,
+      "cost": 84552,
+      "score": 13.654877991310817,
       "status": "selected"
     },
     "task360": {
@@ -2557,10 +2546,10 @@
       "status": "selected"
     },
     "task361": {
-      "source": "jazivxt-infinitesimals",
-      "size": 3352,
-      "cost": 23327,
-      "score": 14.942633233051444,
+      "source": "konbu17-may8",
+      "size": 6275,
+      "cost": 21107,
+      "score": 15.042639981999383,
       "status": "selected"
     },
     "task362": {
@@ -2571,17 +2560,17 @@
       "status": "selected"
     },
     "task363": {
-      "source": "imaadmahmood-rule-based",
-      "size": 27194,
-      "cost": 54243,
-      "score": 14.098770769180737,
+      "source": "konbu17-may8",
+      "size": 27811,
+      "cost": 54241,
+      "score": 14.098807640977503,
       "status": "selected"
     },
     "task364": {
-      "source": "imaadmahmood-rule-based",
-      "size": 7417,
-      "cost": 432404,
-      "score": 12.022884384601795,
+      "source": "konbu17-may8",
+      "size": 10500,
+      "cost": 432344,
+      "score": 12.023023153353146,
       "status": "selected"
     },
     "task365": {
@@ -2599,38 +2588,38 @@
       "status": "selected"
     },
     "task367": {
-      "source": "imaadmahmood-rule-based",
-      "size": 30445,
-      "cost": 62278,
-      "score": 13.960636487605594,
+      "source": "afr1ste-5480-41",
+      "size": 32986,
+      "cost": 51452,
+      "score": 14.151595386801393,
       "status": "selected"
     },
     "task368": {
-      "source": "karnakbaevarthur-task-library",
-      "size": 2416,
-      "cost": 514197,
-      "score": 11.849638260508812,
+      "source": "afr1ste-5480-41",
+      "size": 14740,
+      "cost": 70283,
+      "score": 13.839714772212737,
       "status": "selected"
     },
     "task369": {
-      "source": "jazivxt-infinitesimals",
-      "size": 3939,
-      "cost": 17422,
-      "score": 15.234510945621162,
+      "source": "konbu17-may8",
+      "size": 4677,
+      "cost": 13329,
+      "score": 15.502302608395981,
       "status": "selected"
     },
     "task370": {
-      "source": "hanifnoerrofiq-8may",
-      "size": 30914,
-      "cost": 1418044,
-      "score": 10.835210984788016,
+      "source": "afr1ste-5480-41",
+      "size": 82878,
+      "cost": 153809,
+      "score": 13.056533148103139,
       "status": "selected"
     },
     "task371": {
-      "source": "imaadmahmood-rule-based",
-      "size": 1365,
-      "cost": 44693,
-      "score": 14.292427831213903,
+      "source": "konbu17-may8",
+      "size": 1830,
+      "cost": 24830,
+      "score": 14.880192121497787,
       "status": "selected"
     },
     "task372": {
@@ -2641,10 +2630,10 @@
       "status": "selected"
     },
     "task373": {
-      "source": "imaadmahmood-rule-based",
-      "size": 555,
-      "cost": 3443,
-      "score": 16.855901536661477,
+      "source": "konbu17-may8",
+      "size": 924,
+      "cost": 1067,
+      "score": 18.027393748698245,
       "status": "selected"
     },
     "task374": {
@@ -2662,10 +2651,10 @@
       "status": "selected"
     },
     "task376": {
-      "source": "imaadmahmood-rule-based",
-      "size": 1567,
-      "cost": 42837,
-      "score": 14.334842505901594,
+      "source": "konbu17-may8",
+      "size": 2229,
+      "cost": 42836,
+      "score": 14.334865850479234,
       "status": "selected"
     },
     "task377": {
@@ -2690,38 +2679,38 @@
       "status": "selected"
     },
     "task380": {
-      "source": "karnakbaevarthur-task-library",
-      "size": 481,
+      "source": "konbu17-may8",
+      "size": 608,
       "cost": 1089,
       "score": 18.00698487706704,
       "status": "selected"
     },
     "task381": {
-      "source": "karnakbaevarthur-task-library",
-      "size": 5241,
-      "cost": 55183,
-      "score": 14.081589786182118,
+      "source": "konbu17-may8",
+      "size": 5721,
+      "cost": 55177,
+      "score": 14.081698521231155,
       "status": "selected"
     },
     "task382": {
-      "source": "konbu17-may8",
-      "size": 67623,
-      "cost": 330517,
-      "score": 12.29158662583263,
+      "source": "afr1ste-5480-41",
+      "size": 504203,
+      "cost": 189704,
+      "score": 12.846779758374055,
       "status": "selected"
     },
     "task383": {
-      "source": "imaadmahmood-rule-based",
-      "size": 7490,
-      "cost": 326445,
-      "score": 12.303983239783722,
+      "source": "afr1ste-5480-41",
+      "size": 9880,
+      "cost": 322782,
+      "score": 12.315267548258616,
       "status": "selected"
     },
     "task384": {
-      "source": "konbu17-may8",
-      "size": 3017,
-      "cost": 114112,
-      "score": 13.355064298777188,
+      "source": "afr1ste-5480-41",
+      "size": 3142,
+      "cost": 114111,
+      "score": 13.355073062135833,
       "status": "selected"
     },
     "task385": {
@@ -2739,38 +2728,38 @@
       "status": "selected"
     },
     "task387": {
-      "source": "afr1ste-5480-41",
-      "size": 101163,
+      "source": "konbu17-may8",
+      "size": 101207,
       "cost": 137434,
       "score": 13.169100919148114,
       "status": "selected"
     },
     "task388": {
-      "source": "karnakbaevarthur-task-library",
-      "size": 3500,
-      "cost": 287216,
-      "score": 12.432010175089149,
+      "source": "afr1ste-5480-41",
+      "size": 4708,
+      "cost": 16771,
+      "score": 15.272593516668373,
       "status": "selected"
     },
     "task389": {
-      "source": "vyankteshdwivedi-multi-source",
-      "size": 1096,
-      "cost": 3377,
-      "score": 16.875256979614434,
+      "source": "konbu17-may8",
+      "size": 1158,
+      "cost": 1979,
+      "score": 17.409653054397435,
       "status": "selected"
     },
     "task390": {
-      "source": "imaadmahmood-rule-based",
-      "size": 6573,
-      "cost": 32345,
-      "score": 14.615785271521915,
+      "source": "konbu17-may8",
+      "size": 7686,
+      "cost": 32343,
+      "score": 14.615847106792772,
       "status": "selected"
     },
     "task391": {
-      "source": "karnakbaevarthur-task-library",
-      "size": 1304,
-      "cost": 33031,
-      "score": 14.594798206566344,
+      "source": "afr1ste-5480-41",
+      "size": 2841,
+      "cost": 10021,
+      "score": 15.787561829941671,
       "status": "selected"
     },
     "task392": {
@@ -2781,10 +2770,10 @@
       "status": "selected"
     },
     "task393": {
-      "source": "karnakbaevarthur-task-library",
-      "size": 1289,
-      "cost": 33238,
-      "score": 14.588550921312532,
+      "source": "afr1ste-5480-41",
+      "size": 2433,
+      "cost": 5873,
+      "score": 16.321879144477478,
       "status": "selected"
     },
     "task394": {
@@ -2795,24 +2784,24 @@
       "status": "selected"
     },
     "task395": {
-      "source": "karnakbaevarthur-task-library",
-      "size": 870,
-      "cost": 79380,
-      "score": 13.717998273662944,
+      "source": "konbu17-may8",
+      "size": 1417,
+      "cost": 1991,
+      "score": 17.403607695935804,
       "status": "selected"
     },
     "task396": {
-      "source": "imaadmahmood-rule-based",
-      "size": 72480,
-      "cost": 2479127,
-      "score": 10.27658295996009,
+      "source": "konbu17-may8",
+      "size": 95200,
+      "cost": 668900,
+      "score": 11.5866101488935,
       "status": "selected"
     },
     "task397": {
-      "source": "imaadmahmood-rule-based",
-      "size": 3691,
-      "cost": 239133,
-      "score": 12.61522483851126,
+      "source": "afr1ste-5480-41",
+      "size": 6413,
+      "cost": 32300,
+      "score": 14.617177490789253,
       "status": "selected"
     },
     "task398": {
@@ -2823,17 +2812,17 @@
       "status": "selected"
     },
     "task399": {
-      "source": "karnakbaevarthur-task-library",
-      "size": 1896,
-      "cost": 87270,
-      "score": 13.623237959842642,
+      "source": "konbu17-may8",
+      "size": 3162,
+      "cost": 12026,
+      "score": 15.605173748400485,
       "status": "selected"
     },
     "task400": {
-      "source": "imaadmahmood-rule-based",
-      "size": 2074,
-      "cost": 93362,
-      "score": 13.555760310818291,
+      "source": "afr1ste-5480-41",
+      "size": 2286,
+      "cost": 91320,
+      "score": 13.577874899356269,
       "status": "selected"
     }
   }
