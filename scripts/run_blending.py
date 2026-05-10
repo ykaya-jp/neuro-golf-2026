@@ -19,6 +19,9 @@ def main() -> int:
     ap.add_argument("--out", type=Path, default=Path("submissions/blended.zip"))
     ap.add_argument("--inventory-only", action="store_true",
                     help="print source inventory and exit")
+    ap.add_argument("--full", action="store_true",
+                    help="evaluate all candidates (true min cost) instead of lazy quick mode")
+    ap.add_argument("-v", "--verbose", action="store_true")
     args = ap.parse_args()
 
     repo_root = Path(__file__).resolve().parents[1]
@@ -30,14 +33,18 @@ def main() -> int:
                   f"{[v for k, v in sorted(per_task.items())[:3]]})")
         return 0
 
-    summary = build_blended_zip(args.out, repo_root=repo_root)
+    summary = build_blended_zip(
+        args.out, repo_root=repo_root,
+        quick_mode=not args.full, progress=args.verbose,
+    )
+    meta = summary["_meta"]
     print(f"\nblended submission: {args.out}")
-    print(f"zip size: {summary['_meta']['zip_size_bytes']:,} byte")
-    print(f"uncompressed total: {summary['_meta']['uncompressed_total_bytes']:,} byte")
-    print(f"fallback count: {summary['_meta']['fallback_count']}")
+    print(f"zip size: {meta['zip_size_bytes']:,} byte")
+    print(f"uncompressed total: {meta['uncompressed_total_bytes']:,} byte")
+    print(f"fallback count: {meta['fallback_count']}")
+    print(f"estimated total score: {meta['estimated_total_score']:.2f} (mode: {meta['mode']})")
     print(f"\nby source count:")
-    for src, cnt in sorted(summary["_meta"]["by_source_count"].items(),
-                           key=lambda x: -x[1]):
+    for src, cnt in sorted(meta["by_source_count"].items(), key=lambda x: -x[1]):
         print(f"  {src}: {cnt}")
     return 0
 

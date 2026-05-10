@@ -1,9 +1,15 @@
 """Per-task argmin selection across multiple ONNX sources.
 
-戦略: ONNX file size (= proxy of cost = params + memory_bytes) で min を選ぶ。
-真の cost は score_network() で測れるが build 時に全 source × 全 task で score を
-走らせると 2000+ 回の重い計算になるため、 file size を proxy にしてから
-build_blended で 最終 採用 ONNX のみ score_network gate する 二段方式。
+戦略 v2 (2026-05-11): **真の cost (= score_network() の memory_bytes + params)** で
+per-task min を選ぶ。 加えて以下を全て gate:
+- banned op 不使用 (`_validate_onnx`)
+- functional correct (= validate_task の `functional_correct: true`)
+- scorer_ok (= score_network が None を返さない、 = scorer-poison op 不使用)
+
+v1 (size proxy) の問題:
+- size 小 != true cost 小 (例: ONNX header / metadata で乖離)
+- size 小でも functional incorrect / scorer crash の source を採用 → 0 点で task ロス
+- magmacot-new-blending / konbu17-blended-401-v117 は **全 task で scorer crash** 観測
 
 License hedge: 公開 dataset の license は各作者依存だが、 NeuroGolf comp の
 submission は kaggle competitions submit 経由で公開作品の流用が一般的に
@@ -14,7 +20,11 @@ from __future__ import annotations
 from dataclasses import dataclass
 from pathlib import Path
 
+import onnx
+
 from neurogolf_2026.build_submission import _validate_onnx
+from neurogolf_2026.synthesis.runner import _temp_registry
+from neurogolf_2026.validate import validate_task
 
 
 @dataclass(frozen=True)
@@ -41,6 +51,32 @@ class Source:
         return p.stat().st_size
 
 
+def _evaluate_candidate(task_id: str, raw: bytes) -> tuple[bool, int | None, float | None, str]:
+    """raw ONNX bytes に対して score_network() を経由して評価.
+
+    Returns: (accepted, cost, score, reason)
+      accepted = True iff functional_correct and scorer_ok and no banned-op violation
+    """
+    violations = _validate_onnx(task_id, raw)
+    if violations:
+        return False, None, None, f"banned op / constraint: {violations[:1]}"
+    try:
+        model = onnx.load_from_string(raw)
+    except Exception as e:
+        return False, None, None, f"onnx parse: {e!r}"
+    try:
+        with _temp_registry(task_id, model):
+            v = validate_task(task_id, strict=False, verbose=False)
+    except Exception as e:
+        return False, None, None, f"validate_task crash: {e!r}"
+    if not v["scorer_ok"]:
+        return False, None, None, f"scorer crash: {v['errors'][:1]}"
+    if not v["functional_correct"]:
+        return False, v.get("cost"), v.get("score"), \
+               f"functional incorrect (arc_agi {v['arc_agi']}, arc_gen {v['arc_gen']})"
+    return True, v["cost"], v["score"], "accepted"
+
+
 def select_per_task(
     task_num: int,
     sources: list[Source],
@@ -48,19 +84,17 @@ def select_per_task(
     *,
     self_raw: bytes | None = None,
     self_size: int | None = None,
-) -> tuple[str, bytes] | None:
-    """Per-task で min size source の raw ONNX を返す.
+    quick_mode: bool = False,
+) -> tuple[str, bytes, dict] | None:
+    """Per-task で **真の cost** で min を選び、 functional correct + scorer_ok を全候補で gate.
 
     Args:
-        task_num: 1..400
-        sources: 評価対象の source list
-        repo_root: 解決用 base path
-        self_raw: 自前 ONNX の raw bytes (e.g., task276 の hand-craft)
-        self_size: self_raw の onnx file size (cost proxy)
+        quick_mode: True なら size 昇順で 上から試行、 最初の accepted を採用 (= lazy)。
+                    False なら全 candidate を score_network → 真の cost で argmin。
 
     Returns:
-        (source_name, raw_bytes) — banned op 検査 pass、 size 最小の source。
-        全 source / self が banned op fail なら None。
+        (source_name, raw_bytes, eval_info) where eval_info has cost / score / size
+        全 source / self が fail なら None。
     """
     candidates: list[tuple[int, str, bytes]] = []
     if self_raw is not None and self_size is not None:
@@ -74,11 +108,27 @@ def select_per_task(
     if not candidates:
         return None
 
-    # size 昇順で sort、 banned op 違反ない最初の 1 つを採用
-    candidates.sort(key=lambda x: x[0])
     task_id = f"task{task_num:03d}"
+
+    if quick_mode:
+        # size 昇順で 1 件ずつ accept 判定、 最初の accepted を採用 (= lazy 早期 break)
+        candidates.sort(key=lambda x: x[0])
+        for size, name, raw in candidates:
+            accepted, cost, score, reason = _evaluate_candidate(task_id, raw)
+            if accepted:
+                return name, raw, {"size": size, "cost": cost, "score": score, "source": name}
+        return None
+
+    # 全 candidate を評価して 真 cost で argmin
+    evaluated: list[tuple[int, float, str, bytes]] = []
     for size, name, raw in candidates:
-        violations = _validate_onnx(task_id, raw)
-        if not violations:
-            return name, raw
-    return None
+        accepted, cost, score, reason = _evaluate_candidate(task_id, raw)
+        if accepted and cost is not None:
+            evaluated.append((cost, score or 0.0, name, raw))
+
+    if not evaluated:
+        return None
+    evaluated.sort(key=lambda x: x[0])  # min cost
+    cost, score, name, raw = evaluated[0]
+    return name, raw, {"cost": cost, "score": score, "source": name,
+                       "size": len(raw), "candidates_evaluated": len(candidates)}

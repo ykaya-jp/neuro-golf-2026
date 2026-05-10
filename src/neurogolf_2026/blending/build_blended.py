@@ -27,6 +27,8 @@ def build_blended_zip(
     use_self_registry: bool = True,
     fallback_to_zero: bool = True,
     summary_path: Path | None = None,
+    quick_mode: bool = True,
+    progress: bool = False,
 ) -> dict:
     """全 400 task で argmin source を選び submission.zip を構築.
 
@@ -68,6 +70,7 @@ def build_blended_zip(
             sel = select_per_task(
                 n, sources, repo_root,
                 self_raw=self_raw, self_size=self_size,
+                quick_mode=quick_mode,
             )
 
             if sel is None:
@@ -82,19 +85,27 @@ def build_blended_zip(
                 raw = _serialize(model)
                 source_name = "fallback-zero-conv"
                 fallback_count += 1
+                eval_info = {"size": len(raw), "source": source_name}
             else:
-                source_name, raw = sel
+                source_name, raw, eval_info = sel
 
             zf.writestr(f"{tk}.onnx", raw)
             selections[tk] = {
                 "source": source_name,
                 "size": len(raw),
+                "cost": eval_info.get("cost"),
+                "score": eval_info.get("score"),
                 "status": "selected",
             }
             total_bytes += len(raw)
             by_source[source_name] = by_source.get(source_name, 0) + 1
+            if progress and n % 50 == 0:
+                print(f"  [{n}/{NUM_TASKS}] cumulative est score: {sum(s.get('score') or 0 for s in selections.values()):.1f}")
 
     out_path.write_bytes(buf.getvalue())
+
+    # 推定 total score (= 採用 source の score 合計、 None は 0 扱い)
+    est_total_score = sum(s.get("score") or 0.0 for s in selections.values())
 
     summary = {
         "_meta": {
@@ -105,6 +116,8 @@ def build_blended_zip(
             "fallback_count": fallback_count,
             "by_source_count": by_source,
             "sources_evaluated": [s.name for s in sources],
+            "estimated_total_score": est_total_score,
+            "mode": "quick" if quick_mode else "full",
         },
         "per_task": selections,
     }
